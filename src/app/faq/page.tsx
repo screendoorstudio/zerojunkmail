@@ -165,7 +165,7 @@ export default function FAQPage() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-red-600">
+          <Link href="/" className="hover:text-blue-600">
             Home
           </Link>
           <span className="mx-2">/</span>
@@ -203,7 +203,7 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/what-is-eddm"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 What is EDDM? →
               </Link>
@@ -211,7 +211,7 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/why-you-cant-opt-out"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Why You Can&apos;t Opt Out →
               </Link>
@@ -219,7 +219,7 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/environmental-impact"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Environmental Impact →
               </Link>
@@ -227,7 +227,7 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/take-action"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Take Action →
               </Link>

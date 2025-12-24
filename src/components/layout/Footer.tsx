@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PETITION_URL, SITE_CONFIG } from "@/lib/constants/statistics";
 
 const footerLinks = [
@@ -35,9 +36,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-bold text-red-500">Zero</span>
-              <span className="text-2xl font-bold text-white">Junk Mail</span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Zero Junk Mail"
+                width={160}
+                height={44}
+                className="h-11 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm text-gray-400 mb-4">
               {SITE_CONFIG.tagline}

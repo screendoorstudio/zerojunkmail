@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { STATISTICS, PETITION_URL } from "@/lib/constants/statistics";
@@ -7,78 +8,121 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-red-900 text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            You Cannot Unsubscribe from{" "}
-            <span className="text-red-400">Your Own Government&apos;s</span>{" "}
-            Advertising Mail
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The USPS delivers billions of pieces of unsolicited advertising
-            directly to your mailbox every year—and federal law says you have
-            no right to stop it.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={PETITION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
-            >
-              Sign the Petition
-            </a>
-            <Link
-              href="/what-is-eddm"
-              className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/20"
-            >
-              Learn More
-            </Link>
+      <section className="relative min-h-[600px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/mailboxes-hero.jpg"
+            alt="Mailboxes overflowing with junk mail"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/70" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+              You Cannot Unsubscribe from{" "}
+              <span className="text-blue-400">Your Own Government&apos;s</span>{" "}
+              Advertising Mail
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              The USPS delivers billions of pieces of unsolicited advertising
+              directly to your mailbox every year—and federal law says you have
+              no right to stop it.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={PETITION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
+              >
+                Sign the Petition
+              </a>
+              <Link
+                href="/what-is-eddm"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/30 text-center"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+
+          {/* EDDM Sample Image */}
+          <div className="hidden lg:block">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-blue-500/20 rounded-2xl blur-xl" />
+              <Image
+                src="/images/eddm-sample-ecrwss.jpg"
+                alt="EDDM mail showing ECRWSS label - Residential Customer"
+                width={600}
+                height={400}
+                className="relative rounded-xl shadow-2xl border-4 border-white/20"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+                <span className="font-mono text-sm">*ECRWSSEDDM*</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* What is EDDM Section */}
       <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
             What is EDDM?
           </h2>
-          <div className="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg mb-8">
-            <p className="text-lg text-gray-800">
-              <strong>Every Door Direct Mail (EDDM)</strong> is a USPS program
-              that allows businesses to send advertising mail to every address
-              in a postal route—without needing names or addresses. You know it
-              as the mail marked <strong>&quot;ECRWSS&quot;</strong> or{" "}
-              <strong>&quot;Postal Customer.&quot;</strong>
-            </p>
-          </div>
-          <p className="text-gray-600 mb-6">
-            Unlike addressed mail, EDDM cannot be refused or returned. The USPS
-            considers it &quot;unaddressed mail&quot; and delivers it regardless of your
-            preferences. There is no Do Not Mail registry, no opt-out form, and
-            no legal recourse.
-          </p>
-          <div className="text-center">
-            <Link
-              href="/what-is-eddm"
-              className="text-red-600 hover:text-red-700 font-semibold inline-flex items-center gap-2"
-            >
-              Learn how EDDM works
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+                <p className="text-lg text-gray-800">
+                  <strong>Every Door Direct Mail (EDDM)</strong> is a USPS program
+                  that allows businesses to send advertising mail to every address
+                  in a postal route—without needing names or addresses. You know it
+                  as the mail marked <strong>&quot;ECRWSS&quot;</strong> or{" "}
+                  <strong>&quot;Postal Customer.&quot;</strong>
+                </p>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Unlike addressed mail, EDDM cannot be refused or returned. The USPS
+                considers it &quot;unaddressed mail&quot; and delivers it regardless of your
+                preferences. There is no Do Not Mail registry, no opt-out form, and
+                no legal recourse.
+              </p>
+              <Link
+                href="/what-is-eddm"
+                className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center gap-2"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
+                Learn how EDDM works
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/eddm-sample-2.jpg"
+                alt="Example of EDDM junk mail"
+                width={500}
+                height={350}
+                className="rounded-xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -140,7 +184,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/environmental-impact"
-              className="text-red-600 hover:text-red-700 font-semibold inline-flex items-center gap-2"
+              className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center gap-2"
             >
               See the full environmental impact
               <svg
@@ -212,7 +256,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/why-you-cant-opt-out"
-              className="text-red-600 hover:text-red-700 font-semibold inline-flex items-center gap-2"
+              className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center gap-2"
             >
               Read the full legal explanation
               <svg
@@ -281,7 +325,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/faq"
-              className="text-red-600 hover:text-red-700 font-semibold inline-flex items-center gap-2"
+              className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center gap-2"
             >
               View all FAQs
               <svg

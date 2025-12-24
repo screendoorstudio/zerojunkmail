@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { PETITION_URL } from "@/lib/constants/statistics";
 
@@ -20,9 +21,15 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-red-600">Zero</span>
-              <span className="text-2xl font-bold text-gray-900">Junk Mail</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Zero Junk Mail"
+                width={180}
+                height={50}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
           </div>
 
@@ -41,7 +48,7 @@ export function Header() {
               href={PETITION_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+              className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Sign Petition
             </a>
@@ -98,7 +105,7 @@ export function Header() {
                 href={PETITION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-center"
+                className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
               >
                 Sign Petition
               </a>

@@ -18,7 +18,7 @@ export function TLDRBox({ summary, keyStatistic }: TLDRBoxProps) {
         </div>
         {keyStatistic && (
           <div className="flex-shrink-0 text-center bg-white p-4 rounded-lg shadow-sm">
-            <div className="text-3xl font-bold text-red-600">
+            <div className="text-3xl font-bold text-blue-600">
               {keyStatistic.value}
             </div>
             <div className="text-sm text-gray-600 mt-1">

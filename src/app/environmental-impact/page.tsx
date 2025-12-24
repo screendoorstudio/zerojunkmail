@@ -64,7 +64,7 @@ export default function EnvironmentalImpactPage() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-red-600">
+          <Link href="/" className="hover:text-blue-600">
             Home
           </Link>
           <span className="mx-2">/</span>
@@ -341,7 +341,7 @@ export default function EnvironmentalImpactPage() {
             <li>
               <Link
                 href="/solutions"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Proposed Solutions →
               </Link>
@@ -349,7 +349,7 @@ export default function EnvironmentalImpactPage() {
             <li>
               <Link
                 href="/take-action"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Take Action →
               </Link>
@@ -357,7 +357,7 @@ export default function EnvironmentalImpactPage() {
             <li>
               <Link
                 href="/why-you-cant-opt-out"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Why You Can&apos;t Opt Out →
               </Link>

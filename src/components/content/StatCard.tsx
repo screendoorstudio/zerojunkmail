@@ -7,7 +7,7 @@ interface StatCardProps {
 }
 
 const colorClasses = {
-  red: "border-red-500 text-red-600",
+  red: "border-blue-500 text-blue-600",
   green: "border-green-500 text-green-600",
   blue: "border-blue-500 text-blue-600",
   amber: "border-amber-500 text-amber-600",
@@ -18,7 +18,7 @@ export function StatCard({
   label,
   description,
   source,
-  color = "red",
+  color = "blue",
 }: StatCardProps) {
   return (
     <div className={`bg-white border-t-4 ${colorClasses[color].split(" ")[0]} p-6 rounded-lg shadow-md`}>

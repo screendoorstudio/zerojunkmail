@@ -40,7 +40,7 @@ export default function TakeActionPage() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-red-600">
+          <Link href="/" className="hover:text-blue-600">
             Home
           </Link>
           <span className="mx-2">/</span>
@@ -175,7 +175,7 @@ export default function TakeActionPage() {
               mailing lists
             </li>
           </ul>
-          <p className="text-red-600 font-semibold">
+          <p className="text-blue-600 font-semibold">
             Important: None of these services stop EDDM or saturation mail. They
             only affect mail addressed to you personally.
           </p>
@@ -256,7 +256,7 @@ export default function TakeActionPage() {
             href={PETITION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-lg transition-colors"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-colors"
           >
             Sign the Petition Now
           </a>
@@ -271,7 +271,7 @@ export default function TakeActionPage() {
             <li>
               <Link
                 href="/environmental-impact"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Environmental Impact →
               </Link>
@@ -279,7 +279,7 @@ export default function TakeActionPage() {
             <li>
               <Link
                 href="/solutions"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Proposed Solutions →
               </Link>
@@ -287,7 +287,7 @@ export default function TakeActionPage() {
             <li>
               <Link
                 href="/faq"
-                className="text-red-600 hover:text-red-700"
+                className="text-blue-600 hover:text-blue-700"
               >
                 Frequently Asked Questions →
               </Link>
