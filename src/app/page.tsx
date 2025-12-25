@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
+import { Testimonials } from "@/components/content/Testimonials";
 import { STATISTICS, PETITION_URL } from "@/lib/constants/statistics";
 
 export default function HomePage() {
@@ -216,6 +217,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Why No Opt-Out Section */}
       <section className="py-16 px-4" style={{ backgroundColor: '#ffffff' }}>

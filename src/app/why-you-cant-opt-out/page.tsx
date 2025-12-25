@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
@@ -91,6 +92,36 @@ export default function WhyYouCantOptOutPage() {
             USPS advertising mail from arriving in your mailbox</strong>. This
             isn&apos;t an oversight; it&apos;s by design.
           </p>
+
+          {/* Image: EDDM sample showing addressing */}
+          <div className="not-prose my-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <Image
+                  src="/images/junk-mail/eddm-sample-1.jpg"
+                  alt="EDDM mail addressed to Postal Customer"
+                  width={400}
+                  height={300}
+                  className="rounded-lg shadow-md w-full"
+                />
+                <p className="text-sm text-gray-500 mt-2" style={{ color: "#6b7280" }}>
+                  EDDM mail addressed to &quot;Postal Customer&quot;—not you personally
+                </p>
+              </div>
+              <div>
+                <Image
+                  src="/images/junk-mail/eddm-sample-2.jpg"
+                  alt="Example of ECRWSS saturation mail"
+                  width={400}
+                  height={300}
+                  className="rounded-lg shadow-md w-full"
+                />
+                <p className="text-sm text-gray-500 mt-2" style={{ color: "#6b7280" }}>
+                  The ECRWSS label indicates saturation mail delivery
+                </p>
+              </div>
+            </div>
+          </div>
 
           <h2>The Federal Mailbox Monopoly</h2>
           <p>

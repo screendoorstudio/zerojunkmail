@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
@@ -91,6 +92,20 @@ export default function EnvironmentalImpactPage() {
             produce paper, to the fuel burned transporting billions of mail
             pieces, to the energy consumed disposing of unwanted advertisements—
             the true cost of unsolicited mail extends far beyond your mailbox.
+          </p>
+        </div>
+
+        {/* Image: Pile of junk mail */}
+        <div className="my-8 relative">
+          <Image
+            src="/images/junk-mail/eddm-pile-1.jpg"
+            alt="Pile of EDDM junk mail ready for recycling"
+            width={800}
+            height={500}
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+          <p className="text-sm text-gray-500 mt-2 text-center" style={{ color: "#6b7280" }}>
+            A typical week&apos;s worth of unsolicited EDDM mail destined for the recycling bin
           </p>
         </div>
 
@@ -212,6 +227,17 @@ export default function EnvironmentalImpactPage() {
             In an era of increasing water scarcity and drought, this consumption
             for unwanted advertisements is difficult to justify.
           </p>
+
+          {/* Inline image */}
+          <div className="not-prose my-8 float-right ml-6 mb-4 w-full md:w-1/2">
+            <Image
+              src="/images/junk-mail/eddm-pile-2.jpg"
+              alt="Stack of unread EDDM advertising mail"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-md w-full"
+            />
+          </div>
 
           <h2>Waste Stream Impact</h2>
           <p>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
@@ -204,6 +205,40 @@ export default function WhatIsEDDMPage() {
               from busy households
             </li>
           </ul>
+
+          <h2>Examples of Problematic EDDM Content</h2>
+          <p>
+            EDDM allows virtually any content to be delivered to every home on a
+            postal route, including materials many recipients find objectionable:
+          </p>
+        </div>
+
+        {/* Problem content examples */}
+        <div className="my-8 grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-50 p-4 rounded-lg" style={{ backgroundColor: "#f9fafb" }}>
+            <Image
+              src="/images/junk-mail/cigarette-ad.png"
+              alt="Cigarette advertisement delivered via EDDM"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-md w-full mb-3"
+            />
+            <p className="text-sm text-gray-600" style={{ color: "#4b5563" }}>
+              <strong>Tobacco advertising</strong> delivered to every home—including families with children
+            </p>
+          </div>
+          <div className="bg-gray-50 p-4 rounded-lg" style={{ backgroundColor: "#f9fafb" }}>
+            <Image
+              src="/images/junk-mail/religious-tract.jpg"
+              alt="Religious tract delivered via EDDM"
+              width={400}
+              height={300}
+              className="rounded-lg shadow-md w-full mb-3"
+            />
+            <p className="text-sm text-gray-600" style={{ color: "#4b5563" }}>
+              <strong>Religious materials</strong> delivered to all addresses regardless of recipient beliefs
+            </p>
+          </div>
         </div>
 
         {/* FAQ Section */}
