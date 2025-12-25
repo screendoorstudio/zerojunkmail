@@ -162,21 +162,21 @@ export default function FAQPage() {
     <>
       <SchemaMarkup schema={[faqSchema, breadcrumbSchema]} />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
+      <article className="max-w-4xl mx-auto px-4 py-12 bg-white" style={{ backgroundColor: '#ffffff' }}>
         {/* Breadcrumb */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">
+        <nav className="text-sm mb-8" style={{ color: '#6b7280' }}>
+          <Link href="/" className="hover:text-blue-600" style={{ color: '#6b7280' }}>
             Home
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-900">FAQ</span>
+          <span style={{ color: '#111827' }}>FAQ</span>
         </nav>
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl font-bold mb-6" style={{ color: '#111827' }}>
           Frequently Asked Questions
         </h1>
 
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg mb-12" style={{ color: '#4b5563' }}>
           Find answers to common questions about EDDM, junk mail, opt-out
           options, and what you can do to help change the system.
         </p>
@@ -184,7 +184,7 @@ export default function FAQPage() {
         {/* FAQ Categories */}
         {faqsByCategory.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: '#111827' }}>
               {category.category}
             </h2>
             <FAQAccordion items={category.faqs} />
@@ -192,18 +192,19 @@ export default function FAQPage() {
         ))}
 
         {/* Still have questions */}
-        <div className="mt-12 bg-gray-100 p-6 rounded-lg">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="mt-12 p-6 rounded-lg" style={{ backgroundColor: '#f3f4f6' }}>
+          <h3 className="text-lg font-semibold mb-4" style={{ color: '#111827' }}>
             Didn&apos;t find your answer?
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="mb-4" style={{ color: '#4b5563' }}>
             Check out our detailed pages for more information:
           </p>
           <ul className="space-y-2">
             <li>
               <Link
                 href="/what-is-eddm"
-                className="text-blue-600 hover:text-blue-700"
+                className="hover:text-blue-700"
+                style={{ color: '#2563eb' }}
               >
                 What is EDDM? →
               </Link>
@@ -211,7 +212,8 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/why-you-cant-opt-out"
-                className="text-blue-600 hover:text-blue-700"
+                className="hover:text-blue-700"
+                style={{ color: '#2563eb' }}
               >
                 Why You Can&apos;t Opt Out →
               </Link>
@@ -219,7 +221,8 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/environmental-impact"
-                className="text-blue-600 hover:text-blue-700"
+                className="hover:text-blue-700"
+                style={{ color: '#2563eb' }}
               >
                 Environmental Impact →
               </Link>
@@ -227,7 +230,8 @@ export default function FAQPage() {
             <li>
               <Link
                 href="/take-action"
-                className="text-blue-600 hover:text-blue-700"
+                className="hover:text-blue-700"
+                style={{ color: '#2563eb' }}
               >
                 Take Action →
               </Link>

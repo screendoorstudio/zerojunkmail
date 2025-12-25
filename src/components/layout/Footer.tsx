@@ -88,8 +88,23 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
-          <p className="mt-2">
-            This site is dedicated to protecting consumers from unwanted advertising mail.
+          <p className="mt-4 text-xs text-gray-600 max-w-3xl mx-auto">
+            ZeroJunkMail.org is for informational purposes only and is in no way
+            associated or affiliated with the USPS, DMA, Taradel, IMS,
+            DirectMail.com or their customers. Information compiled within this
+            site is publicly available. Every Door Direct Mail® and EDDM® are
+            registered trademarks of the United States Postal Service.
+          </p>
+          <p className="mt-4 text-xs text-gray-600">
+            Made by{" "}
+            <a
+              href="https://screendoorstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
+              Screendoor Studio Inc.
+            </a>
           </p>
         </div>
       </div>

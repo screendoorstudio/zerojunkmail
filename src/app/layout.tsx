@@ -65,15 +65,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: 'light' }}>
       <head>
+        <meta name="color-scheme" content="light only" />
         <SchemaMarkup schema={[generateOrganizationSchema(), generateWebSiteSchema()]} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-white text-gray-900`}
       >
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 bg-white" style={{ backgroundColor: '#ffffff' }}>
           {children}
         </main>
         <Footer />

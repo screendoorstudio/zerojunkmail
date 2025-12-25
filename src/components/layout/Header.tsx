@@ -11,13 +11,17 @@ const navLinks = [
   { href: "/environmental-impact", label: "Environmental Impact" },
   { href: "/take-action", label: "Take Action" },
   { href: "/faq", label: "FAQ" },
+  { href: "/about", label: "About" },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header
+      className="bg-white border-b border-gray-200 sticky top-0 z-50"
+      style={{ backgroundColor: "#ffffff", borderColor: "#e5e7eb" }}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -40,6 +44,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+                style={{ color: "#4b5563" }}
               >
                 {link.label}
               </Link>
@@ -49,6 +54,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
             >
               Sign Petition
             </a>
@@ -59,6 +65,7 @@ export function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-600 hover:text-gray-900 p-2"
+              style={{ color: "#4b5563" }}
               aria-label="Toggle menu"
             >
               <svg
@@ -89,13 +96,17 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div
+            className="md:hidden border-t border-gray-200 py-4"
+            style={{ backgroundColor: "#ffffff", borderColor: "#e5e7eb" }}
+          >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="text-gray-600 hover:text-gray-900 font-medium"
+                  style={{ color: "#4b5563" }}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -106,6 +117,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
+                style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
               >
                 Sign Petition
               </a>

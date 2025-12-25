@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light only;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,15 +13,61 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Force light mode - comprehensive overrides for Brave and other aggressive dark modes */
+html {
+  color-scheme: light only !important;
+  background-color: #ffffff !important;
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #ffffff !important;
+  color: #171717 !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
+/* Force backgrounds on all major containers */
+main,
+article,
+section,
+div[class*="bg-white"],
+div[class*="bg-gray-50"],
+div[class*="bg-gray-100"],
+div[class*="bg-blue-50"] {
+  background-color: inherit;
+}
+
+/* Ensure text colors are preserved */
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+p, span, li, a {
+  color: inherit;
+}
+
+/* Override dark mode at all levels */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light only !important;
+  }
+
+  html {
+    background-color: #ffffff !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #171717 !important;
+  }
+
+  main {
+    background-color: #ffffff !important;
+  }
+
+  article {
+    background-color: #ffffff !important;
+  }
 }
 
 /* Custom prose styling for content pages */
