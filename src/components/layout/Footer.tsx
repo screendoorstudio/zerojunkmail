@@ -9,6 +9,7 @@ const footerLinks = [
       { href: "/what-is-eddm", label: "What is EDDM?" },
       { href: "/why-you-cant-opt-out", label: "Why No Opt-Out?" },
       { href: "/environmental-impact", label: "Environmental Impact" },
+      { href: "/legal-background", label: "Legal Background" },
       { href: "/faq", label: "FAQ" },
     ],
   },
@@ -17,14 +18,15 @@ const footerLinks = [
     links: [
       { href: "/take-action", label: "How to Help" },
       { href: PETITION_URL, label: "Sign Petition", external: true },
+      { href: "/reduce-junk-mail", label: "Reduce Junk Mail" },
     ],
   },
   {
-    title: "Resources",
+    title: "About",
     links: [
-      { href: "/legal-background", label: "Legal Background" },
-      { href: "/solutions", label: "Proposed Solutions" },
       { href: "/about", label: "About Us" },
+      { href: "/contact", label: "Contact" },
+      { href: PETITION_URL, label: "Sign the Petition", external: true },
     ],
   },
 ];
@@ -59,15 +61,28 @@ export function Footer() {
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.href + link.label}>
                     {"external" in link && link.external ? (
                       <a
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
+                        className="text-gray-400 hover:text-white transition-colors text-sm inline-flex items-center gap-1"
                       >
                         {link.label}
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
                       </a>
                     ) : (
                       <Link
