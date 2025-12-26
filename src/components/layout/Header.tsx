@@ -8,10 +8,10 @@ import { PETITION_URL } from "@/lib/constants/statistics";
 const navLinks = [
   { href: "/what-is-eddm", label: "What is EDDM?" },
   { href: "/why-you-cant-opt-out", label: "Why No Opt-Out?" },
+  { href: "/reduce-junk-mail", label: "Reduce Junk Mail" },
   { href: "/environmental-impact", label: "Environmental Impact" },
   { href: "/take-action", label: "Take Action" },
   { href: "/faq", label: "FAQ" },
-  { href: "/about", label: "About" },
 ];
 
 export function Header() {
