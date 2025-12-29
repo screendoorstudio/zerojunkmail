@@ -10,7 +10,7 @@ export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAP
     return (
       <div className={`bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 rounded-xl shadow-lg ${className}`}>
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Help Us Reach 2,500 Signatures
+          Help Us Reach 10,000 Signatures
         </h2>
         <p className="text-lg mb-6 text-blue-100">
           Join thousands demanding the right to opt out of USPS advertising mail.
