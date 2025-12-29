@@ -20,8 +20,8 @@ export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAP
           href={PETITION_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-lg text-lg hover:bg-blue-50 transition-colors shadow-md"
-          style={{ color: '#2563eb', backgroundColor: '#ffffff' }}
+          className="inline-block bg-yellow-400 text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-yellow-300 transition-colors shadow-md"
+          style={{ color: '#111827', backgroundColor: '#facc15' }}
         >
           Sign the Petition Now
         </a>
