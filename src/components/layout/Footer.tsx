@@ -1,6 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { PETITION_URL, SITE_CONFIG } from "@/lib/constants/statistics";
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+function trackPetitionClick() {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "petition_click", {
+      event_category: "conversion",
+      event_label: "footer",
+      page_location: window.location.pathname,
+    });
+  }
+}
 
 const footerLinks = [
   {
@@ -67,6 +86,7 @@ export function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={trackPetitionClick}
                         className="text-gray-400 hover:text-white transition-colors text-sm inline-flex items-center gap-1"
                       >
                         {link.label}

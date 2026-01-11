@@ -1,8 +1,27 @@
+"use client";
+
 import { PETITION_URL } from "@/lib/constants/statistics";
 
 interface PetitionCTAProps {
   variant?: "hero" | "inline" | "compact";
   className?: string;
+}
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+function trackPetitionClick(variant: string, location?: string) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "petition_click", {
+      event_category: "conversion",
+      event_label: variant,
+      page_location: location || window.location.pathname,
+    });
+  }
 }
 
 export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAProps) {
@@ -20,6 +39,7 @@ export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAP
           href={PETITION_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackPetitionClick("hero")}
           className="inline-block bg-yellow-400 text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-yellow-300 transition-colors shadow-md"
           style={{ color: '#111827', backgroundColor: '#facc15' }}
         >
@@ -38,6 +58,7 @@ export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAP
         href={PETITION_URL}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackPetitionClick("compact")}
         className={`inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors ${className}`}
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -64,6 +85,7 @@ export function PetitionCTA({ variant = "inline", className = "" }: PetitionCTAP
           href={PETITION_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackPetitionClick("inline")}
           className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
         >
           Sign the Petition

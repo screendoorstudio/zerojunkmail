@@ -5,6 +5,23 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { PETITION_URL } from "@/lib/constants/statistics";
 
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+  }
+}
+
+function trackPetitionClick(location: string) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "petition_click", {
+      event_category: "conversion",
+      event_label: location,
+      page_location: window.location.pathname,
+    });
+  }
+}
+
 interface NavItem {
   label: string;
   href?: string;
@@ -109,7 +126,10 @@ function DropdownMenu({
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
                 style={{ color: "#4b5563" }}
-                onClick={onClose}
+                onClick={() => {
+                  trackPetitionClick("header-dropdown");
+                  onClose();
+                }}
               >
                 {child.label}
                 <svg
@@ -196,6 +216,7 @@ export function Header() {
               href={PETITION_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackPetitionClick("header-button")}
               className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
             >
@@ -281,7 +302,10 @@ export function Header() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 text-gray-600 hover:text-gray-900 py-1"
                             style={{ color: "#4b5563" }}
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              trackPetitionClick("mobile-dropdown");
+                              setMobileMenuOpen(false);
+                            }}
                           >
                             {child.label}
                             <svg
@@ -319,6 +343,7 @@ export function Header() {
                   href={PETITION_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPetitionClick("mobile-button")}
                   className="block bg-blue-600 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center"
                   style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
                 >
