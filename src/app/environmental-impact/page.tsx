@@ -100,15 +100,6 @@ export default function EnvironmentalImpactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="relative">
               <Image
-                src="/images/junk-mail-landfill.png"
-                alt="Junk mail piling up at a landfill facility"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-md w-full h-48 object-cover"
-              />
-            </div>
-            <div className="relative">
-              <Image
                 src="/images/mail-carrier-junk.jpg"
                 alt="Mail carrier delivering a bag full of junk mail"
                 width={400}
@@ -120,6 +111,15 @@ export default function EnvironmentalImpactPage() {
               <Image
                 src="/images/junk-mail-pile-large.jpg"
                 alt="Large pile of discarded junk mail and advertising"
+                width={400}
+                height={300}
+                className="rounded-lg shadow-md w-full h-48 object-cover"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/junk-mail-landfill.png"
+                alt="Junk mail piling up at a landfill facility"
                 width={400}
                 height={300}
                 className="rounded-lg shadow-md w-full h-48 object-cover"
