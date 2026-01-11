@@ -123,6 +123,21 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
+          <p className="mt-3 text-xs">
+            <Link
+              href="/privacy"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="mx-2">|</span>
+            <Link
+              href="/terms"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
+              Terms and Conditions
+            </Link>
+          </p>
           <p className="mt-4 text-xs text-gray-600 max-w-3xl mx-auto">
             ZeroJunkMail.org is for informational purposes only and is in no way
             associated or affiliated with the USPS, DMA, Taradel, IMS,
