@@ -95,17 +95,39 @@ export default function EnvironmentalImpactPage() {
           </p>
         </div>
 
-        {/* Image: Pile of junk mail */}
-        <div className="my-8 relative">
-          <Image
-            src="/images/junk-mail/eddm-pile-1.jpg"
-            alt="Pile of EDDM junk mail ready for recycling"
-            width={800}
-            height={500}
-            className="rounded-xl shadow-lg w-full object-cover"
-          />
-          <p className="text-sm text-gray-500 mt-2 text-center" style={{ color: "#6b7280" }}>
-            A typical week&apos;s worth of unsolicited EDDM mail destined for the recycling bin
+        {/* Image Grid: Environmental impact visuals */}
+        <div className="my-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="relative">
+              <Image
+                src="/images/junk-mail-landfill.png"
+                alt="Junk mail piling up at a landfill facility"
+                width={400}
+                height={300}
+                className="rounded-lg shadow-md w-full h-48 object-cover"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/mail-carrier-junk.jpg"
+                alt="Mail carrier delivering a bag full of junk mail"
+                width={400}
+                height={300}
+                className="rounded-lg shadow-md w-full h-48 object-cover"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/junk-mail-pile-large.jpg"
+                alt="Large pile of discarded junk mail and advertising"
+                width={400}
+                height={300}
+                className="rounded-lg shadow-md w-full h-48 object-cover"
+              />
+            </div>
+          </div>
+          <p className="text-sm text-gray-500 mt-3 text-center" style={{ color: "#6b7280" }}>
+            From delivery to landfill: the lifecycle of unwanted advertising mail
           </p>
         </div>
 
