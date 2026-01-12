@@ -38,7 +38,10 @@ const footerLinks = [
     links: [
       { href: "/take-action", label: "How to Help" },
       { href: PETITION_URL, label: "Sign Petition", external: true },
-      { href: "/reduce-junk-mail", label: "Reduce Junk Mail" },
+      { href: "/reduce-junk-mail", label: "Stop Junk Mail Guide" },
+      { href: "/opt-out-credit-offers", label: "Stop Credit Offers" },
+      { href: "/stop-catalog-mail", label: "Stop Catalogs" },
+      { href: "/stop-mail-deceased", label: "Deceased Mail" },
     ],
   },
   {
