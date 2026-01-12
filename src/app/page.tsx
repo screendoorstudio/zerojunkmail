@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { Testimonials } from "@/components/content/Testimonials";
+import { NewsFeed } from "@/components/content/NewsFeed";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
 import { STATISTICS, PETITION_URL, SITE_CONFIG } from "@/lib/constants/statistics";
@@ -265,6 +266,9 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <Testimonials />
+
+      {/* News Feed Section */}
+      <NewsFeed />
 
       {/* Why No Opt-Out Section */}
       <section className="py-16 px-4" style={{ backgroundColor: '#ffffff' }}>

@@ -37,6 +37,7 @@ const navigation: NavItem[] = [
       { href: "/why-you-cant-opt-out", label: "Why No Opt-Out?" },
       { href: "/environmental-impact", label: "Environmental Impact" },
       { href: "/legal-background", label: "Legal Background" },
+      { href: "/news", label: "News" },
       { href: "/faq", label: "FAQ" },
       { href: "/resources", label: "Resources" },
     ],

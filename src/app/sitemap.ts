@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/why-you-cant-opt-out", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/environmental-impact", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/legal-background", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/news", priority: 0.8, changeFrequency: "daily" as const },
     { path: "/take-action", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/reduce-junk-mail", priority: 1.0, changeFrequency: "weekly" as const },
     { path: "/opt-out-credit-offers", priority: 0.9, changeFrequency: "monthly" as const },
