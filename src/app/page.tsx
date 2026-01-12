@@ -3,11 +3,40 @@ import Image from "next/image";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { Testimonials } from "@/components/content/Testimonials";
-import { STATISTICS, PETITION_URL } from "@/lib/constants/statistics";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
+import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
+import { STATISTICS, PETITION_URL, SITE_CONFIG } from "@/lib/constants/statistics";
+
+const homeFAQs: FAQItem[] = [
+  {
+    question: "Can I put a 'No Junk Mail' sign on my mailbox?",
+    answer:
+      "You can, but it has no legal effect. USPS carriers are instructed to deliver EDDM mail regardless of any signs or stickers on the mailbox.",
+  },
+  {
+    question: "What about the DMAchoice mail preference service?",
+    answer:
+      "DMAchoice only works for addressed mail from participating companies. It has zero effect on EDDM or any other saturation mail programs.",
+  },
+  {
+    question: "How do I stop junk mail?",
+    answer:
+      "While EDDM cannot be stopped, you can reduce other junk mail by using OptOutPrescreen.com for credit offers, DMAchoice.org for catalogs, and services like Catalog Choice or PaperKarma. These won't stop EDDM, but can significantly reduce addressed advertising mail.",
+  },
+  {
+    question: "Do other countries allow people to opt out?",
+    answer:
+      "Yes. Many European countries, including the Netherlands and Germany, have opt-in systems where you only receive advertising mail if you explicitly request it.",
+  },
+];
 
 export default function HomePage() {
+  const faqSchema = generateFAQSchema(homeFAQs);
+
   return (
     <>
+      <SchemaMarkup schema={[faqSchema]} />
+
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center">
         {/* Background Image */}
@@ -61,6 +90,15 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
+            <p className="mt-4 text-sm" style={{ color: "#9ca3af" }}>
+              <Link
+                href="/reduce-junk-mail"
+                className="hover:text-white underline transition-colors"
+                style={{ color: "#9ca3af" }}
+              >
+                Learn what junk mail you CAN stop →
+              </Link>
+            </p>
           </div>
 
           {/* EDDM Sample Image */}
@@ -192,6 +230,13 @@ export default function HomePage() {
               source={STATISTICS.water.source}
               color="blue"
             />
+            <StatCard
+              value={STATISTICS.timeSorting.shortValue}
+              label={STATISTICS.timeSorting.label}
+              description={STATISTICS.timeSorting.description}
+              source={STATISTICS.timeSorting.source}
+              color="amber"
+            />
           </StatGrid>
           <div className="text-center mt-8">
             <Link
@@ -308,36 +353,20 @@ export default function HomePage() {
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            <div className="border-b pb-6" style={{ borderColor: '#e5e7eb' }}>
-              <h3 className="text-lg font-semibold mb-2" style={{ color: '#111827' }}>
-                Can I put a &quot;No Junk Mail&quot; sign on my mailbox?
-              </h3>
-              <p style={{ color: '#4b5563' }}>
-                You can, but it has no legal effect. USPS carriers are
-                instructed to deliver EDDM mail regardless of any signs or
-                stickers on the mailbox.
-              </p>
-            </div>
-            <div className="border-b pb-6" style={{ borderColor: '#e5e7eb' }}>
-              <h3 className="text-lg font-semibold mb-2" style={{ color: '#111827' }}>
-                What about the DMAchoice mail preference service?
-              </h3>
-              <p style={{ color: '#4b5563' }}>
-                DMAchoice only works for addressed mail from participating
-                companies. It has zero effect on EDDM or any other saturation
-                mail programs.
-              </p>
-            </div>
-            <div className="pb-6">
-              <h3 className="text-lg font-semibold mb-2" style={{ color: '#111827' }}>
-                Do other countries allow people to opt out?
-              </h3>
-              <p style={{ color: '#4b5563' }}>
-                Yes. Many European countries, including the Netherlands and
-                Germany, have opt-in systems where you only receive advertising
-                mail if you explicitly request it.
-              </p>
-            </div>
+            {homeFAQs.map((faq, index) => (
+              <div
+                key={index}
+                className={index < homeFAQs.length - 1 ? "border-b pb-6" : "pb-6"}
+                style={index < homeFAQs.length - 1 ? { borderColor: '#e5e7eb' } : {}}
+              >
+                <h3 className="text-lg font-semibold mb-2" style={{ color: '#111827' }}>
+                  {faq.question}
+                </h3>
+                <p style={{ color: '#4b5563' }}>
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
           <div className="text-center mt-8">
             <Link

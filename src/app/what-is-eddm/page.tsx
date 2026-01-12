@@ -97,8 +97,7 @@ export default function WhatIsEDDMPage() {
           <h2>How Does EDDM Work?</h2>
           <p>
             Unlike traditional direct mail, EDDM doesn&apos;t require advertisers to
-            purchase mailing lists or know individual recipient names. Instead,
-            businesses simply:
+            purchase mailing lists or know individual recipient names. <strong>This is the critical difference: there is no mailing list to opt out of.</strong> If you have a mailbox, you receive EDDM mail. Period. Businesses simply:
           </p>
           <ul>
             <li>Select zip codes or carrier routes they want to target</li>
@@ -108,12 +107,12 @@ export default function WhatIsEDDMPage() {
             </li>
             <li>Bundle the pieces and deliver them to their local post office</li>
             <li>
-              Pay discounted postage rates (approximately $0.20-0.23 per piece)
+              Pay discounted postage rates (approximately $0.20-0.23 per piece)—far cheaper than regular postage
             </li>
           </ul>
           <p>
             The USPS then delivers one piece to every address on the selected
-            routes—whether the resident wants it or not.
+            routes—whether the resident wants it or not. At under 25 cents per piece, EDDM is incredibly affordable for advertisers, which explains why billions of pieces flood American mailboxes each year.
           </p>
 
           <h2>What Does ECRWSS Mean?</h2>
@@ -286,6 +285,14 @@ export default function WhatIsEDDMPage() {
                 className="text-blue-600 hover:text-blue-700"
               >
                 What You Can Do About It →
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resources"
+                className="text-blue-600 hover:text-blue-700"
+              >
+                Resources &amp; Organizations →
               </Link>
             </li>
           </ul>

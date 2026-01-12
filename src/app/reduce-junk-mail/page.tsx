@@ -12,19 +12,22 @@ import {
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "How to Reduce Junk Mail: Complete Opt-Out Guide",
+  title: "How to Stop Junk Mail in 2025 | Complete Opt-Out Guide",
   description:
-    "Step-by-step guide to reducing junk mail. Opt out of credit offers, catalogs, coupon mailers, and charity requests. While EDDM mail cannot be stopped, these tips can significantly reduce your mailbox clutter.",
+    "Stop junk mail with this step-by-step guide. Opt out of credit offers, catalogs, and coupon mailers for free. Learn which services actually work and what mail you can't stop.",
   keywords: [
-    "reduce junk mail",
     "stop junk mail",
-    "opt out mail",
+    "how to stop junk mail",
+    "reduce junk mail",
+    "opt out junk mail",
     "DMAchoice",
     "OptOutPrescreen",
     "CatalogChoice",
+    "PaperKarma",
     "stop catalogs",
     "stop credit card offers",
     "junk mail opt out",
+    "do not mail",
   ],
 };
 
@@ -58,7 +61,7 @@ const faqs: FAQItem[] = [
 
 export default function ReduceJunkMailPage() {
   const articleSchema = generateArticleSchema({
-    title: "How to Reduce Junk Mail: Complete Opt-Out Guide",
+    title: "How to Stop Junk Mail in 2025 | Complete Opt-Out Guide",
     description: metadata.description as string,
     datePublished: "2024-01-01",
     dateModified: new Date().toISOString().split("T")[0],
@@ -96,13 +99,13 @@ export default function ReduceJunkMailPage() {
         </nav>
 
         {/* TL;DR Box */}
-        <TLDRBox summary="While you cannot stop EDDM mail addressed to 'Postal Customer,' you can significantly reduce other junk mail. Start with OptOutPrescreen.com (free, stops credit offers) and DMAchoice.org ($4-6, stops catalogs and marketing mail). Add CatalogChoice.org (free) for specific catalogs and contact coupon mailers directly. Expect 30-90 days for results." />
+        <TLDRBox summary="You can stop 80-90% of addressed junk mail using free services. Start with OptOutPrescreen.com (stops credit offers) and DMAchoice.org ($4-6, stops catalogs). Add CatalogChoice.org and PaperKarma for stragglers. Combined, these services have processed over 12 million opt-out requests. Expect 30-90 days for results. Important: None of these can stop EDDM 'Postal Customer' mail." />
 
         <h1
           className="text-4xl font-bold text-gray-900 mb-6"
           style={{ color: "#111827" }}
         >
-          How to Reduce Junk Mail: A Complete Guide
+          How to Stop Junk Mail: Complete Opt-Out Guide
         </h1>
 
         {/* Important Warning */}
@@ -132,9 +135,7 @@ export default function ReduceJunkMailPage() {
 
         <div className="prose max-w-none">
           <p style={{ color: "#374151" }}>
-            While we fight for a comprehensive Do Not Mail registry, you can
-            take steps to reduce the junk mail you receive. Follow these steps
-            in order for maximum effect.
+            <strong>Want to stop junk mail?</strong> You&apos;re not alone—Americans receive an average of 848 pieces of junk mail per household every year, spending up to 8 months of their lives sorting through it. While we fight for a comprehensive Do Not Mail registry, you can take steps right now to stop most of the junk mail you receive. Follow these steps in order for maximum effect—most people see an 80-95% reduction within 2-3 months.
           </p>
 
           {/* STEP 1 */}
@@ -414,9 +415,8 @@ export default function ReduceJunkMailPage() {
                   <strong>CatalogChoice.org</strong> — Free nonprofit service
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  CatalogChoice is a free service from The Story of Stuff
-                  Project that lets you opt out of specific catalogs one at a
-                  time. They have nearly 10,000 mailers in their database.
+                  CatalogChoice is a free nonprofit service from The Story of Stuff
+                  Project. Over the past 8 years, they&apos;ve helped more than 2 million users reduce junk mail and saved half a million trees in the process. They have nearly 10,000 mailers in their database.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -660,14 +660,15 @@ export default function ReduceJunkMailPage() {
             <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
               PaperKarma is a mobile app that makes opting out easy: snap a
               photo of unwanted mail and they contact the sender on your behalf.
-              Available for iOS and Android.
+              With over 10.3 million opt-out requests processed and a 90% effectiveness rate, it&apos;s the largest Do Not Mail registry in the USA.
             </p>
             <ul
               className="list-disc pl-5 space-y-1 text-gray-700 mb-4"
               style={{ color: "#374151" }}
             >
-              <li>Works with 100,000+ mailers</li>
-              <li>4 free opt-out requests, then subscription required</li>
+              <li>Largest database: 100,000+ mailers (10x more than other services)</li>
+              <li>Subscription-based after initial free requests</li>
+              <li>Available for iOS and Android</li>
               <li>
                 <strong>Cannot stop EDDM</strong> (&quot;Postal Customer&quot;
                 mail)
@@ -704,9 +705,7 @@ export default function ReduceJunkMailPage() {
                 Return to Sender
               </h4>
               <p style={{ color: "#374151" }}>
-                For first-class mail, write &quot;Refused - Return to
-                Sender&quot; and place it back in your mailbox. This does{" "}
-                <strong>not</strong> work for EDDM or standard mail.
+                For first-class mail or mail with endorsements like &quot;Address Correction Requested&quot; or &quot;Return Postage Guaranteed,&quot; write &quot;REFUSED - RETURN TO SENDER&quot; on the unopened envelope and place it back in your mailbox. Mail to &quot;Resident&quot; or &quot;Current Occupant&quot; <strong>can</strong> be refused if it contains one of these endorsements or is sent First Class. However, this does <strong>not</strong> work for standard EDDM mail without endorsements.
               </p>
             </div>
 
@@ -1112,6 +1111,15 @@ export default function ReduceJunkMailPage() {
                 style={{ color: "#2563eb" }}
               >
                 Take Action →
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resources"
+                className="text-blue-600 hover:text-blue-700"
+                style={{ color: "#2563eb" }}
+              >
+                Resources: Opt-Out Services &amp; Organizations →
               </Link>
             </li>
           </ul>

@@ -51,6 +51,55 @@ export const STATISTICS = {
     description: "Number of EDDM mail pieces delivered each year",
     source: "USPS",
   },
+  piecesPerHousehold: {
+    value: "848",
+    shortValue: "848",
+    label: "pieces per household/year",
+    description: "Average junk mail pieces received per American household annually",
+    source: "VoLo Foundation",
+  },
+  timeSorting: {
+    value: "8 Months",
+    shortValue: "8 mo",
+    label: "of life sorting junk mail",
+    description: "Time the average American spends sorting junk mail over their lifetime",
+    source: "Eco-Cycle",
+  },
+  globalJunkPercentage: {
+    value: "33%",
+    shortValue: "33%",
+    label: "of mail is junk",
+    description: "Percentage of all delivered mail globally that is junk mail",
+    source: "VoLo Foundation",
+  },
+  catalogChoiceUsers: {
+    value: "2 Million",
+    shortValue: "2M",
+    label: "users helped",
+    description: "Number of people helped by Catalog Choice over 8 years",
+    source: "Story of Stuff Project",
+  },
+  paperKarmaRequests: {
+    value: "10.3 Million",
+    shortValue: "10.3M",
+    label: "opt-out requests",
+    description: "Number of opt-out requests processed by PaperKarma",
+    source: "PaperKarma",
+  },
+  treesPerHousehold: {
+    value: "1.5",
+    shortValue: "1.5",
+    label: "trees per household/year",
+    description: "Trees consumed per household annually for junk mail",
+    source: "VoLo Foundation",
+  },
+  carEquivalent: {
+    value: "9 Million",
+    shortValue: "9M",
+    label: "cars equivalent",
+    description: "CO2 emissions from junk mail equal to this many passenger vehicles",
+    source: "VoLo Foundation",
+  },
 } as const;
 
 export const PETITION_URL = "https://www.change.org/p/united-states-postal-service-do-not-deliver-u-s-postal-service-eddm-junk-mail";

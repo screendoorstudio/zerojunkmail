@@ -194,8 +194,7 @@ export default function WhyYouCantOptOutPage() {
           </ul>
           <p>
             Yet <strong>no equivalent protection exists for postal mail</strong>.
-            Several &quot;Do Not Mail&quot; bills have been proposed in Congress over the
-            years, but none have passed. Why?
+            In 2007-2008, <strong>18 states</strong> introduced &quot;Do Not Mail&quot; bills to create state-level opt-out registries: Arkansas, Colorado, Connecticut, Hawaii, Illinois, Maryland, Michigan, Missouri, Montana, New Hampshire, New Jersey, New York, North Carolina, Rhode Island, Tennessee, Texas, Vermont, and Washington. Every single bill was withdrawn or defeated after intense industry opposition.
           </p>
 
           <h2>Follow the Money: USPS Revenue Dependency</h2>
@@ -226,18 +225,16 @@ export default function WhyYouCantOptOutPage() {
 
           <h2>Industry Lobbying</h2>
           <p>
-            The direct mail industry is a powerful lobbying force. Organizations
-            like the Data & Marketing Association (DMA) actively oppose Do Not
-            Mail legislation, arguing that:
+            The direct mail industry is a powerful lobbying force. In 2007, when state-level Do Not Mail bills gained momentum, the Data &amp; Marketing Association formed the <strong>Mail Moves America (MMA)</strong> coalition to fight the legislation. Their arguments:
           </p>
           <ul>
-            <li>Direct mail supports jobs in printing and postal industries</li>
+            <li>Job losses for mail carriers and postal workers</li>
+            <li>Devastating effects on retailers, printers, and manufacturers</li>
+            <li>Increased postal rates for all consumers</li>
             <li>Small businesses depend on EDDM for local advertising</li>
-            <li>Consumers can simply &quot;throw away&quot; unwanted mail</li>
           </ul>
           <p>
-            This lobbying has successfully blocked every Do Not Mail bill
-            introduced in Congress.
+            The campaign was remarkably effective. All 18 state bills were withdrawn, and no federal legislation has gained traction since. Meanwhile, the industry continues to lobby against any consumer opt-out mechanism.
           </p>
 
           <h2>What About Rowan v. Post Office?</h2>
@@ -291,7 +288,7 @@ export default function WhyYouCantOptOutPage() {
           <ul>
             <li>
               <strong>Netherlands:</strong> Opt-in system with &quot;JA/JA&quot; stickers—
-              you only receive advertising mail if you request it
+              you only receive advertising mail if you request it. Amsterdam&apos;s implementation achieved a <strong>30% reduction</strong> in advertising mail volume.
             </li>
             <li>
               <strong>Germany:</strong> &quot;Keine Werbung&quot; (No Advertising) stickers
@@ -305,7 +302,7 @@ export default function WhyYouCantOptOutPage() {
           <p>
             These models prove that consumer choice and postal services can
             coexist. The US simply hasn&apos;t chosen to implement similar
-            protections.
+            protections—despite 18 years of consumer advocacy efforts.
           </p>
         </div>
 
@@ -342,6 +339,14 @@ export default function WhyYouCantOptOutPage() {
             </li>
             <li>
               <Link
+                href="/reduce-junk-mail"
+                className="text-blue-600 hover:text-blue-700"
+              >
+                How to Stop the Mail You Can Control →
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/legal-background"
                 className="text-blue-600 hover:text-blue-700"
               >
@@ -350,10 +355,10 @@ export default function WhyYouCantOptOutPage() {
             </li>
             <li>
               <Link
-                href="/solutions"
+                href="/resources"
                 className="text-blue-600 hover:text-blue-700"
               >
-                Proposed Solutions →
+                Resources &amp; Organizations →
               </Link>
             </li>
           </ul>

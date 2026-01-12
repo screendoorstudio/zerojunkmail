@@ -88,10 +88,13 @@ export default function EnvironmentalImpactPage() {
         <div className="prose max-w-none">
           <p>
             Every year, the junk mail industry leaves an enormous environmental
-            footprint that most Americans never see. From the forests cleared to
+            footprint that most Americans never see. The average American household receives <strong>848 pieces of junk mail annually</strong>—equivalent to 1.5 trees per household. Globally, <strong>33% of all delivered mail is junk mail</strong>. From the forests cleared to
             produce paper, to the fuel burned transporting billions of mail
             pieces, to the energy consumed disposing of unwanted advertisements—
             the true cost of unsolicited mail extends far beyond your mailbox.
+          </p>
+          <p>
+            Perhaps most absurdly, Americans spend an estimated <strong>8 months of their lives</strong> sorting through junk mail. That&apos;s time stolen from families, hobbies, and meaningful work—all so companies can send advertisements most people don&apos;t want.
           </p>
         </div>
 
@@ -237,7 +240,7 @@ export default function EnvironmentalImpactPage() {
           <p>
             Paper production is extraordinarily water-intensive. The junk mail
             industry consumes approximately{" "}
-            <strong>28 billion gallons of water</strong> annually for:
+            <strong>28 billion gallons of water</strong> annually—enough to fill over <strong>42,000 Olympic swimming pools</strong>. This water is used for:
           </p>
           <ul>
             <li>Pulping and fiber processing</li>
@@ -388,10 +391,10 @@ export default function EnvironmentalImpactPage() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/solutions"
+                href="/reduce-junk-mail"
                 className="text-blue-600 hover:text-blue-700"
               >
-                Proposed Solutions →
+                How to Stop Junk Mail →
               </Link>
             </li>
             <li>
@@ -408,6 +411,14 @@ export default function EnvironmentalImpactPage() {
                 className="text-blue-600 hover:text-blue-700"
               >
                 Why You Can&apos;t Opt Out →
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resources"
+                className="text-blue-600 hover:text-blue-700"
+              >
+                Resources &amp; Organizations →
               </Link>
             </li>
           </ul>

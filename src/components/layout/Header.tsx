@@ -38,6 +38,7 @@ const navigation: NavItem[] = [
       { href: "/environmental-impact", label: "Environmental Impact" },
       { href: "/legal-background", label: "Legal Background" },
       { href: "/faq", label: "FAQ" },
+      { href: "/resources", label: "Resources" },
     ],
   },
   {
