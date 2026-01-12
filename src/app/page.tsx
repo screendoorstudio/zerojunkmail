@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
+import { TrackedPetitionLink } from "@/components/cta/TrackedPetitionLink";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { Testimonials } from "@/components/content/Testimonials";
 import { NewsFeed } from "@/components/content/NewsFeed";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { STATISTICS, PETITION_URL, SITE_CONFIG } from "@/lib/constants/statistics";
+import { STATISTICS, SITE_CONFIG } from "@/lib/constants/statistics";
 
 const homeFAQs: FAQItem[] = [
   {
@@ -74,15 +75,13 @@ export default function HomePage() {
               no right to stop it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={PETITION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <TrackedPetitionLink
+                label="homepage-hero"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
                 style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
               >
                 Sign the Petition
-              </a>
+              </TrackedPetitionLink>
               <Link
                 href="/what-is-eddm"
                 className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/30 text-center"

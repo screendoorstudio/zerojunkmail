@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
+import { TrackedPetitionLink } from "@/components/cta/TrackedPetitionLink";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
-import { SITE_CONFIG, PETITION_URL } from "@/lib/constants/statistics";
+import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
   title: "Take Action to Stop Junk Mail",
@@ -77,13 +78,12 @@ export default function TakeActionPage() {
           </p>
           <ul>
             <li>
-              <a
-                href={PETITION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <TrackedPetitionLink
+                label="take-action-inline"
+                className="text-blue-600 hover:text-blue-700 underline"
               >
                 Sign the petition on Change.org
-              </a>
+              </TrackedPetitionLink>
             </li>
             <li>Share it on social media with your own story</li>
             <li>
@@ -252,14 +252,12 @@ export default function TakeActionPage() {
             The most important step is the first one. Sign the petition today
             and add your voice to the growing demand for mail choice.
           </p>
-          <a
-            href={PETITION_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <TrackedPetitionLink
+            label="take-action-final"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-colors"
           >
             Sign the Petition Now
-          </a>
+          </TrackedPetitionLink>
         </div>
 
         {/* Related Links */}

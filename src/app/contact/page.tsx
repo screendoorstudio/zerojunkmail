@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { TrackedPetitionLink } from "@/components/cta/TrackedPetitionLink";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
 } from "@/lib/schema/article";
-import { SITE_CONFIG, PETITION_URL } from "@/lib/constants/statistics";
+import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
   title: "Contact Zero Junk Mail",
@@ -107,10 +108,8 @@ export default function ContactPage() {
               The most impactful thing you can do is sign and share the
               petition. Every signature adds pressure for change.
             </p>
-            <a
-              href={PETITION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <TrackedPetitionLink
+              label="contact-action"
               className="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
             >
@@ -128,7 +127,7 @@ export default function ContactPage() {
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                 />
               </svg>
-            </a>
+            </TrackedPetitionLink>
           </div>
 
           {/* Share Your Story */}
@@ -167,10 +166,8 @@ export default function ContactPage() {
               experience trying to opt out? Share your story on the petition
               page.
             </p>
-            <a
-              href={PETITION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <TrackedPetitionLink
+              label="contact-story"
               className="inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-800 transition-colors"
               style={{ color: "#15803d" }}
             >
@@ -188,7 +185,7 @@ export default function ContactPage() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </a>
+            </TrackedPetitionLink>
           </div>
         </div>
 
