@@ -45,6 +45,7 @@ const navigation: NavItem[] = [
   {
     label: "Take Action",
     children: [
+      { href: "/eddm-do-not-deliver", label: "Do Not Deliver Tool" },
       { href: "/take-action", label: "How to Help" },
       { href: PETITION_URL, label: "Sign Petition", external: true },
       { href: "/reduce-junk-mail", label: "Stop Junk Mail Guide" },
