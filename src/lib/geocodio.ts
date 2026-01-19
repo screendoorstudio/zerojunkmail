@@ -31,10 +31,13 @@ export interface GeocodioResult {
     source: string;
     fields?: {
       zip4?: {
-        zip4: string;
-        carrier_route: string;
-        check_digit: number;
-        record_type: {
+        plus4?: string[];
+        zip9?: string[];
+        carrier_route?: {
+          id: string;
+          description: string;
+        };
+        record_type?: {
           code: string;
           description: string;
         };
@@ -104,15 +107,17 @@ export async function lookupCarrierRoute(
     const result = data.results[0];
 
     // Check if carrier route is available
-    const carrierRoute = result.fields?.zip4?.carrier_route;
+    const carrierRouteData = result.fields?.zip4?.carrier_route;
 
-    if (!carrierRoute) {
+    if (!carrierRouteData?.id) {
       return {
         success: false,
         error:
           "Carrier route information not available for this address. This may be a PO Box or business address.",
       };
     }
+
+    const carrierRoute = carrierRouteData.id;
 
     return {
       success: true,
