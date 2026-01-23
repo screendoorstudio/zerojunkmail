@@ -107,7 +107,7 @@ export const PETITION_URL = "https://www.change.org/p/united-states-postal-servi
 export const SITE_CONFIG = {
   name: "Zero Junk Mail",
   tagline: "End Unwanted USPS Advertising Mail",
-  description: "The authoritative resource on EDDM (Every Door Direct Mail) and why consumers cannot opt out of USPS junk mail. Learn about the environmental impact, taxpayer costs, and how to take action.",
+  description: "Learn why consumers can't opt out of USPS EDDM junk mail, its environmental impact, taxpayer costs, and how to take action.",
   url: "https://zerojunkmail.org",
   twitter: "@zerojunkmail",
 } as const;
