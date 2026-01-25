@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/opt-out-credit-offers", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/stop-catalog-mail", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/stop-mail-deceased", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/data-broker-opt-out", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/faq", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/resources", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },

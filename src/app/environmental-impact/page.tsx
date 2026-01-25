@@ -10,17 +10,24 @@ import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/ar
 import { SITE_CONFIG, STATISTICS } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "Environmental Impact of Junk Mail",
+  title: "Environmental Impact of Junk Mail | 100 Million Trees Destroyed",
   description:
-    "Junk mail destroys 100 million trees annually, produces 51.5 million metric tons of CO2, and consumes 28 billion gallons of water. Learn the full environmental cost of USPS advertising mail.",
+    "Junk mail destroys 100 million trees annually, produces 51.5 million metric tons of CO2, and consumes 28 billion gallons of water. 44% is thrown away unopened. Learn the full environmental cost.",
   keywords: [
     "junk mail environmental impact",
-    "paper waste",
+    "how many trees for junk mail",
     "junk mail trees",
+    "100 million trees junk mail",
     "junk mail carbon footprint",
+    "junk mail waste statistics",
+    "junk mail landfill",
+    "paper waste junk mail",
+    "junk mail pollution",
     "advertising mail waste",
     "mail recycling",
     "sustainability",
+    "junk mail water consumption",
+    "taxpayer disposal cost junk mail",
   ],
 };
 
@@ -28,17 +35,32 @@ const faqs: FAQItem[] = [
   {
     question: "How many trees are cut down for junk mail each year?",
     answer:
-      "Approximately 80-100 million trees are cut down annually to produce junk mail in the United States, according to the Center for Development of Recycling.",
+      "Approximately 80-100 million trees are cut down annually to produce junk mail in the United States, according to the Center for Development of Recycling. If these trees were left standing, they would absorb approximately 1.7 million tons of CO2 per year.",
   },
   {
     question: "What is the carbon footprint of junk mail?",
     answer:
-      "Junk mail production, transportation, and disposal generates approximately 51.5 million metric tons of CO2 equivalent greenhouse gases per year, according to VoLo Foundation research.",
+      "Junk mail production, transportation, and disposal generates approximately 51.5 million metric tons of CO2 equivalent greenhouse gases per year—equivalent to the annual emissions of about 11 million cars, according to VoLo Foundation research.",
+  },
+  {
+    question: "How much water does junk mail production use?",
+    answer:
+      "Junk mail production consumes approximately 28 billion gallons of water annually in the United States, according to ForestEthics. This water is used in paper manufacturing, pulping, and printing processes.",
+  },
+  {
+    question: "How much junk mail ends up in landfills?",
+    answer:
+      "Approximately 44% of junk mail is thrown away without ever being opened. The EPA estimates that 4 million tons of junk mail end up in landfills each year, with 60% of unsolicited mail never being recycled.",
+  },
+  {
+    question: "How much do taxpayers pay to dispose of junk mail?",
+    answer:
+      "Local governments spend approximately $320 million per year disposing of junk mail that ends up in municipal waste streams. Transporting junk mail costs an additional $550 million annually. These costs are borne by taxpayers, not the companies sending the mail.",
   },
   {
     question: "Is recycling junk mail a solution?",
     answer:
-      "Recycling helps reduce landfill waste, but it doesn't address the upstream environmental damage: trees cut, water consumed, and emissions produced in manufacturing. Prevention is far more effective than recycling.",
+      "Recycling helps reduce landfill waste, but it doesn't address the upstream environmental damage: trees cut, water consumed, and emissions produced in manufacturing. Additionally, junk mail inks often contain heavy metals that complicate recycling. Prevention is far more effective than recycling.",
   },
 ];
 

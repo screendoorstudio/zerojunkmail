@@ -9,17 +9,26 @@ import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/ar
 import { SITE_CONFIG, STATISTICS } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "What is EDDM (Every Door Direct Mail)?",
+  title: "What is EDDM (Every Door Direct Mail)? | ECRWSS Explained",
   description:
-    "EDDM (Every Door Direct Mail) is a USPS program that delivers advertising mail to every address in a postal route. Learn how EDDM works, what ECRWSS means, and why you receive junk mail marked 'Postal Customer.'",
+    "EDDM (Every Door Direct Mail) is a USPS program that delivers advertising mail to every address. Learn what ECRWSS means, why mail says 'Postal Customer,' and why you can't opt out of saturation mail.",
   keywords: [
     "EDDM",
+    "what is EDDM",
     "Every Door Direct Mail",
     "ECRWSS",
+    "what does ECRWSS mean",
+    "ECRWSS meaning",
     "Postal Customer mail",
+    "Current Resident mail",
     "USPS saturation mail",
     "bulk mail",
     "carrier route mail",
+    "EDDM opt out",
+    "can I stop EDDM",
+    "saturation mailing",
+    "USPS marketing mail",
+    "junk mail addressed to postal customer",
   ],
 };
 
@@ -27,17 +36,37 @@ const faqs: FAQItem[] = [
   {
     question: "What does ECRWSS mean on my mail?",
     answer:
-      "ECRWSS stands for 'Enhanced Carrier Route Walking Sequence Saturation.' It means the mail piece is being delivered to every address on a postal carrier's route. This is the technical term for EDDM mail.",
+      "ECRWSS stands for 'Enhanced Carrier Route Walking Sequence Saturation.' It means the mail piece is being delivered to every address on a postal carrier's route. This is the technical designation for EDDM saturation mail. You may also see variations like ECRWSS EDDM, ECRLOT (Line of Travel), or ECRWSH (High-Density).",
   },
   {
     question: "Why does my mail say 'Postal Customer' instead of my name?",
     answer:
-      "Mail addressed to 'Postal Customer' or 'Resident' is EDDM saturation mail. Advertisers don't need your name or address—they simply pay to have mail delivered to every home in a zip code or carrier route.",
+      "Mail addressed to 'Postal Customer,' 'Resident,' 'Current Resident,' or 'Current Occupant' is EDDM saturation mail. Advertisers don't need your name or address—they simply pay to have mail delivered to every home in a zip code or carrier route. This generic addressing is why you cannot refuse or return this mail.",
   },
   {
     question: "How much does EDDM cost advertisers?",
     answer:
-      "EDDM postage rates are heavily discounted, typically around $0.20-0.23 per piece—far less than regular mail. This low cost incentivizes mass mailings and makes saturation advertising economically attractive.",
+      "EDDM postage rates are heavily discounted, typically around $0.20-0.25 per piece—far less than regular first-class mail. This low cost incentivizes mass mailings and makes saturation advertising economically attractive for local businesses.",
+  },
+  {
+    question: "Can I opt out of EDDM mail?",
+    answer:
+      "No. There is currently no legal mechanism to opt out of EDDM or saturation mail in the United States. Unlike spam email or robocalls, postal advertising has no federal opt-out registry. Services like DMAchoice and CatalogChoice only work for addressed mail—not EDDM.",
+  },
+  {
+    question: "Can I refuse EDDM mail or return it to sender?",
+    answer:
+      "No. You can only refuse mail addressed to you personally. Since EDDM mail is addressed to 'Postal Customer' rather than your name, the USPS does not accept refusals. Writing 'Refused' or 'Return to Sender' will have no effect.",
+  },
+  {
+    question: "What is the difference between EDDM and regular junk mail?",
+    answer:
+      "Regular addressed junk mail uses your name and address from mailing lists—you can opt out by removing yourself from these lists. EDDM requires no mailing list at all—it's delivered to every address on a route. There's no list to remove yourself from, which is why EDDM cannot be stopped.",
+  },
+  {
+    question: "How many EDDM pieces are sent each year?",
+    answer:
+      "The USPS processes approximately 3 billion EDDM mail pieces annually. When combined with other advertising mail programs, Americans receive over 80 billion pieces of marketing mail each year—the majority of which goes directly to recycling or trash.",
   },
 ];
 

@@ -51,6 +51,7 @@ const navigation: NavItem[] = [
       { href: "/reduce-junk-mail", label: "Stop Junk Mail Guide" },
       { href: "/opt-out-credit-offers", label: "Stop Credit Offers" },
       { href: "/stop-catalog-mail", label: "Stop Catalogs" },
+      { href: "/data-broker-opt-out", label: "Data Broker Opt-Out" },
       { href: "/stop-mail-deceased", label: "Deceased Mail" },
     ],
   },

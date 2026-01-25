@@ -150,6 +150,71 @@ export default function NewsPage() {
           </div>
         </section>
 
+        {/* Historical Archive CTA */}
+        <section
+          className="py-8 bg-gradient-to-r from-gray-800 to-gray-900"
+          style={{
+            background: "linear-gradient(to right, #1f2937, #111827)",
+          }}
+        >
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <svg
+                className="w-8 h-8 text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style={{ color: "#facc15" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+              <h2
+                className="text-xl font-bold text-white"
+                style={{ color: "#ffffff" }}
+              >
+                55 Years of Junk Mail History
+              </h2>
+            </div>
+            <p
+              className="text-gray-300 mb-4"
+              style={{ color: "#d1d5db" }}
+            >
+              Explore our comprehensive archive spanning from the 1970 Supreme Court decision to today&apos;s EDDM controversy.
+            </p>
+            <Link
+              href="/news/archive"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
+              style={{ backgroundColor: "#facc15", color: "#111827" }}
+            >
+              Browse Full Archive
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </Link>
+            <p
+              className="mt-3 text-sm text-gray-400"
+              style={{ color: "#9ca3af" }}
+            >
+              50+ articles across 8 categories
+            </p>
+          </div>
+        </section>
+
         {/* Curated Archive Section */}
         <section
           className="py-12 bg-gray-50"

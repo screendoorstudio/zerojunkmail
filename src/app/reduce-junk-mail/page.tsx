@@ -15,20 +15,43 @@ import { SITE_CONFIG } from "@/lib/constants/statistics";
 export const metadata: Metadata = {
   title: "How to Stop Junk Mail in 2025 | Complete Opt-Out Guide",
   description:
-    "Stop junk mail with this step-by-step guide. Opt out of credit offers, catalogs, and coupon mailers for free. Learn which services actually work and what mail you can't stop.",
+    "Stop junk mail permanently with this step-by-step guide. Use OptOutPrescreen, DMAchoice, CatalogChoice, and more to reduce unwanted mail by 80-90%. Free and paid methods compared.",
   keywords: [
-    "stop junk mail",
     "how to stop junk mail",
+    "stop junk mail",
+    "how to stop junk mail permanently",
     "reduce junk mail",
     "opt out junk mail",
+    "stop unwanted mail",
+    "get rid of junk mail",
+    "junk mail opt out",
+    "do not mail list",
+    "do not mail registry",
     "DMAchoice",
+    "dmachoice.org",
     "OptOutPrescreen",
+    "optoutprescreen.com",
+    "1-888-5-optout",
     "CatalogChoice",
     "PaperKarma",
+    "paperkarma alternative",
     "stop catalogs",
+    "how to stop catalogs",
     "stop credit card offers",
-    "junk mail opt out",
-    "do not mail",
+    "how to stop credit card offers in mail",
+    "stop prescreened offers",
+    "pre-approved credit card offers stop",
+    "stop valpak",
+    "valpak opt out",
+    "redplum opt out",
+    "stop charity mail",
+    "stop political mail",
+    "yellowpagesoptout",
+    "stop phone book delivery",
+    "data broker opt out",
+    "return to sender junk mail",
+    "refuse junk mail",
+    "mail preference service",
   ],
 };
 
@@ -51,12 +74,37 @@ const faqs: FAQItem[] = [
   {
     question: "Can I opt out of political mail?",
     answer:
-      "Political mail is largely exempt from opt-out services. Political campaigns and advocacy groups are not required to honor DMAchoice or other opt-out requests. You can try contacting campaigns directly, but compliance is voluntary.",
+      "Political mail is largely exempt from opt-out services due to First Amendment protections. Political campaigns and advocacy groups are not required to honor DMAchoice or other opt-out requests. You can try voting early (campaigns often stop mailing once you've voted) or contacting campaigns directly.",
   },
   {
     question: "What about mail for previous residents?",
     answer:
       "Write 'Return to Sender - No Longer at This Address' on first-class mail and place it back in your mailbox. For standard mail, you can mark it 'Refused' but the USPS may not return it. Register the previous resident's name at DMAchoice if possible.",
+  },
+  {
+    question: "Is OptOutPrescreen legitimate and safe?",
+    answer:
+      "Yes. OptOutPrescreen.com is the official website operated by Equifax, Experian, TransUnion, and Innovis—the major consumer credit bureaus. It's the only authorized way to opt out of prescreened credit and insurance offers. The phone number 1-888-5-OPTOUT (1-888-567-8688) is also legitimate.",
+  },
+  {
+    question: "What is the best junk mail app?",
+    answer:
+      "PaperKarma is the most popular junk mail app ($3.99/month) with a database of 100,000+ mailers and 90% effectiveness. For free alternatives, combine OptOutPrescreen.com, DMAchoice.org, and CatalogChoice.org. No app can stop EDDM mail addressed to 'Postal Customer.'",
+  },
+  {
+    question: "Can I return junk mail to sender?",
+    answer:
+      "Only if it's addressed to you personally and unopened. Write 'Refused' or 'Return to Sender' and place it back in your mailbox. However, bulk mail (Standard Mail/Marketing Mail) is typically discarded rather than returned. Mail addressed to 'Postal Customer' or 'Resident' cannot be returned.",
+  },
+  {
+    question: "How do I stop mail for a deceased person?",
+    answer:
+      "Register the deceased at the DMA Deceased Do Not Contact List (ims-dm.com/cgi/ddnc.php). Write 'Deceased - Return to Sender' on first-class mail. Contact individual senders directly, especially credit card companies and financial institutions. It may take 90+ days for mailings to stop. See our detailed guide at /stop-mail-deceased.",
+  },
+  {
+    question: "Why is there no federal Do Not Mail registry?",
+    answer:
+      "Unlike the Do Not Call registry for telemarketing, no federal law requires a Do Not Mail registry. The USPS profits from advertising mail, the direct mail industry lobbies against such legislation, and Congress has never prioritized it. That's why we're petitioning for change.",
   },
 ];
 

@@ -8,20 +8,25 @@ import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/ar
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "Legal Background: EDDM and Junk Mail Regulations",
+  title: "Is Junk Mail Legal? | EDDM Laws and Postal Regulations",
   description:
-    "Understand the federal laws, regulations, and court cases governing USPS advertising mail. Learn about 18 USC 1725, PAEA 2006, Rowan v. Post Office, and why no Do Not Mail registry exists.",
+    "Is junk mail legal? Yes. Learn the federal laws governing USPS advertising mail: 18 USC 1725 (mailbox monopoly), PAEA 2006, Rowan v. Post Office, and why there's no Do Not Mail registry.",
   keywords: [
-    "EDDM law",
+    "is junk mail legal",
+    "junk mail laws",
     "junk mail regulations",
+    "EDDM law",
     "18 USC 1725",
     "mailbox monopoly law",
+    "who controls my mailbox",
     "PAEA 2006",
     "Rowan v Post Office",
     "39 USC 3008",
     "postal regulations",
     "advertising mail law",
     "Do Not Mail legislation",
+    "do not mail registry legislation",
+    "can I sue for junk mail",
   ],
 };
 

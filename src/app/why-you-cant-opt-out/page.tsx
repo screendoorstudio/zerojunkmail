@@ -9,17 +9,27 @@ import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/ar
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "Why You Can't Opt Out of USPS Junk Mail",
+  title: "Why You Can't Opt Out of EDDM Junk Mail | No Do Not Mail Registry",
   description:
-    "Learn why federal law prevents you from opting out of EDDM and USPS advertising mail. Understand the legal framework, mailbox monopoly, and why there's no 'Do Not Mail' registry.",
+    "Why can't you stop junk mail? Learn why federal law prevents opting out of EDDM, why there's no Do Not Mail registry, and what the mailbox monopoly means for consumers.",
   keywords: [
-    "opt out junk mail",
+    "why can't I stop junk mail",
+    "can I opt out of EDDM",
+    "EDDM opt out",
     "stop EDDM mail",
+    "opt out junk mail",
+    "can I refuse junk mail",
+    "refuse USPS junk mail",
     "USPS advertising opt out",
     "mailbox monopoly",
     "18 USC 1725",
     "Do Not Mail registry",
-    "refuse junk mail",
+    "do not mail list",
+    "why no do not mail registry",
+    "can I stop USPS from delivering junk mail",
+    "postal customer mail stop",
+    "current resident mail opt out",
+    "no junk mail sign mailbox",
   ],
 };
 
