@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/news", priority: 0.8, changeFrequency: "daily" as const },
     { path: "/news/archive", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/take-action", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/legislators", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/eddm-do-not-deliver", priority: 0.9, changeFrequency: "daily" as const },
     { path: "/reduce-junk-mail", priority: 1.0, changeFrequency: "weekly" as const },
     { path: "/opt-out-credit-offers", priority: 0.9, changeFrequency: "monthly" as const },

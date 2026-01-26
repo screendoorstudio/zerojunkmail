@@ -48,6 +48,7 @@ const navigation: NavItem[] = [
       // { href: "/eddm-do-not-deliver", label: "Do Not Deliver Tool" }, // Hidden until verification system added
       { href: "/take-action", label: "How to Help" },
       { href: PETITION_URL, label: "Sign Petition", external: true },
+      { href: "/legislators", label: "Legislative Toolkit" },
       { href: "/reduce-junk-mail", label: "Stop Junk Mail Guide" },
       { href: "/opt-out-credit-offers", label: "Stop Credit Offers" },
       { href: "/stop-catalog-mail", label: "Stop Catalogs" },

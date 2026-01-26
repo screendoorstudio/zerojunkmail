@@ -26,12 +26,15 @@ export const metadata: Metadata = {
   title: "Legislative Toolkit: EDDM Consumer Choice Act of 2026 | Zero Junk Mail",
   description:
     "Complete legislative toolkit for the EDDM Consumer Choice Act of 2026. Model bill text, section-by-section analysis, talking points, FAQ, and counterargument responses for legislators and staff.",
-  robots: {
-    index: false,
-    follow: false,
-    noarchive: true,
-    nosnippet: true,
-  },
+  keywords: [
+    "EDDM Consumer Choice Act",
+    "Do Not Mail legislation",
+    "junk mail law",
+    "model bill",
+    "EDDM opt-out",
+    "legislative toolkit",
+    "postal reform",
+  ],
 };
 
 // Helper component for talking points tab content
