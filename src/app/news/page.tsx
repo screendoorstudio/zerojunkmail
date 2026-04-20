@@ -4,12 +4,12 @@ import { TLDRBox } from "@/components/content/TLDRBox";
 import { FAQAccordion } from "@/components/content/FAQAccordion";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
-import { NewsFeed } from "@/components/content/NewsFeed";
+import { NewsCard } from "@/components/content/NewsFeed";
 import { generateFAQSchema } from "@/lib/schema/faq";
 import { generateNewsPageSchema } from "@/lib/schema/news";
 import { generateBreadcrumbSchema } from "@/lib/schema/article";
 import { SITE_CONFIG, STATISTICS } from "@/lib/constants/statistics";
-import { FALLBACK_ARTICLES } from "@/lib/constants/news";
+import { sortedLatestNews } from "@/data/latest-news";
 
 export const metadata: Metadata = {
   title: "Junk Mail & EDDM News | Zero Junk Mail",
@@ -131,22 +131,28 @@ export default function NewsPage() {
           />
         </div>
 
-        {/* Live News Feed */}
-        <section className="py-12">
+        {/* Curated Latest News - 15+ articles */}
+        <section className="py-12" style={{ backgroundColor: "#ffffff" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
-              className="text-2xl font-bold text-gray-900 mb-2 text-center"
+              className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center"
               style={{ color: "#111827" }}
             >
-              Latest News
+              Latest Reporting on USPS, EDDM &amp; Junk Mail
             </h2>
             <p
-              className="text-gray-600 text-center mb-8"
+              className="text-gray-600 text-center mb-10 max-w-3xl mx-auto"
               style={{ color: "#4b5563" }}
             >
-              Automatically updated from news sources across the web
+              Hand-picked coverage from major outlets. We update this list as
+              new reporting lands. Older stories live in the 55-year archive
+              below.
             </p>
-            <NewsFeed maxArticles={6} showViewAll={false} />
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {sortedLatestNews().map((article) => (
+                <NewsCard key={article.url} article={article} />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -210,107 +216,11 @@ export default function NewsPage() {
               className="mt-3 text-sm text-gray-400"
               style={{ color: "#9ca3af" }}
             >
-              50+ articles across 8 categories
+              60+ articles across 8 categories, 1970 to today
             </p>
           </div>
         </section>
 
-        {/* Curated Archive Section */}
-        <section
-          className="py-12 bg-gray-50"
-          style={{ backgroundColor: "#f9fafb" }}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2
-              className="text-2xl font-bold text-gray-900 mb-2 text-center"
-              style={{ color: "#111827" }}
-            >
-              Curated Resources
-            </h2>
-            <p
-              className="text-gray-600 text-center mb-8"
-              style={{ color: "#4b5563" }}
-            >
-              Essential articles and reports about junk mail issues
-            </p>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {FALLBACK_ARTICLES.map((article, index) => (
-                <a
-                  key={index}
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all group"
-                  style={{ backgroundColor: "#ffffff", borderColor: "#e5e7eb" }}
-                >
-                  <span
-                    className={`inline-block px-2 py-1 text-xs font-medium rounded-full mb-3 ${
-                      article.category === "environmental"
-                        ? "bg-green-100 text-green-800"
-                        : article.category === "usps"
-                        ? "bg-blue-100 text-blue-800"
-                        : article.category === "fraud"
-                        ? "bg-red-100 text-red-800"
-                        : article.category === "policy"
-                        ? "bg-purple-100 text-purple-800"
-                        : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {article.category === "environmental"
-                      ? "Environmental"
-                      : article.category === "usps"
-                      ? "USPS Business"
-                      : article.category === "fraud"
-                      ? "Fraud & Scams"
-                      : article.category === "policy"
-                      ? "Policy"
-                      : "Consumer"}
-                  </span>
-                  <h3
-                    className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2"
-                    style={{ color: "#111827" }}
-                  >
-                    {article.title}
-                  </h3>
-                  <p
-                    className="text-gray-600 text-sm mb-3 line-clamp-2"
-                    style={{ color: "#4b5563" }}
-                  >
-                    {article.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="text-xs text-gray-500"
-                      style={{ color: "#6b7280" }}
-                    >
-                      {article.source}
-                    </span>
-                    <span
-                      className="text-blue-600 text-sm font-medium flex items-center gap-1"
-                      style={{ color: "#2563eb" }}
-                    >
-                      Read
-                      <svg
-                        className="w-3 h-3"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Key Statistics */}
         <section className="py-12" style={{ backgroundColor: "#ffffff" }}>
