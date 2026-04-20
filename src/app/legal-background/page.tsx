@@ -4,7 +4,10 @@ import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -98,9 +101,7 @@ export default function LegalBackgroundPage() {
         </nav>
 
         {/* TL;DR Box */}
-        <TLDRBox
-          summary="Federal law (18 USC 1725) gives USPS exclusive access to your mailbox—a 'mailbox monopoly' that prevents you from legally refusing any mail they choose to deliver. The EDDM program was created under USPS regulatory authority in 2011-2012. Despite court cases like Rowan v. Post Office recognizing some consumer mail rights, no law requires a Do Not Mail registry, and industry lobbying has blocked all attempts to create one."
-        />
+        <TLDRBox summary="Federal law (18 USC 1725) gives USPS exclusive access to your mailbox, a 'mailbox monopoly' that prevents you from legally refusing any mail they choose to deliver. The EDDM program was created under USPS regulatory authority in 2011-2012. Despite court cases like Rowan v. Post Office recognizing some consumer mail rights, no law requires a Do Not Mail registry, and industry lobbying has blocked all attempts to create one." />
 
         <h1
           className="text-4xl font-bold text-gray-900 mb-6"
@@ -115,7 +116,7 @@ export default function LegalBackgroundPage() {
             understanding the legal framework that governs the U.S. Postal
             Service, mailbox access, and advertising mail. This page examines
             the key federal statutes, regulations, and court decisions that
-            shape—and constrain—your rights as a mail recipient.
+            shape, and constrain, your rights as a mail recipient.
           </p>
 
           <h2
@@ -136,16 +137,16 @@ export default function LegalBackgroundPage() {
             style={{ backgroundColor: "#f9fafb", color: "#374151" }}
           >
             &quot;Whoever knowingly and willfully deposits any mailable matter
-            such as statements of accounts, circulars, sale bills, or other
-            like matter... in any letter box established, approved, or accepted
-            by the Postal Service... shall be fined under this title.&quot;
+            such as statements of accounts, circulars, sale bills, or other like
+            matter... in any letter box established, approved, or accepted by
+            the Postal Service... shall be fined under this title.&quot;
             <br />
-            <span className="text-sm not-italic">— 18 U.S.C. § 1725</span>
+            <span className="text-sm not-italic">, 18 U.S.C. § 1725</span>
           </blockquote>
           <p style={{ color: "#374151" }}>
             This law means that while you own your physical mailbox, you do not
-            control what goes into it. Only USPS carriers have legal access,
-            and the Postal Service decides what they will and will not deliver.
+            control what goes into it. Only USPS carriers have legal access, and
+            the Postal Service decides what they will and will not deliver.
           </p>
 
           <h3
@@ -182,8 +183,9 @@ export default function LegalBackgroundPage() {
           </p>
           <ul className="list-disc pl-6 my-4" style={{ color: "#374151" }}>
             <li>
-              Created the category of <strong>&quot;market-dominant&quot; mail
-              products</strong>, which includes most advertising mail
+              Created the category of{" "}
+              <strong>&quot;market-dominant&quot; mail products</strong>, which
+              includes most advertising mail
             </li>
             <li>
               Gave USPS authority to create new products and pricing within this
@@ -199,8 +201,8 @@ export default function LegalBackgroundPage() {
             </li>
           </ul>
           <p style={{ color: "#374151" }}>
-            PAEA&apos;s financial mandates created strong incentives for USPS
-            to grow advertising mail revenue. EDDM was developed under this
+            PAEA&apos;s financial mandates created strong incentives for USPS to
+            grow advertising mail revenue. EDDM was developed under this
             framework as a way to attract small business advertisers who might
             otherwise use digital channels.
           </p>
@@ -252,21 +254,26 @@ export default function LegalBackgroundPage() {
             a person may file a &quot;prohibitory order&quot; (PS Form 1500)
             against a specific sender of &quot;pandering advertisements.&quot;
           </p>
-          <p style={{ color: "#374151" }}>However, this protection is severely limited:</p>
+          <p style={{ color: "#374151" }}>
+            However, this protection is severely limited:
+          </p>
           <ul className="list-disc pl-6 my-4" style={{ color: "#374151" }}>
             <li>
-              Originally designed for <strong>sexually-oriented material</strong>
+              Originally designed for{" "}
+              <strong>sexually-oriented material</strong>
             </li>
             <li>
-              Requires filing paperwork <strong>for each individual sender</strong>
+              Requires filing paperwork{" "}
+              <strong>for each individual sender</strong>
             </li>
             <li>
-              The <strong>recipient</strong> determines what they find offensive—but
-              USPS interprets this narrowly
+              The <strong>recipient</strong> determines what they find
+              offensive, but USPS interprets this narrowly
             </li>
             <li>
-              Does <strong>not apply to EDDM</strong> because there is no identifiable
-              &quot;sender&quot; to block (mail is addressed to &quot;Postal Customer&quot;)
+              Does <strong>not apply to EDDM</strong> because there is no
+              identifiable &quot;sender&quot; to block (mail is addressed to
+              &quot;Postal Customer&quot;)
             </li>
           </ul>
           <p style={{ color: "#374151" }}>
@@ -345,9 +352,9 @@ export default function LegalBackgroundPage() {
           </h2>
           <p style={{ color: "#374151" }}>
             Commercial advertising, including direct mail, receives{" "}
-            <strong>First Amendment protection</strong>—though less than
-            political or artistic speech. Under the <em>Central Hudson</em>{" "}
-            test (1980), government restrictions on commercial speech must:
+            <strong>First Amendment protection</strong>, though less than
+            political or artistic speech. Under the <em>Central Hudson</em> test
+            (1980), government restrictions on commercial speech must:
           </p>
           <ol className="list-decimal pl-6 my-4" style={{ color: "#374151" }}>
             <li>Serve a substantial government interest</li>
@@ -357,10 +364,11 @@ export default function LegalBackgroundPage() {
           <p style={{ color: "#374151" }}>
             The mailing industry argues that mandatory opt-out registries would
             violate advertisers&apos; First Amendment rights. However,{" "}
-            <em>Rowan</em> established that <strong>consumer privacy in the
-            home</strong> can override advertiser speech rights. A properly
-            designed Do Not Mail registry would likely survive constitutional
-            challenge—the barrier is political, not legal.
+            <em>Rowan</em> established that{" "}
+            <strong>consumer privacy in the home</strong> can override
+            advertiser speech rights. A properly designed Do Not Mail registry
+            would likely survive constitutional challenge, the barrier is
+            political, not legal.
           </p>
 
           <h2
@@ -375,14 +383,17 @@ export default function LegalBackgroundPage() {
           </p>
           <ul className="list-disc pl-6 my-4" style={{ color: "#374151" }}>
             <li>
-              <strong>H.R. 3319</strong> (2007) — &quot;Do Not Mail Act of 2007&quot;
+              <strong>H.R. 3319</strong> (2007), &quot;Do Not Mail Act of
+              2007&quot;
             </li>
             <li>
-              <strong>H.R. 2008</strong> (2009) — &quot;Unsolicited Commercial
+              <strong>H.R. 2008</strong> (2009), &quot;Unsolicited Commercial
               Electronic Mail Act&quot; (which included mail provisions)
             </li>
-            <li>Various state-level proposals in California, New York, and
-            other states</li>
+            <li>
+              Various state-level proposals in California, New York, and other
+              states
+            </li>
           </ul>
           <p style={{ color: "#374151" }}>
             None have passed. Opposition comes from:
@@ -528,9 +539,7 @@ export default function LegalBackgroundPage() {
                   <td className="px-4 py-2" style={{ color: "#374151" }}>
                     <strong>Postal Mail</strong>
                   </td>
-                  <td className="px-4 py-2 text-red-600 font-semibold">
-                    None
-                  </td>
+                  <td className="px-4 py-2 text-red-600 font-semibold">None</td>
                   <td className="px-4 py-2" style={{ color: "#374151" }}>
                     No applicable law
                   </td>
@@ -541,7 +550,7 @@ export default function LegalBackgroundPage() {
           <p style={{ color: "#374151" }}>
             This gap exists because the USPS is both the{" "}
             <strong>regulator</strong> of mail delivery and a{" "}
-            <strong>beneficiary</strong> of advertising mail volume—a
+            <strong>beneficiary</strong> of advertising mail volume, a
             fundamental conflict of interest that has prevented consumer
             protection.
           </p>
@@ -558,30 +567,30 @@ export default function LegalBackgroundPage() {
           </p>
           <ul className="list-disc pl-6 my-4" style={{ color: "#374151" }}>
             <li>
-              <strong>18 U.S.C. § 1725</strong> — Mailbox access restrictions
+              <strong>18 U.S.C. § 1725</strong>, Mailbox access restrictions
               (&quot;mailbox monopoly&quot;)
             </li>
             <li>
-              <strong>39 U.S.C. § 3008</strong> — Prohibitory orders for
+              <strong>39 U.S.C. § 3008</strong>, Prohibitory orders for
               pandering advertisements
             </li>
             <li>
-              <strong>Public Law 109-435</strong> — Postal Accountability and
+              <strong>Public Law 109-435</strong>, Postal Accountability and
               Enhancement Act of 2006
             </li>
             <li>
-              <strong>77 FR 62429</strong> — Federal Register final rule making
+              <strong>77 FR 62429</strong>, Federal Register final rule making
               EDDM permanent (2012)
             </li>
             <li>
-              <strong>Postal Bulletin 22312</strong> — Original EDDM pilot
-              launch (2011)
+              <strong>Postal Bulletin 22312</strong>, Original EDDM pilot launch
+              (2011)
             </li>
             <li>
-              <strong>Rowan v. USPS</strong> — 397 U.S. 728 (1970)
+              <strong>Rowan v. USPS</strong>, 397 U.S. 728 (1970)
             </li>
             <li>
-              <strong>Domestic Mail Manual (DMM)</strong> — USPS operational
+              <strong>Domestic Mail Manual (DMM)</strong>, USPS operational
               rules for EDDM
             </li>
           </ul>

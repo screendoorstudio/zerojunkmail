@@ -4,7 +4,10 @@ import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { TrackedPetitionLink } from "@/components/cta/TrackedPetitionLink";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -58,7 +61,7 @@ export default function TakeActionPage() {
         <div className="prose max-w-none">
           <p>
             While there is currently no legal way to stop EDDM mail, your voice
-            still matters. Collective action has changed laws before—and it can
+            still matters. Collective action has changed laws before, and it can
             again. Here&apos;s what you can do to help end unwanted advertising
             mail.
           </p>
@@ -107,13 +110,13 @@ export default function TakeActionPage() {
               Sample Message to Congress
             </h4>
             <p className="text-gray-600 text-sm italic">
-              &quot;I am writing to request that you support legislation creating a
-              federal Do Not Mail registry, similar to the Do Not Call registry.
-              Americans deserve the right to opt out of unsolicited advertising
-              delivered by our own Postal Service. EDDM junk mail wastes 100
-              million trees annually and costs taxpayers $320 million in disposal
-              fees. Please support consumer choice and environmental protection
-              by backing a Do Not Mail registry.&quot;
+              &quot;I am writing to request that you support legislation
+              creating a federal Do Not Mail registry, similar to the Do Not
+              Call registry. Americans deserve the right to opt out of
+              unsolicited advertising delivered by our own Postal Service. EDDM
+              junk mail wastes 100 million trees annually and costs taxpayers
+              $320 million in disposal fees. Please support consumer choice and
+              environmental protection by backing a Do Not Mail registry.&quot;
             </p>
           </div>
           <p>Contact your representatives:</p>
@@ -191,9 +194,7 @@ export default function TakeActionPage() {
               Calculate how much mail you receive annually (average household
               receives 800+ pieces of junk mail per year)
             </li>
-            <li>
-              Write letters to the editor of your local newspaper
-            </li>
+            <li>Write letters to the editor of your local newspaper</li>
             <li>
               Request that local environmental groups add junk mail to their
               advocacy priorities
@@ -221,18 +222,14 @@ export default function TakeActionPage() {
             <li>
               Passing resolutions supporting a federal Do Not Mail registry
             </li>
-            <li>
-              Calculating and publicizing local junk mail disposal costs
-            </li>
-            <li>
-              Including junk mail reduction in sustainability plans
-            </li>
+            <li>Calculating and publicizing local junk mail disposal costs</li>
+            <li>Including junk mail reduction in sustainability plans</li>
           </ul>
 
           <h2>What Happens Next?</h2>
           <p>
             Change takes time, but it is possible. The Do Not Call registry was
-            once considered impossible due to telemarketing industry opposition—
+            once considered impossible due to telemarketing industry opposition,
             yet public demand ultimately prevailed. The same can happen for
             postal advertising.
           </p>
@@ -283,10 +280,7 @@ export default function TakeActionPage() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/faq"
-                className="text-blue-600 hover:text-blue-700"
-              >
+              <Link href="/faq" className="text-blue-600 hover:text-blue-700">
                 Frequently Asked Questions →
               </Link>
             </li>

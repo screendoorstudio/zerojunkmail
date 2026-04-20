@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 
 const faqs: FAQItem[] = [
   {
-    question: "How long does it take for mail to stop after registering with DMA Deceased Do Not Contact List?",
+    question:
+      "How long does it take for mail to stop after registering with DMA Deceased Do Not Contact List?",
     answer:
       "It typically takes 2-3 months for most mail to stop. Some mailings prepared in advance may continue arriving during this period as companies update their databases.",
   },
@@ -44,7 +45,8 @@ const faqs: FAQItem[] = [
       "For basic opt-outs like the DMA Deceased Do Not Contact List, you don't need to be the executor. However, for mail forwarding through USPS, you'll need proof of executorship or administrator status.",
   },
   {
-    question: "What if I keep receiving mail for a deceased person after opting out?",
+    question:
+      "What if I keep receiving mail for a deceased person after opting out?",
     answer:
       "Contact the sending organizations directly with a copy of the death certificate. Most companies will remove the name within 30 days. For persistent senders, contact the Better Business Bureau.",
   },
@@ -97,7 +99,8 @@ export default function StopMailDeceasedPage() {
 
   const howToSchema = generateHowToSchema({
     name: "How to Stop Mail for a Deceased Person",
-    description: "Step-by-step guide to stop junk mail and unwanted mail for someone who has passed away.",
+    description:
+      "Step-by-step guide to stop junk mail and unwanted mail for someone who has passed away.",
     totalTime: "PT20M",
     estimatedCost: { currency: "USD", value: "0-1" },
     steps: howToSteps,
@@ -105,7 +108,9 @@ export default function StopMailDeceasedPage() {
 
   return (
     <>
-      <SchemaMarkup schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]} />
+      <SchemaMarkup
+        schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]}
+      />
 
       <article
         className="max-w-4xl mx-auto px-4 py-12"
@@ -151,7 +156,10 @@ export default function StopMailDeceasedPage() {
 
         <div className="prose max-w-none">
           <p style={{ color: "#374151" }}>
-            Receiving mail addressed to a deceased loved one can be painful. Unfortunately, marketing databases often take months or even years to update. This guide will help you stop most unwanted mail for someone who has passed away.
+            Receiving mail addressed to a deceased loved one can be painful.
+            Unfortunately, marketing databases often take months or even years
+            to update. This guide will help you stop most unwanted mail for
+            someone who has passed away.
           </p>
 
           {/* Quick Answer Box */}
@@ -159,9 +167,14 @@ export default function StopMailDeceasedPage() {
             className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6"
             style={{ backgroundColor: "#eff6ff", borderColor: "#3b82f6" }}
           >
-            <p className="font-semibold" style={{ color: "#1e40af" }}>Quick Answer:</p>
+            <p className="font-semibold" style={{ color: "#1e40af" }}>
+              Quick Answer:
+            </p>
             <p style={{ color: "#1e3a8a" }}>
-              Register with the <strong>DMA Deceased Do Not Contact List</strong> at dmachoice.org (free with $1 fee). This notifies participating companies to stop mailing to that name. Takes 2-3 months to take effect.
+              Register with the{" "}
+              <strong>DMA Deceased Do Not Contact List</strong> at dmachoice.org
+              (free with $1 fee). This notifies participating companies to stop
+              mailing to that name. Takes 2-3 months to take effect.
             </p>
           </div>
 
@@ -185,14 +198,14 @@ export default function StopMailDeceasedPage() {
                 >
                   Register with DMA Deceased Do Not Contact List
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>dmachoice.org</strong> — Free registration with $1 authentication fee
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>dmachoice.org</strong>, Free registration with $1
+                  authentication fee
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  The Direct Marketing Association (DMA) maintains a Deceased Do Not Contact List that notifies marketing companies to remove the deceased person&apos;s name from their mailing lists.
+                  The Direct Marketing Association (DMA) maintains a Deceased Do
+                  Not Contact List that notifies marketing companies to remove
+                  the deceased person&apos;s name from their mailing lists.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -221,7 +234,10 @@ export default function StopMailDeceasedPage() {
                       </a>
                     </li>
                     <li>Click on &quot;Register a Deceased Individual&quot;</li>
-                    <li>Enter the deceased person&apos;s full name and last known address</li>
+                    <li>
+                      Enter the deceased person&apos;s full name and last known
+                      address
+                    </li>
                     <li>Complete the $1 authentication process</li>
                     <li>Submit the registration</li>
                   </ul>
@@ -260,10 +276,7 @@ export default function StopMailDeceasedPage() {
                 >
                   Forward or Return First-Class Mail
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Handle important mail and return unwanted items
                 </p>
                 <div
@@ -280,9 +293,14 @@ export default function StopMailDeceasedPage() {
                     className="list-disc pl-5 space-y-1 text-gray-700 mb-4"
                     style={{ color: "#374151" }}
                   >
-                    <li>Write &quot;Deceased - Return to Sender&quot; on the unopened envelope</li>
+                    <li>
+                      Write &quot;Deceased - Return to Sender&quot; on the
+                      unopened envelope
+                    </li>
                     <li>Place it back in your mailbox</li>
-                    <li>The sender will be notified and can update their records</li>
+                    <li>
+                      The sender will be notified and can update their records
+                    </li>
                   </ul>
 
                   <h4
@@ -307,7 +325,9 @@ export default function StopMailDeceasedPage() {
                 >
                   <strong style={{ color: "#92400e" }}>Note:</strong>{" "}
                   <span style={{ color: "#78350f" }}>
-                    Standard mail and EDDM (addressed to &quot;Postal Customer&quot;) cannot be returned or forwarded. These are delivered to the address, not to a specific person.
+                    Standard mail and EDDM (addressed to &quot;Postal
+                    Customer&quot;) cannot be returned or forwarded. These are
+                    delivered to the address, not to a specific person.
                   </span>
                 </div>
               </div>
@@ -334,14 +354,13 @@ export default function StopMailDeceasedPage() {
                 >
                   Contact Organizations Directly
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Request removal from mailing lists with documentation
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  For persistent mail from specific organizations, contact them directly with a copy of the death certificate. Most companies will remove the name within 30 days.
+                  For persistent mail from specific organizations, contact them
+                  directly with a copy of the death certificate. Most companies
+                  will remove the name within 30 days.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -357,19 +376,39 @@ export default function StopMailDeceasedPage() {
                     className="list-disc pl-5 space-y-1 text-gray-700"
                     style={{ color: "#374151" }}
                   >
-                    <li><strong>Banks and credit card companies</strong> — Call customer service</li>
-                    <li><strong>Insurance companies</strong> — Contact policy services</li>
-                    <li><strong>Subscription services</strong> — Cancel magazines, clubs</li>
-                    <li><strong>Charities</strong> — Request removal from donor lists</li>
-                    <li><strong>Catalog companies</strong> — Use CatalogChoice.org or call directly</li>
-                    <li><strong>Professional associations</strong> — Cancel memberships</li>
+                    <li>
+                      <strong>Banks and credit card companies</strong>, Call
+                      customer service
+                    </li>
+                    <li>
+                      <strong>Insurance companies</strong>, Contact policy
+                      services
+                    </li>
+                    <li>
+                      <strong>Subscription services</strong>, Cancel magazines,
+                      clubs
+                    </li>
+                    <li>
+                      <strong>Charities</strong>, Request removal from donor
+                      lists
+                    </li>
+                    <li>
+                      <strong>Catalog companies</strong>, Use CatalogChoice.org
+                      or call directly
+                    </li>
+                    <li>
+                      <strong>Professional associations</strong>, Cancel
+                      memberships
+                    </li>
                   </ul>
                 </div>
                 <p
                   className="text-sm text-gray-500"
                   style={{ color: "#6b7280" }}
                 >
-                  <strong>What to include:</strong> Deceased&apos;s full name, address, account number (if known), and a copy of the death certificate (for financial institutions).
+                  <strong>What to include:</strong> Deceased&apos;s full name,
+                  address, account number (if known), and a copy of the death
+                  certificate (for financial institutions).
                 </p>
               </div>
             </div>
@@ -395,10 +434,7 @@ export default function StopMailDeceasedPage() {
                 >
                   Use Additional Opt-Out Services
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Register with other services to maximize coverage
                 </p>
                 <div
@@ -416,13 +452,46 @@ export default function StopMailDeceasedPage() {
                     style={{ color: "#374151" }}
                   >
                     <li>
-                      <strong><a href="https://www.optoutprescreen.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline" style={{ color: "#2563eb" }}>OptOutPrescreen.com</a></strong> — Stops pre-approved credit and insurance offers (free)
+                      <strong>
+                        <a
+                          href="https://www.optoutprescreen.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                          style={{ color: "#2563eb" }}
+                        >
+                          OptOutPrescreen.com
+                        </a>
+                      </strong>
+                      , Stops pre-approved credit and insurance offers (free)
                     </li>
                     <li>
-                      <strong><a href="https://www.catalogchoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline" style={{ color: "#2563eb" }}>CatalogChoice.org</a></strong> — Stops specific catalogs (free)
+                      <strong>
+                        <a
+                          href="https://www.catalogchoice.org"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                          style={{ color: "#2563eb" }}
+                        >
+                          CatalogChoice.org
+                        </a>
+                      </strong>
+                      , Stops specific catalogs (free)
                     </li>
                     <li>
-                      <strong><a href="https://www.directmail.com/mail_preference/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline" style={{ color: "#2563eb" }}>DirectMail.com</a></strong> — Marketing mail opt-out (free)
+                      <strong>
+                        <a
+                          href="https://www.directmail.com/mail_preference/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                          style={{ color: "#2563eb" }}
+                        >
+                          DirectMail.com
+                        </a>
+                      </strong>
+                      , Marketing mail opt-out (free)
                     </li>
                   </ul>
                 </div>
@@ -430,7 +499,9 @@ export default function StopMailDeceasedPage() {
                   className="text-sm text-gray-500"
                   style={{ color: "#6b7280" }}
                 >
-                  Register the deceased person&apos;s name and address with each service. Most accept registrations on behalf of deceased individuals.
+                  Register the deceased person&apos;s name and address with each
+                  service. Most accept registrations on behalf of deceased
+                  individuals.
                 </p>
               </div>
             </div>
@@ -448,7 +519,12 @@ export default function StopMailDeceasedPage() {
               What You Cannot Stop
             </h3>
             <p style={{ color: "#7f1d1d" }}>
-              <strong>EDDM mail</strong> (Every Door Direct Mail) addressed to &quot;Postal Customer,&quot; &quot;Resident,&quot; or &quot;Current Occupant&quot; <strong>cannot be stopped</strong>. This mail is delivered to every address on a postal route, regardless of who lives there. There is currently no opt-out for EDDM mail.
+              <strong>EDDM mail</strong> (Every Door Direct Mail) addressed to
+              &quot;Postal Customer,&quot; &quot;Resident,&quot; or
+              &quot;Current Occupant&quot; <strong>cannot be stopped</strong>.
+              This mail is delivered to every address on a postal route,
+              regardless of who lives there. There is currently no opt-out for
+              EDDM mail.
             </p>
             <Link
               href="/what-is-eddm"

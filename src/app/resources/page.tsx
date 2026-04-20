@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
+import { UnsubscribeEmailTemplate } from "@/components/content/UnsubscribeEmailTemplate";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
 import { SITE_CONFIG } from "@/lib/constants/statistics";
@@ -671,6 +672,10 @@ export default function ResourcesPage() {
               </Link>
             </li>
           </ul>
+        </div>
+
+        <div className="mt-12">
+          <UnsubscribeEmailTemplate />
         </div>
 
         <PetitionCTA className="mt-12" />

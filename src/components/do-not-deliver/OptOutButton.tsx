@@ -32,9 +32,7 @@ export function OptOutButton({
         style={{ backgroundColor: "#f0fdf4" }}
       >
         <div className="text-center">
-          <div className="text-4xl mb-3">
-            {milestoneReached ? "🎉" : "✋"}
-          </div>
+          <div className="text-4xl mb-3">{milestoneReached ? "🎉" : "✋"}</div>
           <h3
             className="text-xl font-bold text-green-800 mb-2"
             style={{ color: "#166534" }}
@@ -53,13 +51,13 @@ export function OptOutButton({
               className="text-sm text-green-700 mb-3"
               style={{ color: "#15803d" }}
             >
-              Help reach 50% — share with your neighbors!
+              Help reach 50%, share with your neighbors!
             </p>
             <div className="flex justify-center gap-3">
               <button
                 onClick={() => {
                   const text = encodeURIComponent(
-                    "I just opted out of EDDM junk mail. You can too: https://zerojunkmail.org/eddm-do-not-deliver"
+                    "I just opted out of EDDM junk mail. You can too: https://zerojunkmail.org/eddm-do-not-deliver",
                   );
                   window.open(`https://twitter.com/intent/tweet?text=${text}`);
                 }}
@@ -70,10 +68,10 @@ export function OptOutButton({
               <button
                 onClick={() => {
                   const url = encodeURIComponent(
-                    "https://zerojunkmail.org/eddm-do-not-deliver"
+                    "https://zerojunkmail.org/eddm-do-not-deliver",
                   );
                   window.open(
-                    `https://www.facebook.com/sharer/sharer.php?u=${url}`
+                    `https://www.facebook.com/sharer/sharer.php?u=${url}`,
                   );
                 }}
                 className="px-4 py-2 bg-[#1877F2] text-white rounded-lg hover:opacity-90 transition text-sm font-medium"
@@ -83,7 +81,7 @@ export function OptOutButton({
               <button
                 onClick={() => {
                   navigator.clipboard.writeText(
-                    "https://zerojunkmail.org/eddm-do-not-deliver"
+                    "https://zerojunkmail.org/eddm-do-not-deliver",
                   );
                   alert("Link copied to clipboard!");
                 }}
@@ -173,16 +171,11 @@ export function OptOutButton({
               Registering...
             </>
           ) : (
-            <>
-              ✋ Do Not Deliver — Opt Out My Household
-            </>
+            <>✋ Do Not Deliver, Opt Out My Household</>
           )}
         </button>
 
-        <p
-          className="text-xs text-gray-500 mt-3"
-          style={{ color: "#6b7280" }}
-        >
+        <p className="text-xs text-gray-500 mt-3" style={{ color: "#6b7280" }}>
           This is a symbolic opt-out. USPS does not currently honor opt-out
           requests for EDDM mail.
         </p>

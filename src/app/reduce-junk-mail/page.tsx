@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
+import { UnsubscribeEmailTemplate } from "@/components/content/UnsubscribeEmailTemplate";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
 import { generateHowToSchema } from "@/lib/schema/howto";
@@ -84,7 +85,7 @@ const faqs: FAQItem[] = [
   {
     question: "Is OptOutPrescreen legitimate and safe?",
     answer:
-      "Yes. OptOutPrescreen.com is the official website operated by Equifax, Experian, TransUnion, and Innovis—the major consumer credit bureaus. It's the only authorized way to opt out of prescreened credit and insurance offers. The phone number 1-888-5-OPTOUT (1-888-567-8688) is also legitimate.",
+      "Yes. OptOutPrescreen.com is the official website operated by Equifax, Experian, TransUnion, and Innovis, the major consumer credit bureaus. It's the only authorized way to opt out of prescreened credit and insurance offers. The phone number 1-888-5-OPTOUT (1-888-567-8688) is also legitimate.",
   },
   {
     question: "What is the best junk mail app?",
@@ -169,7 +170,8 @@ export default function ReduceJunkMailPage() {
 
   const howToSchema = generateHowToSchema({
     name: "How to Stop Junk Mail",
-    description: "Complete step-by-step guide to opt out of junk mail and reduce unwanted advertising mail by 80-90%.",
+    description:
+      "Complete step-by-step guide to opt out of junk mail and reduce unwanted advertising mail by 80-90%.",
     totalTime: "PT30M",
     estimatedCost: { currency: "USD", value: "0-6" },
     steps: howToSteps,
@@ -177,7 +179,9 @@ export default function ReduceJunkMailPage() {
 
   return (
     <>
-      <SchemaMarkup schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]} />
+      <SchemaMarkup
+        schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]}
+      />
 
       <article
         className="max-w-4xl mx-auto px-4 py-12"
@@ -226,7 +230,7 @@ export default function ReduceJunkMailPage() {
           </h2>
           <p style={{ color: "#78350f" }}>
             The services listed below can reduce <strong>addressed</strong> junk
-            mail—mail with your name on it. However,{" "}
+            mail, mail with your name on it. However,{" "}
             <strong>none of these services can stop EDDM</strong> (Every Door
             Direct Mail) addressed to &quot;Postal Customer,&quot;
             &quot;Resident,&quot; or &quot;Current Occupant.&quot; There is
@@ -240,7 +244,13 @@ export default function ReduceJunkMailPage() {
 
         <div className="prose max-w-none">
           <p style={{ color: "#374151" }}>
-            <strong>Want to stop junk mail?</strong> You&apos;re not alone—Americans receive an average of 848 pieces of junk mail per household every year, spending up to 8 months of their lives sorting through it. While we fight for a comprehensive Do Not Mail registry, you can take steps right now to stop most of the junk mail you receive. Follow these steps in order for maximum effect—most people see an 80-95% reduction within 2-3 months.
+            <strong>Want to stop junk mail?</strong> You&apos;re not alone,
+            Americans receive an average of 848 pieces of junk mail per
+            household every year, spending up to 8 months of their lives sorting
+            through it. While we fight for a comprehensive Do Not Mail registry,
+            you can take steps right now to stop most of the junk mail you
+            receive. Follow these steps in order for maximum effect, most people
+            see an 80-95% reduction within 2-3 months.
           </p>
 
           {/* STEP 1 */}
@@ -262,19 +272,15 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Credit Card Offers in the Mail?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>OptOutPrescreen.com</strong> — Free, official service
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>OptOutPrescreen.com</strong>, Free, official service
                   from the credit bureaus
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  This is the{" "}
-                  <strong>single most effective step</strong> you can take.
-                  OptOutPrescreen stops Equifax, Experian, Innovis, and
-                  TransUnion from selling your data to credit card and insurance
-                  companies who send &quot;pre-approved&quot; offers.
+                  This is the <strong>single most effective step</strong> you
+                  can take. OptOutPrescreen stops Equifax, Experian, Innovis,
+                  and TransUnion from selling your data to credit card and
+                  insurance companies who send &quot;pre-approved&quot; offers.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -344,11 +350,8 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Catalogs and Marketing Mail?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>DMAchoice.org</strong> — Industry opt-out service ($4-6
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>DMAchoice.org</strong>, Industry opt-out service ($4-6
                   fee)
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
@@ -387,7 +390,8 @@ export default function ReduceJunkMailPage() {
                     </li>
                     <li>
                       <strong>By Mail:</strong> Send name, address, signature,
-                      and $6 check to: DMAchoice, P.O. Box 900, Cos Cob, CT 06807
+                      and $6 check to: DMAchoice, P.O. Box 900, Cos Cob, CT
+                      06807
                     </li>
                     <li>
                       Choose to stop: Credit Offers, Catalogs, Magazine Offers,
@@ -415,8 +419,8 @@ export default function ReduceJunkMailPage() {
                   <br />
                   <strong>Cost:</strong> $4 online / $6 by mail (lasts 10 years)
                   <br />
-                  <strong>Limitation:</strong> Only affects DMA member companies;
-                  does NOT stop EDDM
+                  <strong>Limitation:</strong> Only affects DMA member
+                  companies; does NOT stop EDDM
                 </p>
               </div>
             </div>
@@ -441,11 +445,8 @@ export default function ReduceJunkMailPage() {
                 >
                   Are There Other Free Mail Preference Services?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>DirectMail.com/mail_preference</strong> — Free,
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>DirectMail.com/mail_preference</strong>, Free,
                   supplemental registry
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
@@ -513,15 +514,15 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Specific Catalogs?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>CatalogChoice.org</strong> — Free nonprofit service
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>CatalogChoice.org</strong>, Free nonprofit service
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  CatalogChoice is a free nonprofit service from The Story of Stuff
-                  Project. Over the past 8 years, they&apos;ve helped more than 2 million users reduce junk mail and saved half a million trees in the process. They have nearly 10,000 mailers in their database.
+                  CatalogChoice is a free nonprofit service from The Story of
+                  Stuff Project. Over the past 8 years, they&apos;ve helped more
+                  than 2 million users reduce junk mail and saved half a million
+                  trees in the process. They have nearly 10,000 mailers in their
+                  database.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -586,10 +587,7 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Valpak and Coupon Mailers?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Opt out of Valpak, RedPlum/RetailMeNot, and other coupon
                   packets
                 </p>
@@ -627,7 +625,9 @@ export default function ReduceJunkMailPage() {
                     </li>
                     <li>
                       <strong className="text-amber-700">Important:</strong>{" "}
-                      <span style={{ color: "#b45309" }}>Opt-out must be renewed every 3 years</span>
+                      <span style={{ color: "#b45309" }}>
+                        Opt-out must be renewed every 3 years
+                      </span>
                     </li>
                   </ul>
 
@@ -689,10 +689,7 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Charity Mail?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Contact charities directly or donate anonymously
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
@@ -751,7 +748,7 @@ export default function ReduceJunkMailPage() {
                   style={{ color: "#6b7280" }}
                 >
                   <strong>Note:</strong> Charities you&apos;ve donated to in the
-                  past 2 years are exempt from DMAchoice—contact them directly.
+                  past 2 years are exempt from DMAchoice, contact them directly.
                 </p>
               </div>
             </div>
@@ -776,16 +773,14 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Stop Phone Book Delivery?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>YellowPagesOptOut.com</strong> — Free, covers 158+ publishers
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>YellowPagesOptOut.com</strong>, Free, covers 158+
+                  publishers
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  Stop unwanted phone book delivery from Yellow Pages, White Pages,
-                  and other directory publishers. One website covers virtually all
-                  phone book publishers in the US.
+                  Stop unwanted phone book delivery from Yellow Pages, White
+                  Pages, and other directory publishers. One website covers
+                  virtually all phone book publishers in the US.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -853,16 +848,14 @@ export default function ReduceJunkMailPage() {
                 >
                   How Do I Opt Out of Data Brokers?
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  Stop junk mail at the source by removing your information from data brokers
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  Stop junk mail at the source by removing your information from
+                  data brokers
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  Data brokers collect and sell your personal information to marketers.
-                  Opting out of these databases reduces junk mail at the source—before
-                  companies even get your address.
+                  Data brokers collect and sell your personal information to
+                  marketers. Opting out of these databases reduces junk mail at
+                  the source, before companies even get your address.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -875,27 +868,55 @@ export default function ReduceJunkMailPage() {
                     Major Data Brokers:
                   </h4>
                   <div className="overflow-x-auto">
-                    <table className="min-w-full text-sm" style={{ color: "#374151" }}>
+                    <table
+                      className="min-w-full text-sm"
+                      style={{ color: "#374151" }}
+                    >
                       <thead>
-                        <tr className="border-b" style={{ borderColor: "#e5e7eb" }}>
-                          <th className="text-left py-2 font-semibold">Broker</th>
-                          <th className="text-left py-2 font-semibold">Opt-Out Method</th>
+                        <tr
+                          className="border-b"
+                          style={{ borderColor: "#e5e7eb" }}
+                        >
+                          <th className="text-left py-2 font-semibold">
+                            Broker
+                          </th>
+                          <th className="text-left py-2 font-semibold">
+                            Opt-Out Method
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr className="border-b" style={{ borderColor: "#e5e7eb" }}>
+                        <tr
+                          className="border-b"
+                          style={{ borderColor: "#e5e7eb" }}
+                        >
                           <td className="py-2">Acxiom</td>
                           <td className="py-2">
-                            <a href="https://www.acxiom.com/optout/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline" style={{ color: "#2563eb" }}>acxiom.com/optout</a> or call 1-877-774-2094
+                            <a
+                              href="https://www.acxiom.com/optout/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline"
+                              style={{ color: "#2563eb" }}
+                            >
+                              acxiom.com/optout
+                            </a>{" "}
+                            or call 1-877-774-2094
                           </td>
                         </tr>
-                        <tr className="border-b" style={{ borderColor: "#e5e7eb" }}>
+                        <tr
+                          className="border-b"
+                          style={{ borderColor: "#e5e7eb" }}
+                        >
                           <td className="py-2">Epsilon</td>
                           <td className="py-2">
                             Email optout@epsilon.com or call 1-866-267-3861
                           </td>
                         </tr>
-                        <tr className="border-b" style={{ borderColor: "#e5e7eb" }}>
+                        <tr
+                          className="border-b"
+                          style={{ borderColor: "#e5e7eb" }}
+                        >
                           <td className="py-2">Oracle</td>
                           <td className="py-2">
                             Visit Oracle privacy page (30 days to process)
@@ -904,7 +925,8 @@ export default function ReduceJunkMailPage() {
                         <tr>
                           <td className="py-2">Abacus (Catalogs)</td>
                           <td className="py-2">
-                            Email abacusoptout@epsilon.com or mail P.O. Box 1478, Broomfield, CO 80038
+                            Email abacusoptout@epsilon.com or mail P.O. Box
+                            1478, Broomfield, CO 80038
                           </td>
                         </tr>
                       </tbody>
@@ -917,7 +939,8 @@ export default function ReduceJunkMailPage() {
                 >
                   <strong style={{ color: "#92400e" }}>Tip:</strong>{" "}
                   <span style={{ color: "#78350f" }}>
-                    Services like DeleteMe and Privacy Duck can automate data broker opt-outs for a subscription fee.
+                    Services like DeleteMe and Privacy Duck can automate data
+                    broker opt-outs for a subscription fee.
                   </span>
                 </div>
               </div>
@@ -945,13 +968,18 @@ export default function ReduceJunkMailPage() {
             <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
               PaperKarma is a mobile app that makes opting out easy: snap a
               photo of unwanted mail and they contact the sender on your behalf.
-              With over 10.3 million opt-out requests processed and a 90% effectiveness rate, it&apos;s the largest Do Not Mail registry in the USA.
+              With over 10.3 million opt-out requests processed and a 90%
+              effectiveness rate, it&apos;s the largest Do Not Mail registry in
+              the USA.
             </p>
             <ul
               className="list-disc pl-5 space-y-1 text-gray-700 mb-4"
               style={{ color: "#374151" }}
             >
-              <li>Largest database: 100,000+ mailers (10x more than other services)</li>
+              <li>
+                Largest database: 100,000+ mailers (10x more than other
+                services)
+              </li>
               <li>Subscription-based after initial free requests</li>
               <li>Available for iOS and Android</li>
               <li>
@@ -990,7 +1018,15 @@ export default function ReduceJunkMailPage() {
                 Return to Sender
               </h4>
               <p style={{ color: "#374151" }}>
-                For first-class mail or mail with endorsements like &quot;Address Correction Requested&quot; or &quot;Return Postage Guaranteed,&quot; write &quot;REFUSED - RETURN TO SENDER&quot; on the unopened envelope and place it back in your mailbox. Mail to &quot;Resident&quot; or &quot;Current Occupant&quot; <strong>can</strong> be refused if it contains one of these endorsements or is sent First Class. However, this does <strong>not</strong> work for standard EDDM mail without endorsements.
+                For first-class mail or mail with endorsements like
+                &quot;Address Correction Requested&quot; or &quot;Return Postage
+                Guaranteed,&quot; write &quot;REFUSED - RETURN TO SENDER&quot;
+                on the unopened envelope and place it back in your mailbox. Mail
+                to &quot;Resident&quot; or &quot;Current Occupant&quot;{" "}
+                <strong>can</strong> be refused if it contains one of these
+                endorsements or is sent First Class. However, this does{" "}
+                <strong>not</strong> work for standard EDDM mail without
+                endorsements.
               </p>
             </div>
 
@@ -1080,7 +1116,10 @@ export default function ReduceJunkMailPage() {
             className="min-w-full border border-gray-200"
             style={{ borderColor: "#e5e7eb" }}
           >
-            <thead className="bg-gray-100" style={{ backgroundColor: "#f3f4f6" }}>
+            <thead
+              className="bg-gray-100"
+              style={{ backgroundColor: "#f3f4f6" }}
+            >
               <tr>
                 <th
                   className="px-4 py-3 text-left text-gray-900 font-semibold border-b"
@@ -1117,7 +1156,15 @@ export default function ReduceJunkMailPage() {
             <tbody>
               <tr>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.optoutprescreen.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>OptOutPrescreen</a>
+                  <a
+                    href="https://www.optoutprescreen.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    OptOutPrescreen
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Credit/insurance offers
@@ -1129,12 +1176,25 @@ export default function ReduceJunkMailPage() {
                   5 days
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>95%+</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    95%+
+                  </span>
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.dmachoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>DMAchoice</a>
+                  <a
+                    href="https://www.dmachoice.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    DMAchoice
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Catalogs, marketing mail
@@ -1146,12 +1206,25 @@ export default function ReduceJunkMailPage() {
                   90 days
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>80%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    80%
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.directmail.com/mail_preference/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>DirectMail.com</a>
+                  <a
+                    href="https://www.directmail.com/mail_preference/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    DirectMail.com
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Marketing mail
@@ -1163,12 +1236,25 @@ export default function ReduceJunkMailPage() {
                   Varies
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800" style={{ backgroundColor: "#fef9c3", color: "#854d0e" }}>60%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"
+                    style={{ backgroundColor: "#fef9c3", color: "#854d0e" }}
+                  >
+                    60%
+                  </span>
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.catalogchoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>CatalogChoice</a>
+                  <a
+                    href="https://www.catalogchoice.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    CatalogChoice
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Specific catalogs
@@ -1180,12 +1266,25 @@ export default function ReduceJunkMailPage() {
                   Varies
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800" style={{ backgroundColor: "#fef9c3", color: "#854d0e" }}>70%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"
+                    style={{ backgroundColor: "#fef9c3", color: "#854d0e" }}
+                  >
+                    70%
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.valpak.com/remove-address" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>Valpak</a>
+                  <a
+                    href="https://www.valpak.com/remove-address"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    Valpak
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Blue envelope coupons
@@ -1197,12 +1296,25 @@ export default function ReduceJunkMailPage() {
                   8-12 weeks
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>95%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    95%
+                  </span>
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://save.com/mailing/delivery-options" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>Save.com</a>
+                  <a
+                    href="https://save.com/mailing/delivery-options"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    Save.com
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   RedPlum coupons
@@ -1214,12 +1326,25 @@ export default function ReduceJunkMailPage() {
                   6 weeks
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>95%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    95%
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.yellowpagesoptout.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>Yellow Pages Opt-Out</a>
+                  <a
+                    href="https://www.yellowpagesoptout.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    Yellow Pages Opt-Out
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Phone books
@@ -1231,12 +1356,25 @@ export default function ReduceJunkMailPage() {
                   2-4 weeks
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>99%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    99%
+                  </span>
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.paperkarma.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>PaperKarma</a>
+                  <a
+                    href="https://www.paperkarma.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    PaperKarma
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Various (photo-based)
@@ -1248,7 +1386,12 @@ export default function ReduceJunkMailPage() {
                   Varies
                 </td>
                 <td className="px-4 py-3 border-b">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>90%</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    90%
+                  </span>
                 </td>
               </tr>
               <tr>
@@ -1280,7 +1423,12 @@ export default function ReduceJunkMailPage() {
                   className="px-4 py-3 font-semibold bg-red-50"
                   style={{ color: "#991b1b", backgroundColor: "#fef2f2" }}
                 >
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-200 text-red-800" style={{ backgroundColor: "#fecaca", color: "#991b1b" }}>0% - No opt-out</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-200 text-red-800"
+                    style={{ backgroundColor: "#fecaca", color: "#991b1b" }}
+                  >
+                    0% - No opt-out
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -1292,17 +1440,11 @@ export default function ReduceJunkMailPage() {
           className="mt-12 bg-gray-900 text-white p-8 rounded-xl"
           style={{ backgroundColor: "#111827" }}
         >
-          <h3
-            className="text-2xl font-bold mb-4"
-            style={{ color: "#ffffff" }}
-          >
+          <h3 className="text-2xl font-bold mb-4" style={{ color: "#ffffff" }}>
             The Real Solution: A Do Not Mail Registry
           </h3>
-          <p
-            className="text-gray-300 mb-6"
-            style={{ color: "#d1d5db" }}
-          >
-            These tips can reduce your junk mail, but they can&apos;t stop EDDM—
+          <p className="text-gray-300 mb-6" style={{ color: "#d1d5db" }}>
+            These tips can reduce your junk mail, but they can&apos;t stop EDDM,
             the mail addressed to &quot;Postal Customer&quot; that makes up a
             huge portion of mailbox clutter. The only real solution is a federal
             Do Not Mail registry. Sign the petition to make it happen.
@@ -1406,6 +1548,10 @@ export default function ReduceJunkMailPage() {
               </Link>
             </li>
           </ul>
+        </div>
+
+        <div className="mt-12">
+          <UnsubscribeEmailTemplate heading="Write Directly to an Advertiser: Copy-and-Paste Email" />
         </div>
 
         <PetitionCTA className="mt-12" />

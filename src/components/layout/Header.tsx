@@ -37,10 +37,13 @@ const navigation: NavItem[] = [
       { href: "/why-you-cant-opt-out", label: "Why No Opt-Out?" },
       { href: "/environmental-impact", label: "Environmental Impact" },
       { href: "/legal-background", label: "Legal Background" },
-      { href: "/news", label: "News" },
       { href: "/faq", label: "FAQ" },
       { href: "/resources", label: "Resources" },
     ],
+  },
+  {
+    label: "News",
+    href: "/news",
   },
   {
     label: "Take Action",
@@ -207,19 +210,30 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            {navigation.map((item) => (
-              <DropdownMenu
-                key={item.label}
-                item={item}
-                isOpen={openDropdown === item.label}
-                onToggle={() =>
-                  setOpenDropdown(
-                    openDropdown === item.label ? null : item.label
-                  )
-                }
-                onClose={() => setOpenDropdown(null)}
-              />
-            ))}
+            {navigation.map((item) =>
+              item.children ? (
+                <DropdownMenu
+                  key={item.label}
+                  item={item}
+                  isOpen={openDropdown === item.label}
+                  onToggle={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label ? null : item.label
+                    )
+                  }
+                  onClose={() => setOpenDropdown(null)}
+                />
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href!}
+                  className="text-gray-600 hover:text-gray-900 font-medium transition-colors py-2"
+                  style={{ color: "#4b5563" }}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
             <a
               href={PETITION_URL}
               target="_blank"
@@ -275,30 +289,41 @@ export function Header() {
             <div className="flex flex-col space-y-2">
               {navigation.map((item) => (
                 <div key={item.label}>
-                  <button
-                    onClick={() => toggleMobileMenu(item.label)}
-                    className="flex items-center justify-between w-full text-left text-gray-700 font-medium py-2"
-                    style={{ color: "#374151" }}
-                  >
-                    {item.label}
-                    <svg
-                      className={`w-4 h-4 transition-transform ${
-                        mobileExpandedMenus.includes(item.label)
-                          ? "rotate-180"
-                          : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {item.children ? (
+                    <button
+                      onClick={() => toggleMobileMenu(item.label)}
+                      className="flex items-center justify-between w-full text-left text-gray-700 font-medium py-2"
+                      style={{ color: "#374151" }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
+                      {item.label}
+                      <svg
+                        className={`w-4 h-4 transition-transform ${
+                          mobileExpandedMenus.includes(item.label)
+                            ? "rotate-180"
+                            : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href!}
+                      className="block text-gray-700 font-medium py-2"
+                      style={{ color: "#374151" }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                   {mobileExpandedMenus.includes(item.label) && item.children && (
                     <div className="pl-4 space-y-2 mt-2 border-l-2 border-gray-200 ml-2">
                       {item.children.map((child) =>

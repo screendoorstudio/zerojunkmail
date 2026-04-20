@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/petition-count",
+      "schedule": "0 */6 * * *"
+    }
+  ]
+}

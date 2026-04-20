@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
+import { UnsubscribeEmailTemplate } from "@/components/content/UnsubscribeEmailTemplate";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
 import { generateHowToSchema } from "@/lib/schema/howto";
@@ -12,7 +13,8 @@ import {
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "How to Stop Catalogs in the Mail | CatalogChoice & DMAchoice Guide 2025",
+  title:
+    "How to Stop Catalogs in the Mail | CatalogChoice & DMAchoice Guide 2025",
   description:
     "Stop unwanted catalogs with CatalogChoice.org (free), DMAchoice.org, and direct contact methods. Step-by-step guide to reduce catalog mail by 70-90%.",
   keywords: [
@@ -104,7 +106,8 @@ export default function StopCatalogMailPage() {
 
   const howToSchema = generateHowToSchema({
     name: "How to Stop Catalogs in the Mail",
-    description: "Step-by-step guide to opt out of unwanted catalog mailings using free and paid services.",
+    description:
+      "Step-by-step guide to opt out of unwanted catalog mailings using free and paid services.",
     totalTime: "PT20M",
     estimatedCost: { currency: "USD", value: "0-4" },
     steps: howToSteps,
@@ -112,7 +115,9 @@ export default function StopCatalogMailPage() {
 
   return (
     <>
-      <SchemaMarkup schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]} />
+      <SchemaMarkup
+        schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]}
+      />
 
       <article
         className="max-w-4xl mx-auto px-4 py-12"
@@ -164,7 +169,10 @@ export default function StopCatalogMailPage() {
 
         <div className="prose max-w-none">
           <p style={{ color: "#374151" }}>
-            Unwanted catalogs waste paper, clutter your mailbox, and often advertise products you&apos;ll never buy. The average American household receives dozens of catalogs each year. Here&apos;s how to stop them.
+            Unwanted catalogs waste paper, clutter your mailbox, and often
+            advertise products you&apos;ll never buy. The average American
+            household receives dozens of catalogs each year. Here&apos;s how to
+            stop them.
           </p>
 
           {/* Quick Answer Box */}
@@ -172,14 +180,42 @@ export default function StopCatalogMailPage() {
             className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6"
             style={{ backgroundColor: "#eff6ff", borderColor: "#3b82f6" }}
           >
-            <p className="font-semibold" style={{ color: "#1e40af" }}>Quick Answer:</p>
+            <p className="font-semibold" style={{ color: "#1e40af" }}>
+              Quick Answer:
+            </p>
             <p style={{ color: "#1e3a8a" }}>
-              Use <strong><a href="https://www.catalogchoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">CatalogChoice.org</a></strong> (free) to stop specific catalogs. Register with <strong><a href="https://www.dmachoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">DMAchoice.org</a></strong> ($4) for broader coverage. Email <strong>abacusoptout@epsilon.com</strong> to stop catalogs from companies you&apos;ve never ordered from.
+              Use{" "}
+              <strong>
+                <a
+                  href="https://www.catalogchoice.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 hover:underline"
+                >
+                  CatalogChoice.org
+                </a>
+              </strong>{" "}
+              (free) to stop specific catalogs. Register with{" "}
+              <strong>
+                <a
+                  href="https://www.dmachoice.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 hover:underline"
+                >
+                  DMAchoice.org
+                </a>
+              </strong>{" "}
+              ($4) for broader coverage. Email{" "}
+              <strong>abacusoptout@epsilon.com</strong> to stop catalogs from
+              companies you&apos;ve never ordered from.
             </p>
           </div>
 
           {/* Quick Comparison Table */}
-          <h2 style={{ color: "#111827" }}>Catalog Opt-Out Services Compared</h2>
+          <h2 style={{ color: "#111827" }}>
+            Catalog Opt-Out Services Compared
+          </h2>
         </div>
 
         <div className="overflow-x-auto my-6">
@@ -187,7 +223,10 @@ export default function StopCatalogMailPage() {
             className="min-w-full border border-gray-200"
             style={{ borderColor: "#e5e7eb" }}
           >
-            <thead className="bg-gray-100" style={{ backgroundColor: "#f3f4f6" }}>
+            <thead
+              className="bg-gray-100"
+              style={{ backgroundColor: "#f3f4f6" }}
+            >
               <tr>
                 <th
                   className="px-4 py-3 text-left text-gray-900 font-semibold border-b"
@@ -218,7 +257,15 @@ export default function StopCatalogMailPage() {
             <tbody>
               <tr>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.catalogchoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>CatalogChoice</a>
+                  <a
+                    href="https://www.catalogchoice.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    CatalogChoice
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   Free
@@ -232,7 +279,15 @@ export default function StopCatalogMailPage() {
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
-                  <a href="https://www.dmachoice.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold" style={{ color: "#2563eb" }}>DMAchoice</a>
+                  <a
+                    href="https://www.dmachoice.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-semibold"
+                    style={{ color: "#2563eb" }}
+                  >
+                    DMAchoice
+                  </a>
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
                   $4 (10 years)
@@ -297,14 +352,13 @@ export default function StopCatalogMailPage() {
                 >
                   Register with DMAchoice
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>dmachoice.org</strong> — $4 for 10 years of coverage
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>dmachoice.org</strong>, $4 for 10 years of coverage
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  Start with DMAchoice because a single registration notifies thousands of catalog companies at once. Select the &quot;Catalogs&quot; category when registering.
+                  Start with DMAchoice because a single registration notifies
+                  thousands of catalog companies at once. Select the
+                  &quot;Catalogs&quot; category when registering.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -334,7 +388,10 @@ export default function StopCatalogMailPage() {
                     </li>
                     <li>Create an account</li>
                     <li>Pay the $4 registration fee</li>
-                    <li>Select &quot;Catalogs&quot; category (and others if desired)</li>
+                    <li>
+                      Select &quot;Catalogs&quot; category (and others if
+                      desired)
+                    </li>
                     <li>Submit your registration</li>
                   </ul>
                 </div>
@@ -344,7 +401,8 @@ export default function StopCatalogMailPage() {
                 >
                   <strong>Time to take effect:</strong> 2-3 months
                   <br />
-                  <strong>By mail:</strong> Send $6 to DMAchoice, P.O. Box 900, Cos Cob, CT 06807
+                  <strong>By mail:</strong> Send $6 to DMAchoice, P.O. Box 900,
+                  Cos Cob, CT 06807
                 </p>
               </div>
             </div>
@@ -370,14 +428,15 @@ export default function StopCatalogMailPage() {
                 >
                   Use CatalogChoice for Specific Catalogs
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
-                  <strong>catalogchoice.org</strong> — Free, nonprofit service
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
+                  <strong>catalogchoice.org</strong>, Free, nonprofit service
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  CatalogChoice lets you target specific catalogs. They&apos;ve helped over <strong>2 million people</strong> stop unwanted catalogs and saved half a million trees in the process. They have nearly <strong>10,000 catalogs</strong> in their database.
+                  CatalogChoice lets you target specific catalogs. They&apos;ve
+                  helped over <strong>2 million people</strong> stop unwanted
+                  catalogs and saved half a million trees in the process. They
+                  have nearly <strong>10,000 catalogs</strong> in their
+                  database.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -443,14 +502,15 @@ export default function StopCatalogMailPage() {
                 >
                   Opt Out of Abacus Database
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   Stop catalog data sharing at the source
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  Abacus (owned by Epsilon) is a <strong>data cooperative</strong> where catalog companies share customer information. If you ordered from one catalog, dozens of others may get your info. Opting out stops this sharing.
+                  Abacus (owned by Epsilon) is a{" "}
+                  <strong>data cooperative</strong> where catalog companies
+                  share customer information. If you ordered from one catalog,
+                  dozens of others may get your info. Opting out stops this
+                  sharing.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -479,10 +539,16 @@ export default function StopCatalogMailPage() {
                     <li>Include your full name and complete mailing address</li>
                     <li>Request removal from the Abacus catalog database</li>
                   </ul>
-                  <p className="mt-4 text-gray-700" style={{ color: "#374151" }}>
-                    <strong>Or mail to:</strong><br />
-                    Abacus Consumer Opt-Out<br />
-                    P.O. Box 1478<br />
+                  <p
+                    className="mt-4 text-gray-700"
+                    style={{ color: "#374151" }}
+                  >
+                    <strong>Or mail to:</strong>
+                    <br />
+                    Abacus Consumer Opt-Out
+                    <br />
+                    P.O. Box 1478
+                    <br />
                     Broomfield, CO 80038
                   </p>
                 </div>
@@ -518,14 +584,13 @@ export default function StopCatalogMailPage() {
                 >
                   Contact Catalog Companies Directly
                 </h2>
-                <p
-                  className="text-gray-600 mb-4"
-                  style={{ color: "#4b5563" }}
-                >
+                <p className="text-gray-600 mb-4" style={{ color: "#4b5563" }}>
                   For persistent catalogs or companies you&apos;ve ordered from
                 </p>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  Companies you&apos;ve ordered from have a direct relationship with you, which may not be covered by DMAchoice or CatalogChoice. Contact them directly for fastest results.
+                  Companies you&apos;ve ordered from have a direct relationship
+                  with you, which may not be covered by DMAchoice or
+                  CatalogChoice. Contact them directly for fastest results.
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -541,10 +606,23 @@ export default function StopCatalogMailPage() {
                     className="list-disc pl-5 space-y-1 text-gray-700"
                     style={{ color: "#374151" }}
                   >
-                    <li><strong>Phone:</strong> Call the customer service number on the catalog</li>
-                    <li><strong>Website:</strong> Use the &quot;Contact Us&quot; or &quot;Mailing Preferences&quot; page</li>
-                    <li><strong>Email:</strong> Many catalogs list an email for catalog removal</li>
-                    <li><strong>When ordering:</strong> Uncheck &quot;Send me catalogs&quot; and add &quot;NO CATALOG&quot; to order notes</li>
+                    <li>
+                      <strong>Phone:</strong> Call the customer service number
+                      on the catalog
+                    </li>
+                    <li>
+                      <strong>Website:</strong> Use the &quot;Contact Us&quot;
+                      or &quot;Mailing Preferences&quot; page
+                    </li>
+                    <li>
+                      <strong>Email:</strong> Many catalogs list an email for
+                      catalog removal
+                    </li>
+                    <li>
+                      <strong>When ordering:</strong> Uncheck &quot;Send me
+                      catalogs&quot; and add &quot;NO CATALOG&quot; to order
+                      notes
+                    </li>
                   </ul>
                 </div>
                 <div
@@ -553,7 +631,8 @@ export default function StopCatalogMailPage() {
                 >
                   <strong style={{ color: "#92400e" }}>Tip:</strong>{" "}
                   <span style={{ color: "#78350f" }}>
-                    Also ask them not to share or sell your information to other companies.
+                    Also ask them not to share or sell your information to other
+                    companies.
                   </span>
                 </div>
               </div>
@@ -572,7 +651,11 @@ export default function StopCatalogMailPage() {
               This Won&apos;t Stop EDDM Mail
             </h3>
             <p style={{ color: "#7f1d1d" }}>
-              These services stop <strong>addressed catalogs</strong>—mail with your name on it. They do <strong>not</strong> stop EDDM &quot;Postal Customer&quot; mailers that look like catalogs. EDDM mail is delivered to every address regardless of who lives there, and there is currently no way to opt out.
+              These services stop <strong>addressed catalogs</strong>, mail with
+              your name on it. They do <strong>not</strong> stop EDDM
+              &quot;Postal Customer&quot; mailers that look like catalogs. EDDM
+              mail is delivered to every address regardless of who lives there,
+              and there is currently no way to opt out.
             </p>
             <Link
               href="/what-is-eddm"
@@ -665,6 +748,10 @@ export default function StopCatalogMailPage() {
               </Link>
             </li>
           </ul>
+        </div>
+
+        <div className="mt-12">
+          <UnsubscribeEmailTemplate heading="Email a Catalog Company Directly: Copy-and-Paste Template" />
         </div>
 
         <PetitionCTA className="mt-12" />

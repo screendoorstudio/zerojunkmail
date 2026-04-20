@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "lastUpdated": "2025-01-11",
-    "totalArticles": 85,
+    "lastUpdated": "2026-04-20",
+    "totalArticles": 63,
     "dateRange": {
       "earliest": "1970-05-04",
-      "latest": "2025-01-11"
+      "latest": "2026-04-11"
     },
     "categories": [
       "legal",
@@ -19,6 +19,143 @@
     "decades": ["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]
   },
   "articles": [
+    {
+      "id": "2026-nyt-postal-service-trouble",
+      "title": "The Postal Service Is in Trouble. Here's How It Could Affect Your Mail.",
+      "date": "2026-04-11",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "The New York Times",
+      "url": "https://www.nytimes.com/2026/04/11/us/politics/postal-service-finances-mail.html",
+      "description": "The New York Times examines how the USPS cash shortfall could force service cuts for ordinary Americans, from delayed delivery to higher stamp prices, as Postmaster General David Steiner warns the agency could be unable to fund operations within a year.",
+      "category": "usps-business",
+      "significance": "high",
+      "keyQuote": "Less than a year from now, the Postal Service will be unable to deliver the mail if we maintain the status quo."
+    },
+    {
+      "id": "2026-time-usps-severe-financial-crisis",
+      "title": "What to Know About the U.S. Postal Service's 'Severe Financial Crisis'",
+      "date": "2026-04-10",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "TIME",
+      "url": "https://time.com/article/2026/04/10/usps-pension-contributions-mail-stamp-prices/",
+      "description": "TIME summarizes the USPS cash crisis, pension suspensions, and looming stamp price hikes, highlighting why advertising mail revenue has not been enough to stabilize the agency despite billions of pieces sent each year.",
+      "category": "usps-business",
+      "significance": "high"
+    },
+    {
+      "id": "2026-reuters-usps-pension-suspended",
+      "title": "Cash-Strapped US Postal Service Suspends Contributions to Pension Plan",
+      "date": "2026-04-09",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/cash-strapped-us-postal-service-suspends-contributions-pension-plan-2026-04-09/",
+      "description": "USPS suspended employer pension contributions effective April 10, pausing roughly $200 million every two weeks to free $2.5 billion in cash this fiscal year, as the agency tries to avoid insolvency.",
+      "category": "usps-business",
+      "significance": "high",
+      "keyQuote": "The move frees up roughly $2.5 billion of cash for the Postal Service this fiscal year."
+    },
+    {
+      "id": "2026-federal-news-network-usps-pension",
+      "title": "USPS Suspends Contributions to Pension Plan to Delay Running Out of Cash",
+      "date": "2026-04-09",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "Federal News Network",
+      "url": "https://federalnewsnetwork.com/management/2026/04/usps-suspends-contributions-to-pension-plan-to-delay-running-out-of-cash/",
+      "description": "Federal News Network details the FERS contribution suspension and its impact on postal employees, noting the move comes weeks after leadership told Congress the agency could run out of cash within the year.",
+      "category": "usps-business",
+      "significance": "medium"
+    },
+    {
+      "id": "2026-al-stamp-prices-increase",
+      "title": "Stamp Prices Set to Increase Again",
+      "date": "2026-04-05",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "AL.com",
+      "url": "https://www.al.com/news/2026/04/stamp-prices-set-to-increaseagain.html",
+      "description": "Another round of stamp price hikes is on the horizon as USPS leadership weighs raising first-class postage from 78 cents to a dollar or more to offset billions in operating losses.",
+      "category": "usps-business",
+      "significance": "medium"
+    },
+    {
+      "id": "2026-npr-1a-usps-plight",
+      "title": "The Plight of the U.S. Postal Service",
+      "date": "2026-03-25",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "NPR / 1A",
+      "url": "https://www.npr.org/2026/03/25/nx-s1-5760859/the-plight-of-the-u-s-postal-service",
+      "description": "NPR's 1A devotes an episode to the USPS crisis, exploring the structural reasons behind declining mail volume, the agency's reliance on advertising mail revenue, and the tradeoffs in possible reforms.",
+      "category": "usps-business",
+      "significance": "medium"
+    },
+    {
+      "id": "2026-fnn-usps-cutting-delivery-days",
+      "title": "USPS Cutting Delivery Days 'On the Table' as Agency Runs Out of Cash",
+      "date": "2026-03-20",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "Federal News Network",
+      "url": "https://federalnewsnetwork.com/agency-oversight/2026/03/usps-cutting-delivery-days-on-the-table-as-agency-runs-out-of-cash-postmaster-general-tells-lawmakers/",
+      "description": "Postmaster General David Steiner told House lawmakers that reducing six-day delivery is now on the table, along with higher postage and expanded borrowing authority, as USPS approaches insolvency.",
+      "category": "usps-business",
+      "significance": "high",
+      "keyQuote": "Without help from Congress, USPS may have to consider cutting delivery days or closing post offices."
+    },
+    {
+      "id": "2026-nypost-usps-cash-crisis-halt-mail",
+      "title": "USPS Already Lost $1.3 Billion This Year, and Cash Shortages Might Halt Mail Delivery in 2027",
+      "date": "2026-03-20",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "New York Post",
+      "url": "https://nypost.com/2026/03/20/lifestyle/usps-cash-crisis-could-halt-mail-delivery-by-2027/",
+      "description": "The New York Post reports USPS posted its fourth straight quarterly loss, $1.3 billion, and warns mail delivery could halt in February 2027 absent congressional action.",
+      "category": "usps-business",
+      "significance": "high"
+    },
+    {
+      "id": "2026-postaltimes-illinois-biggest-problem",
+      "title": "Postmaster General Says Illinois Is USPS' 'Biggest Problem' Area",
+      "date": "2026-03-20",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "The State Journal-Register (via PostalTimes)",
+      "url": "https://postaltimes.com/postmaster-general-says-illinois-is-usps-biggest-problem-area/",
+      "description": "Postmaster General David Steiner identified Illinois as the worst-performing USPS region during House testimony, citing service complaints and operational issues that have drawn congressional attention.",
+      "category": "usps-business",
+      "significance": "medium"
+    },
+    {
+      "id": "2026-npr-usps-out-of-cash",
+      "title": "USPS Is Running Out of Money, Postmaster General Says",
+      "date": "2026-03-17",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "NPR",
+      "url": "https://www.npr.org/2026/03/17/nx-s1-5750419/usps-running-out-of-money-postal-service-david-steiner",
+      "description": "Postmaster General David Steiner told Congress the agency is on track to run out of cash for paying workers and vendors within a year, and warned it may have to stop deliveries without legislative intervention.",
+      "category": "usps-business",
+      "significance": "high",
+      "keyQuote": "The Postal Service will be unable to deliver the mail if we maintain the status quo."
+    },
+    {
+      "id": "2026-eddm-usps-facts-5b-revenue",
+      "title": "USPS Confirms EDDM Has Generated Over $5 Billion in Revenue Since 2011",
+      "date": "2026-01-01",
+      "year": 2026,
+      "decade": "2020s",
+      "source": "USPS Postal Facts",
+      "url": "https://facts.usps.com/every-door-direct-mail/",
+      "description": "USPS Postal Facts reports that Every Door Direct Mail has delivered more than 33 billion pieces and generated more than $5 billion in revenue since launching in 2011, underscoring why the agency resists any opt-out mechanism even as households drown in unwanted ads.",
+      "category": "eddm",
+      "significance": "high",
+      "keyQuote": "More than 33 billion pieces and more than $5 billion in revenue since 2011."
+    },
     {
       "id": "1970-rowan-v-post-office",
       "title": "Supreme Court Upholds Right to Refuse 'Pandering' Mail in Rowan v. Post Office Dept.",
@@ -66,7 +203,7 @@
       "decade": "1980s",
       "source": "Industry Analysis",
       "url": "https://www.wttw.com/chicago-stories/rise-and-fall-of-the-mail-order-giants/the-rise-and-fall-of-chicagos-mail-order-giants",
-      "description": "The 1980s became a golden era for catalog marketing as computer technology enabled sophisticated consumer targeting. Catalogs sent to US addresses ballooned from 5.8 million in 1980 to 13.4 billion by 1989—a 131% increase.",
+      "description": "The 1980s became a golden era for catalog marketing as computer technology enabled sophisticated consumer targeting. Catalogs sent to US addresses ballooned from 5.8 million in 1980 to 13.4 billion by 1989, a 131% increase.",
       "category": "industry",
       "significance": "high",
       "keyQuote": "American homes averaged 4.5 pieces of direct mail per week in 1977. By 1987, they got double that."
@@ -92,7 +229,7 @@
       "decade": "1980s",
       "source": "Vice / The Mail Substack",
       "url": "https://www.vice.com/en/article/889wyv/how-we-ended-up-with-all-this-junk-mail",
-      "description": "Technological breakthroughs allowed mailers to do sophisticated analyses about who to send what mail to based on ZIP codes, census tracts, income levels, and recent purchases—much as Google and Facebook would later do with digital ads.",
+      "description": "Technological breakthroughs allowed mailers to do sophisticated analyses about who to send what mail to based on ZIP codes, census tracts, income levels, and recent purchases, much as Google and Facebook would later do with digital ads.",
       "category": "industry",
       "significance": "high",
       "keyQuote": "Direct mailers could now target ads much more specifically, yielding higher response rates which in turn enabled more junk mail to be profitable."
@@ -105,7 +242,7 @@
       "decade": "1990s",
       "source": "Industry Analysis",
       "url": "https://themail.substack.com/p/how-we-ended-up-with-all-this-junk",
-      "description": "The explosive growth of the nonprofit sector—quadrupling in the 1980s and doubling again in the 1990s and early 2000s—led to massive expansion in direct mail to build nationwide donor and membership lists.",
+      "description": "The explosive growth of the nonprofit sector, quadrupling in the 1980s and doubling again in the 1990s and early 2000s, led to massive expansion in direct mail to build nationwide donor and membership lists.",
       "category": "industry",
       "significance": "medium",
       "keyQuote": "The nonprofit sector quadrupled in the 1980s and doubled again in the 1990s and early 2000s."
@@ -248,7 +385,7 @@
       "decade": "2010s",
       "source": "USPS Federal Register",
       "url": "https://www.federalregister.gov/documents/2012/10/15/2012-25059/every-door-direct-mail-retail",
-      "description": "The Postal Service announces a new market test beginning January 2011 to enable customers to mail saturation flats with simplified addresses to all types of delivery in a more simplified manner—the pilot that would become EDDM.",
+      "description": "The Postal Service announces a new market test beginning January 2011 to enable customers to mail saturation flats with simplified addresses to all types of delivery in a more simplified manner, the pilot that would become EDDM.",
       "category": "eddm",
       "significance": "high",
       "keyQuote": "In December 2010, the Postal Service announced a new market test to begin in January 2011."
@@ -287,10 +424,10 @@
       "decade": "2010s",
       "source": "USPS OIG",
       "url": "https://www.uspsoig.gov/reports/white-papers/analysis-historical-mail-volume-trends",
-      "description": "First-Class Mail volume continues its steep decline, down 40% from 2006 peak levels. The main driver is 'electronic diversion'—the replacement of physical mail with email, texting, social media, and online bill payment.",
+      "description": "First-Class Mail volume continues its steep decline, down 40% from 2006 peak levels. The main driver is 'electronic diversion', the replacement of physical mail with email, texting, social media, and online bill payment.",
       "category": "usps-business",
       "significance": "medium",
-      "keyQuote": "The main driver of declining mail volumes has been 'electronic diversion'—the replacement of physical mail with electronic alternatives."
+      "keyQuote": "The main driver of declining mail volumes has been 'electronic diversion', the replacement of physical mail with electronic alternatives."
     },
     {
       "id": "2016-sierra-club-ban-junk-mail",
@@ -313,7 +450,7 @@
       "decade": "2010s",
       "source": "NASA / Sierra Club",
       "url": "https://www.sierraclub.org/sierra/let-s-ban-junk-mail-already",
-      "description": "A NASA-funded study finds that the production of pulpwood—used for paper products including junk mail—leads to the highest forest carbon release out of all wood products.",
+      "description": "A NASA-funded study finds that the production of pulpwood, used for paper products including junk mail, leads to the highest forest carbon release out of all wood products.",
       "category": "environmental",
       "significance": "medium",
       "keyQuote": "The production of pulpwood leads to the highest forest carbon release out of all wood products."
@@ -385,7 +522,7 @@
     },
     {
       "id": "2023-direct-mail-volume-drops-13",
-      "title": "Direct Mail Volume Plunges 13.4%—Largest Drop Since 2009 Recession",
+      "title": "Direct Mail Volume Plunges 13.4%, Largest Drop Since 2009 Recession",
       "date": "2023-12-01",
       "year": 2023,
       "decade": "2020s",
@@ -407,7 +544,7 @@
       "description": "The FBI reports that scams targeting individuals aged 60 and older caused over $3.4 billion in losses in 2023, an 11% increase from the prior year. Many scams originate through physical mail targeting seniors.",
       "category": "fraud",
       "significance": "high",
-      "keyQuote": "Scams targeting individuals aged 60 and older caused over $3.4 billion in losses in 2023—an increase of approximately 11% from the year prior."
+      "keyQuote": "Scams targeting individuals aged 60 and older caused over $3.4 billion in losses in 2023, an increase of approximately 11% from the year prior."
     },
     {
       "id": "2024-eddm-33-billion-pieces-total",
@@ -456,7 +593,7 @@
       "decade": "2020s",
       "source": "FBI / ABC News",
       "url": "https://abcnews.go.com/Politics/seniors-lost-48-billion-scammers-2024-fbi/story?id=121059590",
-      "description": "According to FBI data, seniors lost $4.885 billion to scammers in 2024—a 46% increase in complaints and 43% increase in losses from 2023. Mail-based fraud remains a significant vector for targeting elderly victims.",
+      "description": "According to FBI data, seniors lost $4.885 billion to scammers in 2024, a 46% increase in complaints and 43% increase in losses from 2023. Mail-based fraud remains a significant vector for targeting elderly victims.",
       "category": "fraud",
       "significance": "high",
       "keyQuote": "In 2024 there was a total of $4.885 billion in losses from 147,127 complaints. This is a 46% increase in complaints from 2023."
@@ -612,10 +749,10 @@
       "decade": "2000s",
       "source": "Industry Analysis / CRS",
       "url": "https://www.everycrsreport.com/reports/RL34643.html",
-      "description": "At its peak, estimates suggest $60 billion—or 21% of all advertising dollars in the United States—was spent on advertising mail, making it a significant portion of the overall advertising economy.",
+      "description": "At its peak, estimates suggest $60 billion, or 21% of all advertising dollars in the United States, was spent on advertising mail, making it a significant portion of the overall advertising economy.",
       "category": "industry",
       "significance": "medium",
-      "keyQuote": "Estimates suggest $60 billion—or 21% of all advertising dollars in the United States—is spent on advertising mail."
+      "keyQuote": "Estimates suggest $60 billion, or 21% of all advertising dollars in the United States, is spent on advertising mail."
     },
     {
       "id": "industry-junk-mail-term-1954",

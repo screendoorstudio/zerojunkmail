@@ -5,7 +5,10 @@ import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG, STATISTICS } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -41,17 +44,17 @@ const faqs: FAQItem[] = [
   {
     question: "Why does my mail say 'Postal Customer' instead of my name?",
     answer:
-      "Mail addressed to 'Postal Customer,' 'Resident,' 'Current Resident,' or 'Current Occupant' is EDDM saturation mail. Advertisers don't need your name or address—they simply pay to have mail delivered to every home in a zip code or carrier route. This generic addressing is why you cannot refuse or return this mail.",
+      "Mail addressed to 'Postal Customer,' 'Resident,' 'Current Resident,' or 'Current Occupant' is EDDM saturation mail. Advertisers don't need your name or address, they simply pay to have mail delivered to every home in a zip code or carrier route. This generic addressing is why you cannot refuse or return this mail.",
   },
   {
     question: "How much does EDDM cost advertisers?",
     answer:
-      "EDDM postage rates are heavily discounted, typically around $0.20-0.25 per piece—far less than regular first-class mail. This low cost incentivizes mass mailings and makes saturation advertising economically attractive for local businesses.",
+      "EDDM postage rates are heavily discounted, typically around $0.20-0.25 per piece, far less than regular first-class mail. This low cost incentivizes mass mailings and makes saturation advertising economically attractive for local businesses.",
   },
   {
     question: "Can I opt out of EDDM mail?",
     answer:
-      "No. There is currently no legal mechanism to opt out of EDDM or saturation mail in the United States. Unlike spam email or robocalls, postal advertising has no federal opt-out registry. Services like DMAchoice and CatalogChoice only work for addressed mail—not EDDM.",
+      "No. There is currently no legal mechanism to opt out of EDDM or saturation mail in the United States. Unlike spam email or robocalls, postal advertising has no federal opt-out registry. Services like DMAchoice and CatalogChoice only work for addressed mail, not EDDM.",
   },
   {
     question: "Can I refuse EDDM mail or return it to sender?",
@@ -61,12 +64,12 @@ const faqs: FAQItem[] = [
   {
     question: "What is the difference between EDDM and regular junk mail?",
     answer:
-      "Regular addressed junk mail uses your name and address from mailing lists—you can opt out by removing yourself from these lists. EDDM requires no mailing list at all—it's delivered to every address on a route. There's no list to remove yourself from, which is why EDDM cannot be stopped.",
+      "Regular addressed junk mail uses your name and address from mailing lists, you can opt out by removing yourself from these lists. EDDM requires no mailing list at all, it's delivered to every address on a route. There's no list to remove yourself from, which is why EDDM cannot be stopped.",
   },
   {
     question: "How many EDDM pieces are sent each year?",
     answer:
-      "The USPS processes approximately 3 billion EDDM mail pieces annually. When combined with other advertising mail programs, Americans receive over 80 billion pieces of marketing mail each year—the majority of which goes directly to recycling or trash.",
+      "The USPS processes approximately 3 billion EDDM mail pieces annually. When combined with other advertising mail programs, Americans receive over 80 billion pieces of marketing mail each year, the majority of which goes directly to recycling or trash.",
   },
 ];
 
@@ -102,7 +105,7 @@ export default function WhatIsEDDMPage() {
 
         {/* TL;DR Box */}
         <TLDRBox
-          summary="EDDM (Every Door Direct Mail) is a USPS program that lets businesses send advertising mail to every address in a zip code or carrier route—without needing names or individual addresses. It's the mail marked 'ECRWSS' or 'Postal Customer' that you cannot opt out of."
+          summary="EDDM (Every Door Direct Mail) is a USPS program that lets businesses send advertising mail to every address in a zip code or carrier route, without needing names or individual addresses. It's the mail marked 'ECRWSS' or 'Postal Customer' that you cannot opt out of."
           keyStatistic={{
             value: STATISTICS.eddmPieces.shortValue,
             label: "pieces/year",
@@ -117,16 +120,23 @@ export default function WhatIsEDDMPage() {
           <p>
             <strong>Every Door Direct Mail (EDDM)</strong> is a United States
             Postal Service program launched in 2011 that allows businesses to
-            send advertising mail to every residential and business address along
-            specific postal carrier routes. The program was designed to make
-            direct mail advertising more accessible and affordable for small
-            businesses.
+            send advertising mail to every residential and business address
+            along specific postal carrier routes. The program was designed to
+            make direct mail advertising more accessible and affordable for
+            small businesses.
           </p>
 
           <h2>How Does EDDM Work?</h2>
           <p>
-            Unlike traditional direct mail, EDDM doesn&apos;t require advertisers to
-            purchase mailing lists or know individual recipient names. <strong>This is the critical difference: there is no mailing list to opt out of.</strong> If you have a mailbox, you receive EDDM mail. Period. Businesses simply:
+            Unlike traditional direct mail, EDDM doesn&apos;t require
+            advertisers to purchase mailing lists or know individual recipient
+            names.{" "}
+            <strong>
+              This is the critical difference: there is no mailing list to opt
+              out of.
+            </strong>{" "}
+            If you have a mailbox, you receive EDDM mail. Period. Businesses
+            simply:
           </p>
           <ul>
             <li>Select zip codes or carrier routes they want to target</li>
@@ -134,14 +144,19 @@ export default function WhatIsEDDMPage() {
               Print mail pieces that meet USPS size requirements (typically
               larger than standard letters)
             </li>
-            <li>Bundle the pieces and deliver them to their local post office</li>
             <li>
-              Pay discounted postage rates (approximately $0.20-0.23 per piece)—far cheaper than regular postage
+              Bundle the pieces and deliver them to their local post office
+            </li>
+            <li>
+              Pay discounted postage rates (approximately $0.20-0.23 per piece),
+              far cheaper than regular postage
             </li>
           </ul>
           <p>
             The USPS then delivers one piece to every address on the selected
-            routes—whether the resident wants it or not. At under 25 cents per piece, EDDM is incredibly affordable for advertisers, which explains why billions of pieces flood American mailboxes each year.
+            routes, whether the resident wants it or not. At under 25 cents per
+            piece, EDDM is incredibly affordable for advertisers, which explains
+            why billions of pieces flood American mailboxes each year.
           </p>
 
           <h2>What Does ECRWSS Mean?</h2>
@@ -159,9 +174,9 @@ export default function WhatIsEDDMPage() {
             <li>Eligible for the lowest bulk mail rates</li>
           </ul>
           <p>
-            When you see &quot;ECRWSS&quot; or &quot;ECRWSS EDDM&quot; printed on mail, it confirms
-            that the piece was sent through the EDDM program to every address in
-            your area.
+            When you see &quot;ECRWSS&quot; or &quot;ECRWSS EDDM&quot; printed
+            on mail, it confirms that the piece was sent through the EDDM
+            program to every address in your area.
           </p>
 
           <h2>Why Does My Mail Say &quot;Postal Customer&quot;?</h2>
@@ -176,10 +191,10 @@ export default function WhatIsEDDMPage() {
             <li>&quot;Local Postal Customer&quot;</li>
           </ul>
           <p>
-            This generic addressing is the key reason you cannot refuse or return
-            EDDM mail. Since it&apos;s not technically addressed to you as an
-            individual, the USPS considers it &quot;unaddressed mail&quot; and will not
-            accept a refusal.
+            This generic addressing is the key reason you cannot refuse or
+            return EDDM mail. Since it&apos;s not technically addressed to you
+            as an individual, the USPS considers it &quot;unaddressed mail&quot;
+            and will not accept a refusal.
           </p>
 
           <h2>The Scale of the Problem</h2>
@@ -187,14 +202,12 @@ export default function WhatIsEDDMPage() {
             The USPS processes approximately{" "}
             <strong>{STATISTICS.eddmPieces.value} EDDM mail pieces</strong>{" "}
             annually. When combined with other bulk mail programs, Americans
-            receive over 80 billion pieces of advertising mail each year—the
+            receive over 80 billion pieces of advertising mail each year, the
             majority of which goes directly into the recycling bin or trash.
           </p>
 
           <h2>Why Was EDDM Created?</h2>
-          <p>
-            The USPS launched EDDM in 2011 primarily for two reasons:
-          </p>
+          <p>The USPS launched EDDM in 2011 primarily for two reasons:</p>
           <ol>
             <li>
               <strong>Revenue generation:</strong> As first-class mail volume
@@ -229,21 +242,25 @@ export default function WhatIsEDDMPage() {
               immediately, contributing to paper waste
             </li>
             <li>
-              <strong>Time cost:</strong> Sorting through unwanted mail takes time
-              from busy households
+              <strong>Time cost:</strong> Sorting through unwanted mail takes
+              time from busy households
             </li>
           </ul>
 
           <h2>Examples of Problematic EDDM Content</h2>
           <p>
             EDDM allows virtually any content to be delivered to every home on a
-            postal route, including materials many recipients find objectionable:
+            postal route, including materials many recipients find
+            objectionable:
           </p>
         </div>
 
         {/* Problem content examples */}
         <div className="my-8 grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-50 p-4 rounded-lg" style={{ backgroundColor: "#f9fafb" }}>
+          <div
+            className="bg-gray-50 p-4 rounded-lg"
+            style={{ backgroundColor: "#f9fafb" }}
+          >
             <Image
               src="/images/junk-mail/cigarette-ad.png"
               alt="Cigarette advertisement delivered via EDDM"
@@ -252,10 +269,14 @@ export default function WhatIsEDDMPage() {
               className="rounded-lg shadow-md w-full mb-3"
             />
             <p className="text-sm text-gray-600" style={{ color: "#4b5563" }}>
-              <strong>Tobacco advertising</strong> delivered to every home—including families with children
+              <strong>Tobacco advertising</strong> delivered to every home,
+              including families with children
             </p>
           </div>
-          <div className="bg-gray-50 p-4 rounded-lg" style={{ backgroundColor: "#f9fafb" }}>
+          <div
+            className="bg-gray-50 p-4 rounded-lg"
+            style={{ backgroundColor: "#f9fafb" }}
+          >
             <Image
               src="/images/junk-mail/religious-tract.jpg"
               alt="Religious tract delivered via EDDM"
@@ -264,7 +285,8 @@ export default function WhatIsEDDMPage() {
               className="rounded-lg shadow-md w-full mb-3"
             />
             <p className="text-sm text-gray-600" style={{ color: "#4b5563" }}>
-              <strong>Religious materials</strong> delivered to all addresses regardless of recipient beliefs
+              <strong>Religious materials</strong> delivered to all addresses
+              regardless of recipient beliefs
             </p>
           </div>
         </div>

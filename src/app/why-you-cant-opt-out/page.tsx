@@ -5,7 +5,10 @@ import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -50,9 +53,10 @@ const faqs: FAQItem[] = [
       "You can, but it has no legal effect. USPS carriers are required to deliver EDDM mail to every address and will ignore such stickers.",
   },
   {
-    question: "Why is there a Do Not Call registry but no Do Not Mail registry?",
+    question:
+      "Why is there a Do Not Call registry but no Do Not Mail registry?",
     answer:
-      "The Do Not Call registry was created by the FTC under the Telemarketing Sales Rule. No equivalent law exists for postal advertising, and the USPS—which profits from advertising mail—has no incentive to create one.",
+      "The Do Not Call registry was created by the FTC under the Telemarketing Sales Rule. No equivalent law exists for postal advertising, and the USPS, which profits from advertising mail, has no incentive to create one.",
   },
 ];
 
@@ -67,7 +71,10 @@ export default function WhyYouCantOptOutPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: SITE_CONFIG.url },
-    { name: "Why You Can't Opt Out", url: `${SITE_CONFIG.url}/why-you-cant-opt-out` },
+    {
+      name: "Why You Can't Opt Out",
+      url: `${SITE_CONFIG.url}/why-you-cant-opt-out`,
+    },
   ]);
 
   const faqSchema = generateFAQSchema(faqs);
@@ -87,9 +94,7 @@ export default function WhyYouCantOptOutPage() {
         </nav>
 
         {/* TL;DR Box */}
-        <TLDRBox
-          summary="You cannot opt out of EDDM mail because: (1) federal law gives USPS exclusive access to your mailbox, (2) the mail is addressed to 'Postal Customer' not you personally, and (3) there is no Do Not Mail registry. The USPS has no incentive to create one because advertising mail generates billions in revenue."
-        />
+        <TLDRBox summary="You cannot opt out of EDDM mail because: (1) federal law gives USPS exclusive access to your mailbox, (2) the mail is addressed to 'Postal Customer' not you personally, and (3) there is no Do Not Mail registry. The USPS has no incentive to create one because advertising mail generates billions in revenue." />
 
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Why You Can&apos;t Opt Out of USPS Junk Mail
@@ -97,10 +102,13 @@ export default function WhyYouCantOptOutPage() {
 
         <div className="prose max-w-none">
           <p>
-            Unlike spam email, robocalls, or text message marketing—all of which
-            have federal opt-out mechanisms—<strong>there is no legal way to stop
-            USPS advertising mail from arriving in your mailbox</strong>. This
-            isn&apos;t an oversight; it&apos;s by design.
+            Unlike spam email, robocalls, or text message marketing, all of
+            which have federal opt-out mechanisms,{" "}
+            <strong>
+              there is no legal way to stop USPS advertising mail from arriving
+              in your mailbox
+            </strong>
+            . This isn&apos;t an oversight; it&apos;s by design.
           </p>
 
           {/* Image: EDDM sample showing addressing */}
@@ -114,8 +122,12 @@ export default function WhyYouCantOptOutPage() {
                   height={300}
                   className="rounded-lg shadow-md w-full"
                 />
-                <p className="text-sm text-gray-500 mt-2" style={{ color: "#6b7280" }}>
-                  EDDM mail addressed to &quot;Postal Customer&quot;—not you personally
+                <p
+                  className="text-sm text-gray-500 mt-2"
+                  style={{ color: "#6b7280" }}
+                >
+                  EDDM mail addressed to &quot;Postal Customer&quot;, not you
+                  personally
                 </p>
               </div>
               <div>
@@ -126,7 +138,10 @@ export default function WhyYouCantOptOutPage() {
                   height={300}
                   className="rounded-lg shadow-md w-full"
                 />
-                <p className="text-sm text-gray-500 mt-2" style={{ color: "#6b7280" }}>
+                <p
+                  className="text-sm text-gray-500 mt-2"
+                  style={{ color: "#6b7280" }}
+                >
                   The ECRWSS label indicates saturation mail delivery
                 </p>
               </div>
@@ -135,59 +150,58 @@ export default function WhyYouCantOptOutPage() {
 
           <h2>The Federal Mailbox Monopoly</h2>
           <p>
-            Under federal law (<strong>18 U.S.C. § 1725</strong>), your mailbox is
-            legally reserved for the exclusive use of the United States Postal
-            Service. While you own the physical mailbox, only the USPS and its
-            carriers are legally permitted to place items inside it.
+            Under federal law (<strong>18 U.S.C. § 1725</strong>), your mailbox
+            is legally reserved for the exclusive use of the United States
+            Postal Service. While you own the physical mailbox, only the USPS
+            and its carriers are legally permitted to place items inside it.
           </p>
-          <p>
-            This &quot;mailbox monopoly&quot; means:
-          </p>
+          <p>This &quot;mailbox monopoly&quot; means:</p>
           <ul>
             <li>
               Only USPS can use your mailbox (violating this is a federal
               offense)
             </li>
-            <li>
-              The USPS has complete discretion over what gets delivered
-            </li>
+            <li>The USPS has complete discretion over what gets delivered</li>
             <li>
               You cannot legally prevent any mail the USPS chooses to deliver
             </li>
           </ul>
           <p>
-            The mailbox monopoly was originally intended to protect mail security
-            and postal revenue. However, it now means you have no control over
-            the advertising that fills your mailbox daily.
+            The mailbox monopoly was originally intended to protect mail
+            security and postal revenue. However, it now means you have no
+            control over the advertising that fills your mailbox daily.
           </p>
 
           <h2>The &quot;Postal Customer&quot; Loophole</h2>
           <p>
-            Traditional mail can be refused: you can write &quot;REFUSED&quot; on an
-            envelope and return it to your carrier. However, this only works for
-            mail that is <strong>addressed to you personally</strong>.
+            Traditional mail can be refused: you can write &quot;REFUSED&quot;
+            on an envelope and return it to your carrier. However, this only
+            works for mail that is <strong>addressed to you personally</strong>.
           </p>
-          <p>
-            EDDM mail exploits a critical loophole:
-          </p>
+          <p>EDDM mail exploits a critical loophole:</p>
           <ul>
             <li>
-              It&apos;s addressed to &quot;Postal Customer,&quot; &quot;Resident,&quot; or &quot;Current
-              Occupant&quot;
+              It&apos;s addressed to &quot;Postal Customer,&quot;
+              &quot;Resident,&quot; or &quot;Current Occupant&quot;
             </li>
-            <li>Since it&apos;s not addressed to you, it&apos;s not legally &quot;your&quot; mail</li>
+            <li>
+              Since it&apos;s not addressed to you, it&apos;s not legally
+              &quot;your&quot; mail
+            </li>
             <li>You cannot refuse mail that isn&apos;t addressed to you</li>
-            <li>Carriers are instructed to deliver it regardless of objections</li>
+            <li>
+              Carriers are instructed to deliver it regardless of objections
+            </li>
           </ul>
           <p>
-            This is not an accidental loophole—it&apos;s an intentional feature of
-            the EDDM program design.
+            This is not an accidental loophole, it&apos;s an intentional feature
+            of the EDDM program design.
           </p>
 
           <h2>No Do Not Mail Registry Exists</h2>
           <p>
-            The federal government has created consumer protection registries for
-            other marketing channels:
+            The federal government has created consumer protection registries
+            for other marketing channels:
           </p>
           <ul>
             <li>
@@ -203,21 +217,27 @@ export default function WhyYouCantOptOutPage() {
             </li>
           </ul>
           <p>
-            Yet <strong>no equivalent protection exists for postal mail</strong>.
-            In 2007-2008, <strong>18 states</strong> introduced &quot;Do Not Mail&quot; bills to create state-level opt-out registries: Arkansas, Colorado, Connecticut, Hawaii, Illinois, Maryland, Michigan, Missouri, Montana, New Hampshire, New Jersey, New York, North Carolina, Rhode Island, Tennessee, Texas, Vermont, and Washington. Every single bill was withdrawn or defeated after intense industry opposition.
+            Yet <strong>no equivalent protection exists for postal mail</strong>
+            . In 2007-2008, <strong>18 states</strong> introduced &quot;Do Not
+            Mail&quot; bills to create state-level opt-out registries: Arkansas,
+            Colorado, Connecticut, Hawaii, Illinois, Maryland, Michigan,
+            Missouri, Montana, New Hampshire, New Jersey, New York, North
+            Carolina, Rhode Island, Tennessee, Texas, Vermont, and Washington.
+            Every single bill was withdrawn or defeated after intense industry
+            opposition.
           </p>
 
           <h2>Follow the Money: USPS Revenue Dependency</h2>
           <p>
-            The USPS is not taxpayer-funded—it must generate its own revenue
+            The USPS is not taxpayer-funded, it must generate its own revenue
             primarily through postage. As first-class mail volume has declined
             due to email and digital payments, advertising mail has become
             increasingly important:
           </p>
           <ul>
             <li>
-              Marketing mail generates <strong>billions in annual revenue</strong>{" "}
-              for USPS
+              Marketing mail generates{" "}
+              <strong>billions in annual revenue</strong> for USPS
             </li>
             <li>
               EDDM specifically is promoted as a growth product for the Postal
@@ -235,16 +255,25 @@ export default function WhyYouCantOptOutPage() {
 
           <h2>Industry Lobbying</h2>
           <p>
-            The direct mail industry is a powerful lobbying force. In 2007, when state-level Do Not Mail bills gained momentum, the Data &amp; Marketing Association formed the <strong>Mail Moves America (MMA)</strong> coalition to fight the legislation. Their arguments:
+            The direct mail industry is a powerful lobbying force. In 2007, when
+            state-level Do Not Mail bills gained momentum, the Data &amp;
+            Marketing Association formed the{" "}
+            <strong>Mail Moves America (MMA)</strong> coalition to fight the
+            legislation. Their arguments:
           </p>
           <ul>
             <li>Job losses for mail carriers and postal workers</li>
-            <li>Devastating effects on retailers, printers, and manufacturers</li>
+            <li>
+              Devastating effects on retailers, printers, and manufacturers
+            </li>
             <li>Increased postal rates for all consumers</li>
             <li>Small businesses depend on EDDM for local advertising</li>
           </ul>
           <p>
-            The campaign was remarkably effective. All 18 state bills were withdrawn, and no federal legislation has gained traction since. Meanwhile, the industry continues to lobby against any consumer opt-out mechanism.
+            The campaign was remarkably effective. All 18 state bills were
+            withdrawn, and no federal legislation has gained traction since.
+            Meanwhile, the industry continues to lobby against any consumer
+            opt-out mechanism.
           </p>
 
           <h2>What About Rowan v. Post Office?</h2>
@@ -255,8 +284,8 @@ export default function WhyYouCantOptOutPage() {
           </p>
           <ul>
             <li>
-              Only applies to mail you personally find &quot;erotically arousing or
-              sexually provocative&quot;
+              Only applies to mail you personally find &quot;erotically arousing
+              or sexually provocative&quot;
             </li>
             <li>Requires you to file paperwork for each individual sender</li>
             <li>Has been interpreted narrowly by the USPS</li>
@@ -275,8 +304,8 @@ export default function WhyYouCantOptOutPage() {
           </p>
           <ul>
             <li>
-              It <strong>only affects addressed mail</strong> from companies that
-              voluntarily participate
+              It <strong>only affects addressed mail</strong> from companies
+              that voluntarily participate
             </li>
             <li>
               It has <strong>zero effect on EDDM</strong> or any saturation mail
@@ -297,22 +326,24 @@ export default function WhyYouCantOptOutPage() {
           </p>
           <ul>
             <li>
-              <strong>Netherlands:</strong> Opt-in system with &quot;JA/JA&quot; stickers—
-              you only receive advertising mail if you request it. Amsterdam&apos;s implementation achieved a <strong>30% reduction</strong> in advertising mail volume.
+              <strong>Netherlands:</strong> Opt-in system with &quot;JA/JA&quot;
+              stickers, you only receive advertising mail if you request it.
+              Amsterdam&apos;s implementation achieved a{" "}
+              <strong>30% reduction</strong> in advertising mail volume.
             </li>
             <li>
-              <strong>Germany:</strong> &quot;Keine Werbung&quot; (No Advertising) stickers
-              are legally binding
+              <strong>Germany:</strong> &quot;Keine Werbung&quot; (No
+              Advertising) stickers are legally binding
             </li>
             <li>
-              <strong>United Kingdom:</strong> Mail Preference Service covers most
-              unaddressed mail
+              <strong>United Kingdom:</strong> Mail Preference Service covers
+              most unaddressed mail
             </li>
           </ul>
           <p>
             These models prove that consumer choice and postal services can
             coexist. The US simply hasn&apos;t chosen to implement similar
-            protections—despite 18 years of consumer advocacy efforts.
+            protections, despite 18 years of consumer advocacy efforts.
           </p>
         </div>
 

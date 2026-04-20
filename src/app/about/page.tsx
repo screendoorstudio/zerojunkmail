@@ -3,7 +3,10 @@ import Link from "next/link";
 import { TLDRBox } from "@/components/content/TLDRBox";
 import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG, PETITION_URL } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -57,9 +60,7 @@ export default function AboutPage() {
         </nav>
 
         {/* TL;DR Box */}
-        <TLDRBox
-          summary="ZeroJunkMail.org advocates for consumer choice in postal mail delivery. We have no control over EDDM junk mail from the U.S. Post Office—sign the petition to demand an opt-out method for EDDM and ECRWSS mail."
-        />
+        <TLDRBox summary="ZeroJunkMail.org advocates for consumer choice in postal mail delivery. We have no control over EDDM junk mail from the U.S. Post Office, sign the petition to demand an opt-out method for EDDM and ECRWSS mail." />
 
         <h1
           className="text-4xl font-bold text-gray-900 mb-6"
@@ -116,7 +117,7 @@ export default function AboutPage() {
             this type of mail.
           </p>
           <p style={{ color: "#374151" }}>
-            This isn&apos;t just an inconvenience—it&apos;s a significant
+            This isn&apos;t just an inconvenience, it&apos;s a significant
             environmental and consumer rights issue:
           </p>
           <ul className="list-disc pl-6 my-4" style={{ color: "#374151" }}>
@@ -148,18 +149,12 @@ export default function AboutPage() {
             <li>
               Educate consumers about EDDM, ECRWSS, and saturation mail programs
             </li>
-            <li>
-              Explain why current laws prevent consumers from opting out
-            </li>
+            <li>Explain why current laws prevent consumers from opting out</li>
             <li>
               Document the environmental and social costs of unwanted mail
             </li>
-            <li>
-              Mobilize public support for a federal Do Not Mail registry
-            </li>
-            <li>
-              Provide resources for contacting elected representatives
-            </li>
+            <li>Mobilize public support for a federal Do Not Mail registry</li>
+            <li>Provide resources for contacting elected representatives</li>
           </ul>
 
           <h2
@@ -171,7 +166,7 @@ export default function AboutPage() {
           <p style={{ color: "#374151" }}>
             The Do Not Call registry was once considered impossible due to
             telemarketing industry opposition. Public demand prevailed. The same
-            can happen for postal advertising mail—but only if enough Americans
+            can happen for postal advertising mail, but only if enough Americans
             speak up.
           </p>
           <p style={{ color: "#374151" }}>

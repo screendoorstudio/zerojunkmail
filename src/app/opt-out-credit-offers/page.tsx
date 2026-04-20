@@ -12,7 +12,8 @@ import {
 import { SITE_CONFIG } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
-  title: "How to Stop Credit Card Offers in the Mail | OptOutPrescreen Guide 2025",
+  title:
+    "How to Stop Credit Card Offers in the Mail | OptOutPrescreen Guide 2025",
   description:
     "Stop pre-approved credit card and insurance offers with OptOutPrescreen.com. Free service from the credit bureaus. Choose 5-year or permanent opt-out. Results in 5 days.",
   keywords: [
@@ -103,7 +104,8 @@ export default function OptOutCreditOffersPage() {
 
   const howToSchema = generateHowToSchema({
     name: "How to Stop Credit Card Offers in the Mail",
-    description: "Step-by-step guide to opt out of pre-approved credit card and insurance offers using OptOutPrescreen.com.",
+    description:
+      "Step-by-step guide to opt out of pre-approved credit card and insurance offers using OptOutPrescreen.com.",
     totalTime: "PT10M",
     estimatedCost: { currency: "USD", value: "0" },
     steps: howToSteps,
@@ -111,7 +113,9 @@ export default function OptOutCreditOffersPage() {
 
   return (
     <>
-      <SchemaMarkup schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]} />
+      <SchemaMarkup
+        schema={[articleSchema, breadcrumbSchema, faqSchema, howToSchema]}
+      />
 
       <article
         className="max-w-4xl mx-auto px-4 py-12"
@@ -163,7 +167,11 @@ export default function OptOutCreditOffersPage() {
 
         <div className="prose max-w-none">
           <p style={{ color: "#374151" }}>
-            Those &quot;pre-approved&quot; credit card and insurance offers flooding your mailbox aren&apos;t just annoying—they&apos;re a privacy and security risk. Every unsolicited offer is a potential identity theft vector if intercepted. The good news? You can stop almost all of them with one free service.
+            Those &quot;pre-approved&quot; credit card and insurance offers
+            flooding your mailbox aren&apos;t just annoying, they&apos;re a
+            privacy and security risk. Every unsolicited offer is a potential
+            identity theft vector if intercepted. The good news? You can stop
+            almost all of them with one free service.
           </p>
 
           {/* Quick Answer Box */}
@@ -171,16 +179,35 @@ export default function OptOutCreditOffersPage() {
             className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6"
             style={{ backgroundColor: "#eff6ff", borderColor: "#3b82f6" }}
           >
-            <p className="font-semibold" style={{ color: "#1e40af" }}>Quick Answer:</p>
+            <p className="font-semibold" style={{ color: "#1e40af" }}>
+              Quick Answer:
+            </p>
             <p style={{ color: "#1e3a8a" }}>
-              Visit <strong><a href="https://www.optoutprescreen.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">OptOutPrescreen.com</a></strong> or call <strong>1-888-567-8688</strong>. Choose 5-year (online) or permanent (mail form) opt-out. Free. Takes 5 days to process.
+              Visit{" "}
+              <strong>
+                <a
+                  href="https://www.optoutprescreen.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 hover:underline"
+                >
+                  OptOutPrescreen.com
+                </a>
+              </strong>{" "}
+              or call <strong>1-888-567-8688</strong>. Choose 5-year (online) or
+              permanent (mail form) opt-out. Free. Takes 5 days to process.
             </p>
           </div>
 
           {/* What is OptOutPrescreen */}
           <h2 style={{ color: "#111827" }}>What is OptOutPrescreen?</h2>
           <p style={{ color: "#374151" }}>
-            OptOutPrescreen.com is the <strong>official, legally authorized</strong> website created by the four major credit bureaus (Equifax, Experian, Innovis, and TransUnion) under the Fair Credit Reporting Act (FCRA). When you opt out, these companies stop providing your credit file information to marketers who send &quot;firm offers of credit or insurance.&quot;
+            OptOutPrescreen.com is the{" "}
+            <strong>official, legally authorized</strong> website created by the
+            four major credit bureaus (Equifax, Experian, Innovis, and
+            TransUnion) under the Fair Credit Reporting Act (FCRA). When you opt
+            out, these companies stop providing your credit file information to
+            marketers who send &quot;firm offers of credit or insurance.&quot;
           </p>
 
           {/* 5-Year vs Permanent Comparison */}
@@ -192,7 +219,10 @@ export default function OptOutCreditOffersPage() {
             className="min-w-full border border-gray-200"
             style={{ borderColor: "#e5e7eb" }}
           >
-            <thead className="bg-gray-100" style={{ backgroundColor: "#f3f4f6" }}>
+            <thead
+              className="bg-gray-100"
+              style={{ backgroundColor: "#f3f4f6" }}
+            >
               <tr>
                 <th
                   className="px-4 py-3 text-left text-gray-900 font-semibold border-b"
@@ -216,7 +246,10 @@ export default function OptOutCreditOffersPage() {
             </thead>
             <tbody>
               <tr>
-                <td className="px-4 py-3 border-b font-medium" style={{ color: "#374151" }}>
+                <td
+                  className="px-4 py-3 border-b font-medium"
+                  style={{ color: "#374151" }}
+                >
                   Process
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
@@ -227,7 +260,10 @@ export default function OptOutCreditOffersPage() {
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
-                <td className="px-4 py-3 border-b font-medium" style={{ color: "#374151" }}>
+                <td
+                  className="px-4 py-3 border-b font-medium"
+                  style={{ color: "#374151" }}
+                >
                   Duration
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
@@ -238,7 +274,10 @@ export default function OptOutCreditOffersPage() {
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-3 border-b font-medium" style={{ color: "#374151" }}>
+                <td
+                  className="px-4 py-3 border-b font-medium"
+                  style={{ color: "#374151" }}
+                >
                   Time to process
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
@@ -249,7 +288,10 @@ export default function OptOutCreditOffersPage() {
                 </td>
               </tr>
               <tr style={{ backgroundColor: "#f9fafb" }}>
-                <td className="px-4 py-3 border-b font-medium" style={{ color: "#374151" }}>
+                <td
+                  className="px-4 py-3 border-b font-medium"
+                  style={{ color: "#374151" }}
+                >
                   Cost
                 </td>
                 <td className="px-4 py-3 border-b" style={{ color: "#374151" }}>
@@ -260,14 +302,22 @@ export default function OptOutCreditOffersPage() {
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-medium" style={{ color: "#374151" }}>
+                <td
+                  className="px-4 py-3 font-medium"
+                  style={{ color: "#374151" }}
+                >
                   Recommendation
                 </td>
                 <td className="px-4 py-3" style={{ color: "#374151" }}>
                   Good for testing
                 </td>
                 <td className="px-4 py-3">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800" style={{ backgroundColor: "#dcfce7", color: "#166534" }}>Best choice</span>
+                  <span
+                    className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                    style={{ backgroundColor: "#dcfce7", color: "#166534" }}
+                  >
+                    Best choice
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -306,7 +356,9 @@ export default function OptOutCreditOffersPage() {
                   >
                     OptOutPrescreen.com
                   </a>
-                  . This is the <strong>only legitimate website</strong> for opting out of prescreened credit offers. Beware of imitation sites.
+                  . This is the <strong>only legitimate website</strong> for
+                  opting out of prescreened credit offers. Beware of imitation
+                  sites.
                 </p>
                 <div
                   className="bg-amber-50 p-3 rounded text-sm"
@@ -314,7 +366,8 @@ export default function OptOutCreditOffersPage() {
                 >
                   <strong style={{ color: "#92400e" }}>Alternative:</strong>{" "}
                   <span style={{ color: "#78350f" }}>
-                    Call <strong>1-888-567-8688</strong> (1-888-5-OPT-OUT) to opt out by phone.
+                    Call <strong>1-888-567-8688</strong> (1-888-5-OPT-OUT) to
+                    opt out by phone.
                   </span>
                 </div>
               </div>
@@ -353,10 +406,12 @@ export default function OptOutCreditOffersPage() {
                     style={{ color: "#374151" }}
                   >
                     <li>
-                      <strong>5-Year Opt-Out:</strong> Completed entirely online. You&apos;ll need to renew after 5 years.
+                      <strong>5-Year Opt-Out:</strong> Completed entirely
+                      online. You&apos;ll need to renew after 5 years.
                     </li>
                     <li>
-                      <strong>Permanent Opt-Out:</strong> Start online, then print, sign, and mail the form. Never expires.
+                      <strong>Permanent Opt-Out:</strong> Start online, then
+                      print, sign, and mail the form. Never expires.
                     </li>
                   </ul>
                 </div>
@@ -385,7 +440,8 @@ export default function OptOutCreditOffersPage() {
                   Enter Your Information
                 </h2>
                 <p className="text-gray-700 mb-4" style={{ color: "#374151" }}>
-                  You&apos;ll need to provide the following information to verify your identity:
+                  You&apos;ll need to provide the following information to
+                  verify your identity:
                 </p>
                 <div
                   className="bg-white p-4 rounded-lg mb-4"
@@ -407,7 +463,9 @@ export default function OptOutCreditOffersPage() {
                 >
                   <strong style={{ color: "#166534" }}>Is it safe?</strong>{" "}
                   <span style={{ color: "#14532d" }}>
-                    Yes. OptOutPrescreen.com is operated by the credit bureaus themselves and uses secure encryption. Your SSN is required to match your credit file.
+                    Yes. OptOutPrescreen.com is operated by the credit bureaus
+                    themselves and uses secure encryption. Your SSN is required
+                    to match your credit file.
                   </span>
                 </div>
               </div>
@@ -454,7 +512,9 @@ export default function OptOutCreditOffersPage() {
                     <li>Print the confirmation form</li>
                     <li>Sign and date the form</li>
                     <li>Mail to the address provided on the form</li>
-                    <li>Processing begins when they receive your signed form</li>
+                    <li>
+                      Processing begins when they receive your signed form
+                    </li>
                   </ol>
                 </div>
               </div>
@@ -462,20 +522,39 @@ export default function OptOutCreditOffersPage() {
           </div>
 
           {/* What OptOutPrescreen Doesn't Stop */}
-          <h2 style={{ color: "#111827" }}>What OptOutPrescreen Doesn&apos;t Stop</h2>
+          <h2 style={{ color: "#111827" }}>
+            What OptOutPrescreen Doesn&apos;t Stop
+          </h2>
           <p style={{ color: "#374151" }}>
-            Even after opting out, you may still receive some credit-related mail:
+            Even after opting out, you may still receive some credit-related
+            mail:
           </p>
           <ul style={{ color: "#374151" }}>
-            <li><strong>Offers from companies you&apos;ve done business with</strong> — Banks and credit cards you already have</li>
-            <li><strong>Non-prescreened offers</strong> — Offers based on purchased mailing lists, not your credit file</li>
-            <li><strong>Local business offers</strong> — Sent via EDDM to every address in your area</li>
+            <li>
+              <strong>
+                Offers from companies you&apos;ve done business with
+              </strong>
+              , Banks and credit cards you already have
+            </li>
+            <li>
+              <strong>Non-prescreened offers</strong>, Offers based on purchased
+              mailing lists, not your credit file
+            </li>
+            <li>
+              <strong>Local business offers</strong>, Sent via EDDM to every
+              address in your area
+            </li>
           </ul>
           <p style={{ color: "#374151" }}>
             To reduce these, register with{" "}
-            <Link href="/reduce-junk-mail" className="text-blue-600 hover:underline" style={{ color: "#2563eb" }}>
+            <Link
+              href="/reduce-junk-mail"
+              className="text-blue-600 hover:underline"
+              style={{ color: "#2563eb" }}
+            >
               DMAchoice.org and other opt-out services
-            </Link>.
+            </Link>
+            .
           </p>
 
           {/* Important Note */}
@@ -490,7 +569,11 @@ export default function OptOutCreditOffersPage() {
               This Won&apos;t Stop EDDM Mail
             </h3>
             <p style={{ color: "#7f1d1d" }}>
-              OptOutPrescreen only stops <strong>prescreened credit offers</strong>—mail that uses your credit bureau data. It does <strong>not</strong> stop EDDM &quot;Postal Customer&quot; mail, which is delivered to every address regardless of who lives there.
+              OptOutPrescreen only stops{" "}
+              <strong>prescreened credit offers</strong>, mail that uses your
+              credit bureau data. It does <strong>not</strong> stop EDDM
+              &quot;Postal Customer&quot; mail, which is delivered to every
+              address regardless of who lives there.
             </p>
             <Link
               href="/what-is-eddm"

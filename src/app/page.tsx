@@ -5,9 +5,10 @@ import { TrackedPetitionLink } from "@/components/cta/TrackedPetitionLink";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { Testimonials } from "@/components/content/Testimonials";
 import { NewsFeed } from "@/components/content/NewsFeed";
+import { PetitionCounter } from "@/components/content/PetitionCounter";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { STATISTICS, SITE_CONFIG } from "@/lib/constants/statistics";
+import { STATISTICS } from "@/lib/constants/statistics";
 
 const homeFAQs: FAQItem[] = [
   {
@@ -71,7 +72,7 @@ export default function HomePage() {
               style={{ color: "#d1d5db" }}
             >
               The USPS delivers billions of pieces of unsolicited advertising
-              directly to your mailbox every year—and federal law says you have
+              directly to your mailbox every year, and federal law says you have
               no right to stop it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -121,32 +122,42 @@ export default function HomePage() {
       </section>
 
       {/* What is EDDM Section */}
-      <section className="py-16 px-4 bg-white" style={{ backgroundColor: '#ffffff' }}>
+      <section
+        className="py-16 px-4 bg-white"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: '#111827' }}>
+          <h2
+            className="text-3xl font-bold mb-6 text-center"
+            style={{ color: "#111827" }}
+          >
             What is EDDM?
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <div className="border-l-4 border-blue-500 p-6 rounded-r-lg mb-6" style={{ backgroundColor: '#eff6ff' }}>
-                <p className="text-lg" style={{ color: '#1f2937' }}>
-                  <strong>Every Door Direct Mail (EDDM)</strong> is a USPS program
-                  that allows businesses to send advertising mail to every address
-                  in a postal route—without needing names or addresses. You know it
-                  as the mail marked <strong>&quot;ECRWSS&quot;</strong> or{" "}
+              <div
+                className="border-l-4 border-blue-500 p-6 rounded-r-lg mb-6"
+                style={{ backgroundColor: "#eff6ff" }}
+              >
+                <p className="text-lg" style={{ color: "#1f2937" }}>
+                  <strong>Every Door Direct Mail (EDDM)</strong> is a USPS
+                  program that allows businesses to send advertising mail to
+                  every address in a postal route, without needing names or
+                  addresses. You know it as the mail marked{" "}
+                  <strong>&quot;ECRWSS&quot;</strong> or{" "}
                   <strong>&quot;Postal Customer.&quot;</strong>
                 </p>
               </div>
-              <p className="mb-6" style={{ color: '#4b5563' }}>
-                Unlike addressed mail, EDDM cannot be refused or returned. The USPS
-                considers it &quot;unaddressed mail&quot; and delivers it regardless of your
-                preferences. There is no Do Not Mail registry, no opt-out form, and
-                no legal recourse.
+              <p className="mb-6" style={{ color: "#4b5563" }}>
+                Unlike addressed mail, EDDM cannot be refused or returned. The
+                USPS considers it &quot;unaddressed mail&quot; and delivers it
+                regardless of your preferences. There is no Do Not Mail
+                registry, no opt-out form, and no legal recourse.
               </p>
               <Link
                 href="/what-is-eddm"
                 className="hover:text-blue-700 font-semibold inline-flex items-center gap-2"
-                style={{ color: '#2563eb' }}
+                style={{ color: "#2563eb" }}
               >
                 Learn how EDDM works
                 <svg
@@ -178,12 +189,18 @@ export default function HomePage() {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#f9fafb' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: "#f9fafb" }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center" style={{ color: '#111827' }}>
+          <h2
+            className="text-3xl font-bold mb-4 text-center"
+            style={{ color: "#111827" }}
+          >
             The True Cost of Junk Mail
           </h2>
-          <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: '#4b5563' }}>
+          <p
+            className="text-center mb-12 max-w-2xl mx-auto"
+            style={{ color: "#4b5563" }}
+          >
             Every year, junk mail causes immense environmental damage, costs
             taxpayers millions, and enables billions in fraud against seniors.
           </p>
@@ -242,7 +259,7 @@ export default function HomePage() {
             <Link
               href="/environmental-impact"
               className="hover:text-blue-700 font-semibold inline-flex items-center gap-2"
-              style={{ color: '#2563eb' }}
+              style={{ color: "#2563eb" }}
             >
               See the full environmental impact
               <svg
@@ -263,6 +280,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Live Petition Counter */}
+      <section className="py-12 px-4" style={{ backgroundColor: "#f9fafb" }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-6">
+            <h2
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#111827" }}
+            >
+              The Petition Is Growing
+            </h2>
+            <p className="mt-2 text-gray-600" style={{ color: "#4b5563" }}>
+              Live count, updated every few hours from Change.org.
+            </p>
+          </div>
+          <PetitionCounter />
+          <div className="mt-6 text-center">
+            <TrackedPetitionLink
+              label="homepage-counter"
+              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3 rounded-lg transition-colors shadow-md"
+              style={{ backgroundColor: "#facc15", color: "#111827" }}
+            >
+              Add Your Signature
+            </TrackedPetitionLink>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <Testimonials />
 
@@ -270,47 +314,75 @@ export default function HomePage() {
       <NewsFeed />
 
       {/* Why No Opt-Out Section */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#ffffff' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: '#111827' }}>
+          <h2
+            className="text-3xl font-bold mb-6 text-center"
+            style={{ color: "#111827" }}
+          >
             Why Can&apos;t You Opt Out?
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 rounded-lg" style={{ backgroundColor: '#f9fafb' }}>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: '#111827' }}>
+            <div
+              className="p-6 rounded-lg"
+              style={{ backgroundColor: "#f9fafb" }}
+            >
+              <h3
+                className="text-xl font-semibold mb-3"
+                style={{ color: "#111827" }}
+              >
                 Federal Mailbox Monopoly
               </h3>
-              <p style={{ color: '#4b5563' }}>
+              <p style={{ color: "#4b5563" }}>
                 Federal law (18 U.S.C. 1725) gives the USPS exclusive access to
                 your mailbox. While you own the box, only the Postal Service can
-                use it—and they can put anything they want inside.
+                use it, and they can put anything they want inside.
               </p>
             </div>
-            <div className="p-6 rounded-lg" style={{ backgroundColor: '#f9fafb' }}>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: '#111827' }}>
+            <div
+              className="p-6 rounded-lg"
+              style={{ backgroundColor: "#f9fafb" }}
+            >
+              <h3
+                className="text-xl font-semibold mb-3"
+                style={{ color: "#111827" }}
+              >
                 &quot;Postal Customer&quot; Loophole
               </h3>
-              <p style={{ color: '#4b5563' }}>
-                EDDM mail isn&apos;t addressed to you by name—it&apos;s addressed to
-                &quot;Postal Customer.&quot; Since it&apos;s not technically &quot;your&quot; mail, you
-                can&apos;t refuse or return it.
+              <p style={{ color: "#4b5563" }}>
+                EDDM mail isn&apos;t addressed to you by name, it&apos;s
+                addressed to &quot;Postal Customer.&quot; Since it&apos;s not
+                technically &quot;your&quot; mail, you can&apos;t refuse or
+                return it.
               </p>
             </div>
-            <div className="p-6 rounded-lg" style={{ backgroundColor: '#f9fafb' }}>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: '#111827' }}>
+            <div
+              className="p-6 rounded-lg"
+              style={{ backgroundColor: "#f9fafb" }}
+            >
+              <h3
+                className="text-xl font-semibold mb-3"
+                style={{ color: "#111827" }}
+              >
                 USPS Revenue Dependency
               </h3>
-              <p style={{ color: '#4b5563' }}>
+              <p style={{ color: "#4b5563" }}>
                 The USPS earns billions annually from advertising mail. Creating
-                an opt-out would directly reduce their revenue—so they have no
+                an opt-out would directly reduce their revenue, so they have no
                 incentive to offer one.
               </p>
             </div>
-            <div className="p-6 rounded-lg" style={{ backgroundColor: '#f9fafb' }}>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: '#111827' }}>
+            <div
+              className="p-6 rounded-lg"
+              style={{ backgroundColor: "#f9fafb" }}
+            >
+              <h3
+                className="text-xl font-semibold mb-3"
+                style={{ color: "#111827" }}
+              >
                 No Consumer Protection Law
               </h3>
-              <p style={{ color: '#4b5563' }}>
+              <p style={{ color: "#4b5563" }}>
                 Unlike email (CAN-SPAM) and phone calls (Do Not Call), there is
                 no federal law requiring postal advertisers to honor opt-out
                 requests.
@@ -321,7 +393,7 @@ export default function HomePage() {
             <Link
               href="/why-you-cant-opt-out"
               className="hover:text-blue-700 font-semibold inline-flex items-center gap-2"
-              style={{ color: '#2563eb' }}
+              style={{ color: "#2563eb" }}
             >
               Read the full legal explanation
               <svg
@@ -350,24 +422,32 @@ export default function HomePage() {
       </section>
 
       {/* Quick FAQ Section */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#ffffff' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: "#ffffff" }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#111827' }}>
+          <h2
+            className="text-3xl font-bold mb-8 text-center"
+            style={{ color: "#111827" }}
+          >
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
             {homeFAQs.map((faq, index) => (
               <div
                 key={index}
-                className={index < homeFAQs.length - 1 ? "border-b pb-6" : "pb-6"}
-                style={index < homeFAQs.length - 1 ? { borderColor: '#e5e7eb' } : {}}
+                className={
+                  index < homeFAQs.length - 1 ? "border-b pb-6" : "pb-6"
+                }
+                style={
+                  index < homeFAQs.length - 1 ? { borderColor: "#e5e7eb" } : {}
+                }
               >
-                <h3 className="text-lg font-semibold mb-2" style={{ color: '#111827' }}>
+                <h3
+                  className="text-lg font-semibold mb-2"
+                  style={{ color: "#111827" }}
+                >
                   {faq.question}
                 </h3>
-                <p style={{ color: '#4b5563' }}>
-                  {faq.answer}
-                </p>
+                <p style={{ color: "#4b5563" }}>{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -375,7 +455,7 @@ export default function HomePage() {
             <Link
               href="/faq"
               className="hover:text-blue-700 font-semibold inline-flex items-center gap-2"
-              style={{ color: '#2563eb' }}
+              style={{ color: "#2563eb" }}
             >
               View all FAQs
               <svg

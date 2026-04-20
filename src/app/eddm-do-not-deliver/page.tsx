@@ -117,7 +117,7 @@ export default function DoNotDeliverPage() {
 
         {/* TL;DR Box */}
         <TLDRBox
-          summary="EDDM junk mail is unstoppable—but together we can prove demand for an opt-out exists. Enter your address below to register your household's opposition."
+          summary="EDDM junk mail is unstoppable, but together we can prove demand for an opt-out exists. Enter your address below to register your household's opposition."
           keyStatistic={{
             value: "0%",
             label: "opt-out rate",
@@ -131,10 +131,7 @@ export default function DoNotDeliverPage() {
           EDDM Do Not Deliver Registry
         </h1>
 
-        <p
-          className="text-xl text-gray-700 mb-8"
-          style={{ color: "#374151" }}
-        >
+        <p className="text-xl text-gray-700 mb-8" style={{ color: "#374151" }}>
           USPS refuses to let consumers opt out of Every Door Direct Mail. This
           tool lets you register your household&apos;s opposition and track how
           many of your neighbors feel the same way.
@@ -215,10 +212,10 @@ export default function DoNotDeliverPage() {
             Why This Matters
           </h3>
           <p className="text-gray-700" style={{ color: "#374151" }}>
-            USPS claims there&apos;s no demand for an EDDM opt-out. This registry
-            creates documented evidence of consumer opposition. When routes
-            demonstrate majority opt-out demand, we&apos;ll use that data to
-            advocate for policy change through direct outreach to USPS
+            USPS claims there&apos;s no demand for an EDDM opt-out. This
+            registry creates documented evidence of consumer opposition. When
+            routes demonstrate majority opt-out demand, we&apos;ll use that data
+            to advocate for policy change through direct outreach to USPS
             leadership, congressional representatives, and media attention.
           </p>
         </div>
@@ -243,8 +240,9 @@ export default function DoNotDeliverPage() {
             Also Sign the National Petition
           </h3>
           <p className="text-gray-300 mb-6" style={{ color: "#d1d5db" }}>
-            While we build route-level evidence, add your voice to the Change.org
-            petition demanding USPS create an official EDDM opt-out method.
+            While we build route-level evidence, add your voice to the
+            Change.org petition demanding USPS create an official EDDM opt-out
+            method.
           </p>
           <a
             href={PETITION_URL}

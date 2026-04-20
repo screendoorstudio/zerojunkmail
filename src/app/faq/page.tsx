@@ -43,7 +43,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "What does ECRWSS mean on my mail?",
         answer:
-          "ECRWSS stands for 'Enhanced Carrier Route Walking Sequence Saturation.' It indicates that the mail piece is being delivered to every address on a postal route—it's the technical designation for EDDM saturation mail.",
+          "ECRWSS stands for 'Enhanced Carrier Route Walking Sequence Saturation.' It indicates that the mail piece is being delivered to every address on a postal route, it's the technical designation for EDDM saturation mail.",
       },
       {
         question: "Why is my mail addressed to 'Postal Customer'?",
@@ -58,7 +58,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "Why do I get so much junk mail?",
         answer:
-          "Companies get your address from public records, phone directories, credit applications, store purchases, sweepstakes entries, and data brokers who collect and sell personal information. Additionally, EDDM mail requires no personal data at all—if you have a mailbox, you receive it.",
+          "Companies get your address from public records, phone directories, credit applications, store purchases, sweepstakes entries, and data brokers who collect and sell personal information. Additionally, EDDM mail requires no personal data at all, if you have a mailbox, you receive it.",
       },
       {
         question: "What is saturation mail?",
@@ -103,7 +103,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "How do I stop junk mail permanently?",
         answer:
-          "You can permanently reduce addressed junk mail by: 1) Visiting OptOutPrescreen.com and selecting 'Permanent Opt-Out' for credit offers, 2) Registering at DMAchoice.org ($4-6, lasts 10 years), 3) Opting out of data brokers. However, EDDM mail addressed to 'Postal Customer' cannot be permanently stopped—there is no legal mechanism to do so.",
+          "You can permanently reduce addressed junk mail by: 1) Visiting OptOutPrescreen.com and selecting 'Permanent Opt-Out' for credit offers, 2) Registering at DMAchoice.org ($4-6, lasts 10 years), 3) Opting out of data brokers. However, EDDM mail addressed to 'Postal Customer' cannot be permanently stopped, there is no legal mechanism to do so.",
       },
       {
         question: "Can I return junk mail to sender?",
@@ -113,7 +113,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "Is OptOutPrescreen legitimate?",
         answer:
-          "Yes. OptOutPrescreen.com is the official website run by Equifax, Experian, TransUnion, and Innovis—the major consumer credit bureaus. It's the only authorized way to opt out of prescreened credit and insurance offers. The phone number 1-888-5-OPTOUT (1-888-567-8688) is also legitimate.",
+          "Yes. OptOutPrescreen.com is the official website run by Equifax, Experian, TransUnion, and Innovis, the major consumer credit bureaus. It's the only authorized way to opt out of prescreened credit and insurance offers. The phone number 1-888-5-OPTOUT (1-888-567-8688) is also legitimate.",
       },
       {
         question: "Is DMAchoice worth the fee?",
@@ -138,12 +138,12 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "Why do I keep getting credit card offers after opting out?",
         answer:
-          "It takes about 5 days for opt-out requests to process, but mailings prepared in advance may continue for several weeks. Also, OptOutPrescreen only stops prescreened offers from credit bureaus—you may still receive offers from companies you do business with or from lists obtained elsewhere.",
+          "It takes about 5 days for opt-out requests to process, but mailings prepared in advance may continue for several weeks. Also, OptOutPrescreen only stops prescreened offers from credit bureaus, you may still receive offers from companies you do business with or from lists obtained elsewhere.",
       },
       {
         question: "Does opting out of credit offers affect my credit score?",
         answer:
-          "No. Opting out at OptOutPrescreen.com does not affect your credit score or credit history in any way. It also doesn't prevent you from applying for credit—it only stops unsolicited offers.",
+          "No. Opting out at OptOutPrescreen.com does not affect your credit score or credit history in any way. It also doesn't prevent you from applying for credit, it only stops unsolicited offers.",
       },
     ],
   },
@@ -153,7 +153,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "How do I stop catalogs from coming in the mail?",
         answer:
-          "Use CatalogChoice.org (free) to opt out of specific catalogs—they have nearly 10,000 catalogs in their database. You can also register at DMAchoice.org ($4-6) to reduce catalogs from DMA member companies. For persistent catalogs, contact the company directly.",
+          "Use CatalogChoice.org (free) to opt out of specific catalogs, they have nearly 10,000 catalogs in their database. You can also register at DMAchoice.org ($4-6) to reduce catalogs from DMA member companies. For persistent catalogs, contact the company directly.",
       },
       {
         question: "How do I stop Valpak coupons?",
@@ -241,7 +241,8 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
           "Yes. Direct mail advertising is legal and regulated primarily by the Deceptive Mail Prevention and Enforcement Act (DMPEA). Unlike email spam (regulated by CAN-SPAM), postal advertising has no required opt-out mechanism except for prescreened credit offers.",
       },
       {
-        question: "Why is there a Do Not Call registry but no Do Not Mail registry?",
+        question:
+          "Why is there a Do Not Call registry but no Do Not Mail registry?",
         answer:
           "The Do Not Call registry was created by the FTC under specific telemarketing regulations. No equivalent law exists for postal advertising. The USPS, which profits from advertising mail, has no incentive to create one, and direct mail industry lobbying has blocked legislative attempts.",
       },
@@ -293,7 +294,7 @@ const faqsByCategory: { category: string; faqs: FAQItem[] }[] = [
       {
         question: "What is the carbon footprint of junk mail?",
         answer:
-          "Junk mail production and disposal generates approximately 51.5 million metric tons of CO2 equivalent emissions per year—equivalent to the annual emissions of about 11 million cars. This includes manufacturing, printing, transportation, and disposal.",
+          "Junk mail production and disposal generates approximately 51.5 million metric tons of CO2 equivalent emissions per year, equivalent to the annual emissions of about 11 million cars. This includes manufacturing, printing, transportation, and disposal.",
       },
       {
         question: "How much water does junk mail production use?",
@@ -357,21 +358,28 @@ export default function FAQPage() {
     <>
       <SchemaMarkup schema={[faqSchema, breadcrumbSchema]} />
 
-      <article className="max-w-4xl mx-auto px-4 py-12 bg-white" style={{ backgroundColor: '#ffffff' }}>
+      <article
+        className="max-w-4xl mx-auto px-4 py-12 bg-white"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         {/* Breadcrumb */}
-        <nav className="text-sm mb-8" style={{ color: '#6b7280' }}>
-          <Link href="/" className="hover:text-blue-600" style={{ color: '#6b7280' }}>
+        <nav className="text-sm mb-8" style={{ color: "#6b7280" }}>
+          <Link
+            href="/"
+            className="hover:text-blue-600"
+            style={{ color: "#6b7280" }}
+          >
             Home
           </Link>
           <span className="mx-2">/</span>
-          <span style={{ color: '#111827' }}>FAQ</span>
+          <span style={{ color: "#111827" }}>FAQ</span>
         </nav>
 
-        <h1 className="text-4xl font-bold mb-6" style={{ color: '#111827' }}>
+        <h1 className="text-4xl font-bold mb-6" style={{ color: "#111827" }}>
           Frequently Asked Questions
         </h1>
 
-        <p className="text-lg mb-12" style={{ color: '#4b5563' }}>
+        <p className="text-lg mb-12" style={{ color: "#4b5563" }}>
           Find answers to common questions about EDDM, junk mail, opt-out
           options, and what you can do to help change the system.
         </p>
@@ -379,7 +387,10 @@ export default function FAQPage() {
         {/* FAQ Categories */}
         {faqsByCategory.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: '#111827' }}>
+            <h2
+              className="text-2xl font-bold mb-6"
+              style={{ color: "#111827" }}
+            >
               {category.category}
             </h2>
             <FAQAccordion items={category.faqs} />
@@ -387,11 +398,17 @@ export default function FAQPage() {
         ))}
 
         {/* Still have questions */}
-        <div className="mt-12 p-6 rounded-lg" style={{ backgroundColor: '#f3f4f6' }}>
-          <h3 className="text-lg font-semibold mb-4" style={{ color: '#111827' }}>
+        <div
+          className="mt-12 p-6 rounded-lg"
+          style={{ backgroundColor: "#f3f4f6" }}
+        >
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Didn&apos;t find your answer?
           </h3>
-          <p className="mb-4" style={{ color: '#4b5563' }}>
+          <p className="mb-4" style={{ color: "#4b5563" }}>
             Check out our detailed pages for more information:
           </p>
           <ul className="space-y-2">
@@ -399,7 +416,7 @@ export default function FAQPage() {
               <Link
                 href="/what-is-eddm"
                 className="hover:text-blue-700"
-                style={{ color: '#2563eb' }}
+                style={{ color: "#2563eb" }}
               >
                 What is EDDM? →
               </Link>
@@ -408,7 +425,7 @@ export default function FAQPage() {
               <Link
                 href="/why-you-cant-opt-out"
                 className="hover:text-blue-700"
-                style={{ color: '#2563eb' }}
+                style={{ color: "#2563eb" }}
               >
                 Why You Can&apos;t Opt Out →
               </Link>
@@ -417,7 +434,7 @@ export default function FAQPage() {
               <Link
                 href="/environmental-impact"
                 className="hover:text-blue-700"
-                style={{ color: '#2563eb' }}
+                style={{ color: "#2563eb" }}
               >
                 Environmental Impact →
               </Link>
@@ -426,7 +443,7 @@ export default function FAQPage() {
               <Link
                 href="/take-action"
                 className="hover:text-blue-700"
-                style={{ color: '#2563eb' }}
+                style={{ color: "#2563eb" }}
               >
                 Take Action →
               </Link>

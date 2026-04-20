@@ -19,11 +19,15 @@ import {
   keyInnovations,
   constitutionalBasis,
 } from "@/data/legislative-toolkit";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { generateFAQSchema } from "@/lib/schema/faq";
 
 export const metadata: Metadata = {
-  title: "Legislative Toolkit: EDDM Consumer Choice Act of 2026 | Zero Junk Mail",
+  title:
+    "Legislative Toolkit: EDDM Consumer Choice Act of 2026 | Zero Junk Mail",
   description:
     "Complete legislative toolkit for the EDDM Consumer Choice Act of 2026. Model bill text, section-by-section analysis, talking points, FAQ, and counterargument responses for legislators and staff.",
   keywords: [
@@ -120,14 +124,17 @@ export default function LegislativePage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://zerojunkmail.org" },
-    { name: "Legislative Toolkit", url: "https://zerojunkmail.org/legislators" },
+    {
+      name: "Legislative Toolkit",
+      url: "https://zerojunkmail.org/legislators",
+    },
   ]);
 
   const faqSchema = generateFAQSchema(
     legislatorFaqs.map((faq) => ({
       question: faq.question,
       answer: faq.answer,
-    }))
+    })),
   );
 
   // Prepare FAQ data for FAQAccordion component
@@ -174,8 +181,8 @@ export default function LegislativePage() {
             EDDM Consumer Choice Act of 2026
           </h1>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: "#6b7280" }}>
-            Model federal legislation to establish an opt-in system for saturation
-            advertising mail delivery
+            Model federal legislation to establish an opt-in system for
+            saturation advertising mail delivery
           </p>
           <p className="mt-4 text-sm" style={{ color: "#9ca3af" }}>
             Prepared by ZeroJunkMail.org | January 2025
@@ -188,9 +195,7 @@ export default function LegislativePage() {
             Executive Summary
           </h2>
 
-          <TLDRBox
-            summary="Americans can opt out of telemarketing calls, unsubscribe from emails, block spam texts, and refuse junk faxes. But they cannot opt out of advertising mail delivered by their own government. The EDDM Consumer Choice Act closes this regulatory gap by requiring consent before saturation mail is delivered."
-          />
+          <TLDRBox summary="Americans can opt out of telemarketing calls, unsubscribe from emails, block spam texts, and refuse junk faxes. But they cannot opt out of advertising mail delivered by their own government. The EDDM Consumer Choice Act closes this regulatory gap by requiring consent before saturation mail is delivered." />
 
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <StatCard value="100M" label="Trees cut annually" />
@@ -207,10 +212,19 @@ export default function LegislativePage() {
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                { name: "Model Bill Text", file: "01_EDDM_Consumer_Choice_Act_Model_Bill.pdf" },
+                {
+                  name: "Model Bill Text",
+                  file: "01_EDDM_Consumer_Choice_Act_Model_Bill.pdf",
+                },
                 { name: "Executive Summary", file: "02_Executive_Summary.pdf" },
-                { name: "One-Page Fact Sheet", file: "04_One_Pager_Fact_Sheet.pdf" },
-                { name: "Section Analysis", file: "03_Section_by_Section_Analysis.pdf" },
+                {
+                  name: "One-Page Fact Sheet",
+                  file: "04_One_Pager_Fact_Sheet.pdf",
+                },
+                {
+                  name: "Section Analysis",
+                  file: "03_Section_by_Section_Analysis.pdf",
+                },
               ].map((doc) => (
                 <a
                   key={doc.file}
@@ -249,8 +263,8 @@ export default function LegislativePage() {
           </h2>
 
           <p className="mb-6" style={{ color: "#374151" }}>
-            Every major marketing channel has federal consumer opt-out protection—except
-            postal advertising mail:
+            Every major marketing channel has federal consumer opt-out
+            protection, except postal advertising mail:
           </p>
 
           <div className="overflow-x-auto">
@@ -296,17 +310,23 @@ export default function LegislativePage() {
                 {regulatoryComparisons.map((row, idx) => (
                   <tr
                     key={row.channel}
-                    className={idx === regulatoryComparisons.length - 1 ? "" : ""}
+                    className={
+                      idx === regulatoryComparisons.length - 1 ? "" : ""
+                    }
                     style={{
                       backgroundColor:
-                        row.channel === "Postal Mail (EDDM)" ? "#fef2f2" : "#ffffff",
+                        row.channel === "Postal Mail (EDDM)"
+                          ? "#fef2f2"
+                          : "#ffffff",
                     }}
                   >
                     <td
                       className="px-4 py-3 font-medium"
                       style={{
                         color:
-                          row.channel === "Postal Mail (EDDM)" ? "#b91c1c" : "#111827",
+                          row.channel === "Postal Mail (EDDM)"
+                            ? "#b91c1c"
+                            : "#111827",
                       }}
                     >
                       {row.channel}
@@ -315,7 +335,9 @@ export default function LegislativePage() {
                       className="px-4 py-3"
                       style={{
                         color:
-                          row.optOutMechanism === "NONE" ? "#b91c1c" : "#374151",
+                          row.optOutMechanism === "NONE"
+                            ? "#b91c1c"
+                            : "#374151",
                         fontWeight: row.optOutMechanism === "NONE" ? 600 : 400,
                       }}
                     >
@@ -372,7 +394,7 @@ export default function LegislativePage() {
                 Current System
               </h3>
               <p style={{ color: "#7f1d1d" }}>
-                You receive advertising unless you opt out—
+                You receive advertising unless you opt out,
                 <strong>but you cannot opt out</strong>
               </p>
             </div>
@@ -393,18 +415,23 @@ export default function LegislativePage() {
             className="p-6 rounded-lg"
             style={{ backgroundColor: "#eff6ff", color: "#1e40af" }}
           >
-            <h3 className="font-semibold mb-3">The Netherlands JA-Sticker Model</h3>
+            <h3 className="font-semibold mb-3">
+              The Netherlands JA-Sticker Model
+            </h3>
             <p className="mb-4">
               The Netherlands has successfully implemented an opt-in system for
-              advertising mail. Households must display a &ldquo;JA&rdquo; (Yes) sticker to
-              receive advertising. The result:
+              advertising mail. Households must display a &ldquo;JA&rdquo; (Yes)
+              sticker to receive advertising. The result:
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li>
-                <strong>81%</strong> of households chose NOT to receive advertising
+                <strong>81%</strong> of households chose NOT to receive
+                advertising
               </li>
               <li>Dutch Supreme Court upheld the system in June 2021</li>
-              <li>62 of 342 municipalities have adopted it (~40% of population)</li>
+              <li>
+                62 of 342 municipalities have adopted it (~40% of population)
+              </li>
               <li>No documented wave of business bankruptcies</li>
               <li>Consumer satisfaction: 92% among those who opted out</li>
             </ul>
@@ -423,7 +450,10 @@ export default function LegislativePage() {
             Do Not Call Registry and Netherlands JA-sticker systems.
           </p>
 
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Key Innovations
           </h3>
 
@@ -455,7 +485,10 @@ export default function LegislativePage() {
             ))}
           </div>
 
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Bill Structure: 15 Sections
           </h3>
 
@@ -533,7 +566,10 @@ export default function LegislativePage() {
           </h2>
 
           {/* Environmental */}
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Environmental Impact
           </h3>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -562,7 +598,10 @@ export default function LegislativePage() {
           </div>
 
           {/* Consumer */}
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Consumer Impact
           </h3>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -591,12 +630,17 @@ export default function LegislativePage() {
           </div>
 
           {/* Economic & Fraud */}
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Economic &amp; Fraud Statistics
           </h3>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {keyStats
-              .filter((s) => s.category === "economic" || s.category === "fraud")
+              .filter(
+                (s) => s.category === "economic" || s.category === "fraud",
+              )
               .map((stat, idx) => (
                 <div
                   key={idx}
@@ -630,7 +674,10 @@ export default function LegislativePage() {
           </div>
 
           {/* International */}
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             International Comparison (Netherlands)
           </h3>
           <div className="grid md:grid-cols-3 gap-4">
@@ -666,8 +713,8 @@ export default function LegislativePage() {
           </h2>
 
           <p className="mb-6" style={{ color: "#374151" }}>
-            This bill is designed to withstand First Amendment challenges based on
-            established Supreme Court precedent.
+            This bill is designed to withstand First Amendment challenges based
+            on established Supreme Court precedent.
           </p>
 
           {/* Rowan */}
@@ -685,9 +732,9 @@ export default function LegislativePage() {
               className="border-l-4 border-blue-500 pl-4 italic"
               style={{ color: "#374151" }}
             >
-              &ldquo;We therefore categorically reject the argument that a vendor has
-              a right under the Constitution or otherwise to send unwanted
-              material into the home of another.&rdquo;
+              &ldquo;We therefore categorically reject the argument that a
+              vendor has a right under the Constitution or otherwise to send
+              unwanted material into the home of another.&rdquo;
             </blockquote>
             <p className="mt-3 text-sm" style={{ color: "#374151" }}>
               <strong>Significance:</strong>{" "}
@@ -737,8 +784,8 @@ export default function LegislativePage() {
               className="border-l-4 border-blue-500 pl-4 italic"
               style={{ color: "#374151" }}
             >
-              &ldquo;The national do-not-call registry is a reasonable fit with the
-              government&apos;s interest in protecting the privacy of
+              &ldquo;The national do-not-call registry is a reasonable fit with
+              the government&apos;s interest in protecting the privacy of
               individuals.&rdquo;
             </blockquote>
             <p className="mt-3 text-sm" style={{ color: "#374151" }}>
@@ -777,9 +824,9 @@ export default function LegislativePage() {
           </h2>
 
           <p className="mb-6" style={{ color: "#374151" }}>
-            The direct mail industry has developed sophisticated arguments against
-            Do Not Mail legislation. Here are the key arguments and how to
-            respond:
+            The direct mail industry has developed sophisticated arguments
+            against Do Not Mail legislation. Here are the key arguments and how
+            to respond:
           </p>
 
           {/* Quick Reference Table */}
@@ -828,7 +875,10 @@ export default function LegislativePage() {
           </div>
 
           {/* Detailed Rebuttals */}
-          <h3 className="text-lg font-semibold mb-4" style={{ color: "#111827" }}>
+          <h3
+            className="text-lg font-semibold mb-4"
+            style={{ color: "#111827" }}
+          >
             Detailed Rebuttals
           </h3>
 
@@ -843,10 +893,7 @@ export default function LegislativePage() {
                     >
                       Industry Position:
                     </h4>
-                    <p
-                      className="text-sm italic"
-                      style={{ color: "#6b7280" }}
-                    >
+                    <p className="text-sm italic" style={{ color: "#6b7280" }}>
                       &ldquo;{item.industryPosition}&rdquo;
                     </p>
                   </div>
@@ -867,7 +914,8 @@ export default function LegislativePage() {
                     className="p-3 rounded text-sm"
                     style={{ backgroundColor: "#eff6ff", color: "#1d4ed8" }}
                   >
-                    <strong>Sound bite:</strong> &ldquo;{item.oneLineResponse}&rdquo;
+                    <strong>Sound bite:</strong> &ldquo;{item.oneLineResponse}
+                    &rdquo;
                   </div>
                 </div>
               </ExpandableSection>
@@ -926,13 +974,22 @@ export default function LegislativePage() {
             </h3>
             <div className="grid md:grid-cols-4 gap-3">
               {[
-                { name: "Model Bill", file: "01_EDDM_Consumer_Choice_Act_Model_Bill.pdf" },
+                {
+                  name: "Model Bill",
+                  file: "01_EDDM_Consumer_Choice_Act_Model_Bill.pdf",
+                },
                 { name: "Executive Summary", file: "02_Executive_Summary.pdf" },
-                { name: "Section Analysis", file: "03_Section_by_Section_Analysis.pdf" },
+                {
+                  name: "Section Analysis",
+                  file: "03_Section_by_Section_Analysis.pdf",
+                },
                 { name: "One-Pager", file: "04_One_Pager_Fact_Sheet.pdf" },
                 { name: "Talking Points", file: "05_Talking_Points.pdf" },
                 { name: "FAQ", file: "06_FAQ_for_Legislators.pdf" },
-                { name: "Counterarguments", file: "07_Industry_Counterarguments.pdf" },
+                {
+                  name: "Counterarguments",
+                  file: "07_Industry_Counterarguments.pdf",
+                },
                 { name: "Comparison Tables", file: "08_Comparison_Tables.pdf" },
               ].map((doc) => (
                 <a
@@ -979,8 +1036,8 @@ export default function LegislativePage() {
             | January 2025
           </p>
           <p className="mt-2">
-            This toolkit is provided for educational purposes. ZeroJunkMail.org is
-            not a law firm and this does not constitute legal advice.
+            This toolkit is provided for educational purposes. ZeroJunkMail.org
+            is not a law firm and this does not constitute legal advice.
           </p>
         </footer>
       </article>

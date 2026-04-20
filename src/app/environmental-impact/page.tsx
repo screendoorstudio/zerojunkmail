@@ -6,7 +6,10 @@ import { PetitionCTA } from "@/components/cta/PetitionCTA";
 import { StatCard, StatGrid } from "@/components/content/StatCard";
 import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { generateFAQSchema, FAQItem } from "@/lib/schema/faq";
-import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema/article";
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema/article";
 import { SITE_CONFIG, STATISTICS } from "@/lib/constants/statistics";
 
 export const metadata: Metadata = {
@@ -40,7 +43,7 @@ const faqs: FAQItem[] = [
   {
     question: "What is the carbon footprint of junk mail?",
     answer:
-      "Junk mail production, transportation, and disposal generates approximately 51.5 million metric tons of CO2 equivalent greenhouse gases per year—equivalent to the annual emissions of about 11 million cars, according to VoLo Foundation research.",
+      "Junk mail production, transportation, and disposal generates approximately 51.5 million metric tons of CO2 equivalent greenhouse gases per year, equivalent to the annual emissions of about 11 million cars, according to VoLo Foundation research.",
   },
   {
     question: "How much water does junk mail production use?",
@@ -75,7 +78,10 @@ export default function EnvironmentalImpactPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: SITE_CONFIG.url },
-    { name: "Environmental Impact", url: `${SITE_CONFIG.url}/environmental-impact` },
+    {
+      name: "Environmental Impact",
+      url: `${SITE_CONFIG.url}/environmental-impact`,
+    },
   ]);
 
   const faqSchema = generateFAQSchema(faqs);
@@ -96,7 +102,7 @@ export default function EnvironmentalImpactPage() {
 
         {/* TL;DR Box */}
         <TLDRBox
-          summary="Junk mail is an environmental catastrophe: 100 million trees destroyed, 51.5 million metric tons of CO2 emissions, and 28 billion gallons of water consumed—every year. 44% is thrown away without being opened, and taxpayers spend $320 million annually to dispose of it."
+          summary="Junk mail is an environmental catastrophe: 100 million trees destroyed, 51.5 million metric tons of CO2 emissions, and 28 billion gallons of water consumed, every year. 44% is thrown away without being opened, and taxpayers spend $320 million annually to dispose of it."
           keyStatistic={{
             value: STATISTICS.trees.shortValue,
             label: "trees/year",
@@ -110,13 +116,21 @@ export default function EnvironmentalImpactPage() {
         <div className="prose max-w-none">
           <p>
             Every year, the junk mail industry leaves an enormous environmental
-            footprint that most Americans never see. The average American household receives <strong>848 pieces of junk mail annually</strong>—equivalent to 1.5 trees per household. Globally, <strong>33% of all delivered mail is junk mail</strong>. From the forests cleared to
-            produce paper, to the fuel burned transporting billions of mail
-            pieces, to the energy consumed disposing of unwanted advertisements—
-            the true cost of unsolicited mail extends far beyond your mailbox.
+            footprint that most Americans never see. The average American
+            household receives <strong>848 pieces of junk mail annually</strong>
+            , equivalent to 1.5 trees per household. Globally,{" "}
+            <strong>33% of all delivered mail is junk mail</strong>. From the
+            forests cleared to produce paper, to the fuel burned transporting
+            billions of mail pieces, to the energy consumed disposing of
+            unwanted advertisements, the true cost of unsolicited mail extends
+            far beyond your mailbox.
           </p>
           <p>
-            Perhaps most absurdly, Americans spend an estimated <strong>8 months of their lives</strong> sorting through junk mail. That&apos;s time stolen from families, hobbies, and meaningful work—all so companies can send advertisements most people don&apos;t want.
+            Perhaps most absurdly, Americans spend an estimated{" "}
+            <strong>8 months of their lives</strong> sorting through junk mail.
+            That&apos;s time stolen from families, hobbies, and meaningful work,
+            all so companies can send advertisements most people don&apos;t
+            want.
           </p>
         </div>
 
@@ -151,8 +165,12 @@ export default function EnvironmentalImpactPage() {
               />
             </div>
           </div>
-          <p className="text-sm text-gray-500 mt-3 text-center" style={{ color: "#6b7280" }}>
-            From delivery to landfill: the lifecycle of unwanted advertising mail
+          <p
+            className="text-sm text-gray-500 mt-3 text-center"
+            style={{ color: "#6b7280" }}
+          >
+            From delivery to landfill: the lifecycle of unwanted advertising
+            mail
           </p>
         </div>
 
@@ -231,8 +249,8 @@ export default function EnvironmentalImpactPage() {
           <h2>Carbon Emissions</h2>
           <p>
             The junk mail lifecycle produces approximately{" "}
-            <strong>51.5 million metric tons of CO2 equivalent</strong> emissions
-            annually. This comes from:
+            <strong>51.5 million metric tons of CO2 equivalent</strong>{" "}
+            emissions annually. This comes from:
           </p>
           <ul>
             <li>
@@ -262,7 +280,9 @@ export default function EnvironmentalImpactPage() {
           <p>
             Paper production is extraordinarily water-intensive. The junk mail
             industry consumes approximately{" "}
-            <strong>28 billion gallons of water</strong> annually—enough to fill over <strong>42,000 Olympic swimming pools</strong>. This water is used for:
+            <strong>28 billion gallons of water</strong> annually, enough to
+            fill over <strong>42,000 Olympic swimming pools</strong>. This water
+            is used for:
           </p>
           <ul>
             <li>Pulping and fiber processing</li>
@@ -293,11 +313,10 @@ export default function EnvironmentalImpactPage() {
           </p>
           <ul>
             <li>
-              <strong>44% is thrown away unopened</strong>—never even glanced at
+              <strong>44% is thrown away unopened</strong>, never even glanced
+              at
             </li>
-            <li>
-              Much of the remainder is discarded after minimal review
-            </li>
+            <li>Much of the remainder is discarded after minimal review</li>
             <li>
               Municipalities spend an estimated <strong>$320 million</strong>{" "}
               annually on collection and processing
@@ -340,9 +359,7 @@ export default function EnvironmentalImpactPage() {
             alone cannot solve the problem:
           </p>
           <ul>
-            <li>
-              Recycling still requires energy, water, and transportation
-            </li>
+            <li>Recycling still requires energy, water, and transportation</li>
             <li>
               Paper can only be recycled 5-7 times before fibers become too
               degraded
@@ -351,9 +368,7 @@ export default function EnvironmentalImpactPage() {
               Many junk mail pieces contain materials that cannot be recycled
               (plastic windows, glossy coatings)
             </li>
-            <li>
-              Recycling rates for mail remain far below 100%
-            </li>
+            <li>Recycling rates for mail remain far below 100%</li>
           </ul>
           <p>
             The environmental hierarchy is clear:{" "}
@@ -383,8 +398,8 @@ export default function EnvironmentalImpactPage() {
           </ul>
           <p>
             Other countries have demonstrated that opt-out systems work.
-            Amsterdam&apos;s opt-in system reduced advertising mail volume by over
-            30%, with corresponding environmental benefits.
+            Amsterdam&apos;s opt-in system reduced advertising mail volume by
+            over 30%, with corresponding environmental benefits.
           </p>
         </div>
 
