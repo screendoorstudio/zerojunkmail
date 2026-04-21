@@ -71,6 +71,11 @@ const faqs: FAQItem[] = [
     answer:
       "The USPS processes approximately 3 billion EDDM mail pieces annually. When combined with other advertising mail programs, Americans receive over 80 billion pieces of marketing mail each year, the majority of which goes directly to recycling or trash.",
   },
+  {
+    question: "Does EDDM revenue save the USPS from its financial crisis?",
+    answer:
+      "No. USPS Postal Facts reports EDDM has generated more than $5 billion since 2011, which averages to roughly $360 million a year. That is about 0.45% of the USPS's $80 billion in annual operating revenue and only 4% of the $9 billion net loss in fiscal year 2025. When Postmaster General David Steiner outlined fixes to Congress in March 2026, he cited reducing delivery days, raising first-class postage, and expanding borrowing authority. He did not mention EDDM. The program is too small to meaningfully affect USPS solvency, which undercuts the claim that consumers cannot opt out because the Postal Service needs the revenue.",
+  },
 ];
 
 export default function WhatIsEDDMPage() {
@@ -290,6 +295,173 @@ export default function WhatIsEDDMPage() {
             </p>
           </div>
         </div>
+
+        {/* Opinion: Does EDDM Keep the USPS Afloat? */}
+        <section
+          className="mt-12 border-t border-gray-200 pt-12"
+          style={{ borderColor: "#e5e7eb" }}
+        >
+          <div
+            className="bg-blue-50 border-l-4 border-blue-600 px-6 py-4 mb-6 rounded-r-lg"
+            style={{ backgroundColor: "#eff6ff", borderColor: "#2563eb" }}
+          >
+            <p
+              className="text-xs font-semibold uppercase tracking-wide mb-1"
+              style={{ color: "#1d4ed8" }}
+            >
+              Analysis
+            </p>
+            <h2
+              className="text-3xl font-bold text-gray-900"
+              style={{ color: "#111827" }}
+            >
+              Does EDDM Actually Keep the USPS Afloat?
+            </h2>
+          </div>
+
+          <div className="prose max-w-none" style={{ color: "#374151" }}>
+            <p style={{ color: "#374151" }}>
+              The standard defense of Every Door Direct Mail goes like this:
+              the Postal Service is losing billions, so it cannot afford to let
+              households opt out of the program. The math does not support the
+              claim.
+            </p>
+
+            <p style={{ color: "#374151" }}>
+              USPS Postal Facts reports that EDDM has delivered more than 33
+              billion pieces and generated more than $5 billion in revenue
+              since launching in 2011. Averaged over fourteen years, that works
+              out to roughly{" "}
+              <strong style={{ color: "#111827" }}>$360 million a year</strong>.
+            </p>
+
+            <p style={{ color: "#374151" }}>
+              Compare that to the rest of the USPS balance sheet. The agency
+              closed fiscal year 2025 with a{" "}
+              <strong style={{ color: "#111827" }}>$9 billion net loss</strong>{" "}
+              and total operating revenue near{" "}
+              <strong style={{ color: "#111827" }}>$80 billion</strong> (USPS
+              Newsroom, November 2025). The U.S. GAO estimates cumulative USPS
+              losses of about $109 billion since 2007. EDDM revenue is about
+              four percent of a single year&apos;s loss and less than half a
+              percent of total revenue.
+            </p>
+
+            <div
+              className="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6"
+              style={{ backgroundColor: "#f9fafb", borderColor: "#e5e7eb" }}
+            >
+              <p
+                className="text-sm font-semibold uppercase tracking-wide mb-3"
+                style={{ color: "#6b7280" }}
+              >
+                The math at a glance
+              </p>
+              <ul
+                className="space-y-2 text-sm"
+                style={{ color: "#374151" }}
+              >
+                <li>
+                  EDDM revenue ≈{" "}
+                  <strong style={{ color: "#111827" }}>$360M / year</strong>
+                </li>
+                <li>
+                  USPS total operating revenue (FY2025) ≈{" "}
+                  <strong style={{ color: "#111827" }}>$80B</strong>
+                </li>
+                <li>
+                  USPS net loss (FY2025) ≈{" "}
+                  <strong style={{ color: "#111827" }}>$9B</strong>
+                </li>
+                <li>
+                  EDDM as share of total revenue: ~
+                  <strong style={{ color: "#111827" }}>0.45%</strong>
+                </li>
+                <li>
+                  EDDM as share of one year&apos;s loss: ~
+                  <strong style={{ color: "#111827" }}>4%</strong>
+                </li>
+              </ul>
+            </div>
+
+            <p style={{ color: "#374151" }}>
+              The bigger levers are obvious. When USPS suspended pension
+              contributions for FY2026, it freed up{" "}
+              <strong style={{ color: "#111827" }}>
+                $2.5 billion in a single year
+              </strong>{" "}
+              (Reuters, April 2026), nearly seven times the annual EDDM take.
+              Rate hikes on Marketing Mail in FY2025 alone produced $350
+              million in new revenue, almost matching what EDDM brings in
+              overall. When Postmaster General David Steiner told Congress the
+              agency was running out of money (NPR, March 2026), the fixes he
+              floated were reducing delivery days, raising first-class postage
+              toward a dollar, and expanding borrowing authority. He did not
+              mention EDDM. It is not large enough to matter at that scale.
+            </p>
+
+            <p style={{ color: "#374151" }}>
+              EDDM&apos;s real function is not to save the Postal Service. It
+              is a politically protected program that supports a small-business
+              advertising industry and props up declining Marketing Mail volume
+              statistics. That is a reasonable thing for USPS to do, but it is
+              not a reason to deny 128 million American households a choice
+              about what lands in their mailbox.
+            </p>
+
+            <p
+              className="text-sm mt-6"
+              style={{ color: "#6b7280" }}
+            >
+              <strong style={{ color: "#374151" }}>Sources:</strong>{" "}
+              <a
+                href="https://facts.usps.com/every-door-direct-mail/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}
+              >
+                USPS Postal Facts
+              </a>
+              {", "}
+              <a
+                href="https://about.usps.com/newsroom/national-releases/2025/1114-usps-reports-fiscal-year-2025-results.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}
+              >
+                USPS Newsroom FY2025
+              </a>
+              {", "}
+              <a
+                href="https://www.gao.gov/blog/u.s.-postal-service-losing-money.-what-can-be-done-help-it"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}
+              >
+                U.S. GAO
+              </a>
+              {", "}
+              <a
+                href="https://www.reuters.com/world/cash-strapped-us-postal-service-suspends-contributions-pension-plan-2026-04-09/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}
+              >
+                Reuters
+              </a>
+              {", "}
+              <a
+                href="https://www.npr.org/2026/03/17/nx-s1-5750419/usps-running-out-of-money-postal-service-david-steiner"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}
+              >
+                NPR
+              </a>
+              . Last updated April 2026.
+            </p>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <div className="mt-12 border-t border-gray-200 pt-12">
